@@ -7,6 +7,9 @@ public class PersonnalityTraits : Traits
     [Header("Personnality")]
     [SerializeField] private Personalities personalities;
 
+    public Personalities Personality => personalities;
+
+    #region Editor
     public override void Init(int _id)
     {
         base.Init(_id);
@@ -18,4 +21,5 @@ public class PersonnalityTraits : Traits
     {
         name = "PT_" + personalities;
     }
+    #endregion
 }
