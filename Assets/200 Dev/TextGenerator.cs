@@ -47,25 +47,25 @@ namespace _200_Dev
             text += JobsPresentationTemplaete[UnityEngine.Random.Range(0, JobsPresentationTemplaete.Length)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.jobTrait.Name);
+            text = text.Replace("{1}", traits.job.name);
             
             
             text += StatusPresentationTemplaete[UnityEngine.Random.Range(0, StatusPresentationTemplaete.Length)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.Status.Name);
+            text = text.Replace("{1}", traits.status.name);
             
             
             text += PersonalityPresentationTemplaete[UnityEngine.Random.Range(0, PersonalityPresentationTemplaete.Length)];
-            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
+            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");  
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.Personality.Name);
+            text = text.Replace("{1}", traits.personnality.name);
             
             
             text += LifestylePresentationTemplaete[UnityEngine.Random.Range(0, LifestylePresentationTemplaete.Length)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.Lifestyle.Name);
+            text = text.Replace("{1}", traits.lifestyle.name);
 
             return text;
         }

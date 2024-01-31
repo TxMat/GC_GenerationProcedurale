@@ -160,8 +160,8 @@ public class TraitsDatabase : ScriptableObject
 
 public struct TraitsMix
 {
-    public JobTraits jobTrait;
-    public StatusTraits statusTrait;
-    public PersonnalityTraits personnalityTrait;
-    public LifestyleTraits lifestyleTrait;
+    public JobTraits job;
+    public StatusTraits status;
+    public PersonnalityTraits personnality;
+    public LifestyleTraits lifestyle;
 }

@@ -68,7 +68,7 @@ public class PortraitGenerator : MonoBehaviour
             GenerateSkinColor(),
             GenerateHairSprite(man),
             GenerateHairColor(),
-            traitsMix.jobTrait.GetClothesSprite(man)
+            traitsMix.job.GetClothesSprite(man)
             );
     }
 
