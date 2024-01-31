@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 public enum Jobs
 {
     MEDIC = 0,
@@ -20,7 +21,6 @@ public enum Personalities
     ADVENTUROUS = 0,
     SHY = 1,
     CHARISMATIC = 2,
-    INTROVERT = 3,
     OPTIMISTIC = 4,
     PESSIMISTIC = 5,
     ALTRUISTIC = 6,
