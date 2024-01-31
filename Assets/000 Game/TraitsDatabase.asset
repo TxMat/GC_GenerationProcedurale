@@ -50,7 +50,8 @@ MonoBehaviour:
   - {fileID: 2965607462187204871}
   personnalityTraits:
   - {fileID: 6521516897947669359}
-  lifestyleTraits: []
+  lifestyleTraits:
+  - {fileID: 5830705972277537473}
 --- !u!114 &2965607462187204871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +68,22 @@ MonoBehaviour:
   tags: 0
   excludeTags: 0
   status: 0
+--- !u!114 &5830705972277537473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_VOYAGER
+  m_EditorClassIdentifier: 
+  id: 36
+  tags: 0
+  excludeTags: 0
+  lifestyle: 0
 --- !u!114 &6041332954731383381
 MonoBehaviour:
   m_ObjectHideFlags: 0
