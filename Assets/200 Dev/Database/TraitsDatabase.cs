@@ -156,3 +156,12 @@ public class TraitsDatabase : ScriptableObject
 
     #endregion
 }
+
+
+public struct TraitsMix
+{
+    public JobTraits jobTrait;
+    public StatusTraits statusTrait;
+    public PersonnalityTraits personnalityTrait;
+    public LifestyleTraits lifestyleTrait;
+}

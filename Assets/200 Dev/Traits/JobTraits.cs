@@ -12,6 +12,12 @@ public class JobTraits : Traits
     [SerializeField] private Sprite manClothesSprite;
     [SerializeField] private Sprite womanClothesSprite;
 
+    public Sprite GetClothesSprite(bool man)
+    {
+        return man ? manClothesSprite : womanClothesSprite;
+    }
+
+    #region Editor
     public override void Init(int _id)
     {
         base.Init(_id);
@@ -23,4 +29,5 @@ public class JobTraits : Traits
     {
         name = "JT_" + job;
     }
+    #endregion
 }
