@@ -62,12 +62,14 @@ public class PortraitGenerator : MonoBehaviour
 
     #region Generation
 
-    public Portrait Generate(bool man, TraitsMix traitsMix)
+    public static Portrait Generate(bool man, TraitsMix traitsMix)
     {
+        if (Instance == null) return default;
+
         return new Portrait(
-            GenerateSkinColor(),
-            GenerateHairSprite(man),
-            GenerateHairColor(),
+            Instance.GenerateSkinColor(),
+            Instance.GenerateHairSprite(man),
+            Instance.GenerateHairColor(),
             traitsMix.job.GetClothesSprite(man)
             );
     }

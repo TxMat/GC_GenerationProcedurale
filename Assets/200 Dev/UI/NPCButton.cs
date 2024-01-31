@@ -15,6 +15,8 @@ public class NPCButton : MonoBehaviour
     {
         NPC = npc;
         onClick = _onClick;
+
+        portrait.Generate(npc.Portrait);
     }
 
 
