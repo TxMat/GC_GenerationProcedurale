@@ -10,4 +10,14 @@ public class UIPortrait : MonoBehaviour
     [SerializeField] private Image hairImage;
     [SerializeField] private Image clothesImage;
     [SerializeField] private Image accessoryImage;
+
+    public Portrait Portrait { get; private set; }
+
+    public void Generate(Portrait portrait)
+    {
+        skinImage.color = portrait.skinColor;
+        hairImage.sprite = portrait.hairSprite;
+        hairImage.color = portrait.hairColor;
+        clothesImage.sprite = portrait.clothesSprite;
+    }
 }
