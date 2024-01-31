@@ -8,7 +8,11 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TraitsDatabase", menuName = "Traits Database")]
 public class TraitsDatabase : ScriptableObject
 {
-    [SerializeField] private List<JobTraits> jobTraits;
+    public List<JobTraits> jobTraits;
+
+    public List<StatusTraits> statusTraits = new();
+
+    public List<PersonnalityTraits> personnalityTraits = new();
 
 
     #region Utility
@@ -19,8 +23,22 @@ public class TraitsDatabase : ScriptableObject
         {
             case Category.JOB:
                 return jobTraits.Cast<T>().ToList();
+            case Category.STATUS:
+                return statusTraits.Cast<T>().ToList();
+            case Category.PERSONNALITY:
+                return personnalityTraits.Cast<T>().ToList();
         }
         return null;
+    }
+
+    private void AddByCategory<T>(Category category, T newElement) where T : Traits
+    {
+        switch (category)
+        {
+            case Category.JOB: jobTraits.Add(newElement as JobTraits); break;
+            case Category.STATUS: statusTraits.Add(newElement as StatusTraits); break;
+            case Category.PERSONNALITY: personnalityTraits.Add(newElement as PersonnalityTraits); break;
+        }
     }
 
     #endregion
@@ -42,8 +60,6 @@ public class TraitsDatabase : ScriptableObject
 
     public void CreateNewData<T>(Category category) where T : Traits
     {
-        List<T> datas = GetByCategory<T>(category);
-
         string path = AssetDatabase.GetAssetPath(this);
 
         Undo.SetCurrentGroupName("Create new data");
@@ -52,13 +68,14 @@ public class TraitsDatabase : ScriptableObject
         T data = CreateInstance<T>();
         Undo.RegisterCreatedObjectUndo(data, "Create");
         data.hideFlags = HideFlags.None;
+        data.Init(GenerateUniqueID<T>(category));
 
         AssetDatabase.AddObjectToAsset(data, path);
 
         Undo.RegisterCompleteObjectUndo(data, "Init");
 
         Undo.RecordObject(this, "Add to list");
-        datas.Add(data);
+        AddByCategory(category, data);
 
         AssetDatabase.SaveAssets();
 

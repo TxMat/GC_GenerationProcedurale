@@ -7,19 +7,11 @@ public abstract class Traits : ScriptableObject
 {
     [SerializeField] private int id;
     public int ID => id;
-}
 
-public class JobTraits : Traits
-{
-
-}
-public class StatusTraits : Traits
-{
-
-}
-public class PersonnalityTraits : Traits
-{
-
+    public virtual void Init(int _id)
+    {
+        id = _id;
+    }
 }
 
 public enum Category
