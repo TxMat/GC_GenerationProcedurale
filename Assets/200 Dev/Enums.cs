@@ -1,4 +1,6 @@
-﻿public enum Jobs
+﻿using System;
+
+public enum Jobs
 {
     MEDIC = 0,
     PAINTER = 1,
@@ -48,4 +50,18 @@ public enum LifeStyle
     COUNTRY_HABITANT = 2,
     DISABLED = 5,
     EXCENTRIC = 6,
+}
+
+public enum Category
+{
+    JOB = 0,
+    STATUS = 1,
+    PERSONNALITY = 2,
+}
+
+[Flags]
+public enum TraitTags
+{
+    RICH = 1 << 0,
+    POOR = 1 << 1,
 }

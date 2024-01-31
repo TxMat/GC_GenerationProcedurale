@@ -18,17 +18,3 @@ public abstract class Traits : ScriptableObject
         id = _id;
     }
 }
-
-public enum Category
-{
-    JOB = 0,
-    STATUS = 1,
-    PERSONNALITY = 2,
-}
-
-[Flags]
-public enum TraitTags
-{
-    RICH = 1 << 0,
-    POOR = 1 << 1,
-}
