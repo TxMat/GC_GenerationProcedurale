@@ -15,8 +15,6 @@ public enum Jobs
     ARTISAN = 9,
     VETERAN = 10,
     TEACHER = 11,
-    BASKETBALL_PLAYER = 14,
-    FOOTBALL_PLAYER = 15,
     PLUMBER = 16,
     CHEMIST = 17,
     MAGE = 18,
@@ -24,6 +22,23 @@ public enum Jobs
     LIBRARIAN = 20,
     ARCHITECT = 21,
     UNEMPLOYED = 22,
+}
+
+public enum Hobby
+{
+    BASKETBALL_PLAYER = 14,
+    FOOTBALL_PLAYER = 15,
+    BASEBALL_PLAYER = 16,
+    TENNIS_PLAYER = 17,
+    SWIMMER = 18,
+    GOLFER = 19,
+    BOXER = 20,
+    CYCLIST = 21,
+    RUNNER = 22,
+    GYMNAST = 23,
+    DANCER = 24,
+    CHESS_PLAYER = 25,
+    GAMER = 26,
 }
 
 public enum Personalities
