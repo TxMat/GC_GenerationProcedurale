@@ -30,45 +30,44 @@ namespace _200_Dev
             "{M_Pronoun} is {1} by character.",
             "{M_Pronoun} is {1} by personality.",
         };
-        
-        private static String[] LifestylePresentationTemplaete = new string[]
-        {
-            "{M_Pronoun} is {1}.",
-            "{M_Pronoun} is {1} by nature.",
-            "{M_Pronoun} is {1} by temperament.",
-            "{M_Pronoun} is {1} by character.",
-            "{M_Pronoun} is {1} by personality.",
-        };
 
         public static string GenerateText(TraitsMix traits, bool isMale)
         {
             string text = "";
 
-            text += JobsPresentationTemplaete[UnityEngine.Random.Range(0, JobsPresentationTemplaete.Length)];
-            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
-            text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.job.name);
+            text += GenerateTemplatedText(traits.job.name, isMale, JobsPresentationTemplaete);
             
             
-            text += StatusPresentationTemplaete[UnityEngine.Random.Range(0, StatusPresentationTemplaete.Length)];
-            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
-            text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.status.name);
+            text += GenerateTemplatedText(traits.status.name, isMale, StatusPresentationTemplaete);
             
             
-            text += PersonalityPresentationTemplaete[UnityEngine.Random.Range(0, PersonalityPresentationTemplaete.Length)];
-            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");  
-            text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.personnality.name);
-            
-            
-            text += LifestylePresentationTemplaete[UnityEngine.Random.Range(0, LifestylePresentationTemplaete.Length)];
-            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
-            text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{1}", traits.lifestyle.name);
+            text += GenerateTemplatedText(traits.personnality.name, isMale, PersonalityPresentationTemplaete);
+
+
+            text += GeneratePredifinedText(traits.lifestyle, isMale);
 
             return text;
         }
 
+        private static string GeneratePredifinedText(Traits traits, bool isMale)
+        {
+            string text = "";
+            
+            text += traits.DescriptionTexts[UnityEngine.Random.Range(0, traits.DescriptionTexts.Count)];
+            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
+            text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
+
+            return text;
+        }
+
+        private static string GenerateTemplatedText(string jobName, bool isMale, string[] jobsPresentationTemplaete)
+        {
+            string text = "";
+            text += jobsPresentationTemplaete[UnityEngine.Random.Range(0, jobsPresentationTemplaete.Length)];
+            text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
+            text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
+            text = text.Replace("{1}", jobName);
+            return text;
+        }
     }
 }

@@ -1,5 +1,39 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6644997729948444392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_VOYAGER
+  m_EditorClassIdentifier: 
+  id: 14
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 0
+--- !u!114 &-2677131574473808099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_GAMBLER
+  m_EditorClassIdentifier: 
+  id: 38
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 5
 --- !u!114 &-1478077717711290384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,6 +90,29 @@ MonoBehaviour:
   - {fileID: 6521516897947669359}
   lifestyleTraits:
   - {fileID: 5830705972277537473}
+  - {fileID: 3473621902788029893}
+  - {fileID: 3110596896978676903}
+  - {fileID: 1892825103296637576}
+  - {fileID: 7085148638194195450}
+  - {fileID: -2677131574473808099}
+  - {fileID: -6644997729948444392}
+--- !u!114 &1892825103296637576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_EXCENTRIC
+  m_EditorClassIdentifier: 
+  id: 99
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 3
 --- !u!114 &2965607462187204871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73,6 +130,40 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 0
+--- !u!114 &3110596896978676903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_COUNTRY_HABITANT
+  m_EditorClassIdentifier: 
+  id: 66
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 2
+--- !u!114 &3473621902788029893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_CITY_HABITANT
+  m_EditorClassIdentifier: 
+  id: 93
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 1
 --- !u!114 &5830705972277537473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -124,6 +215,23 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 0
+--- !u!114 &7085148638194195450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_DRUG_ADDICT
+  m_EditorClassIdentifier: 
+  id: 82
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 4
 --- !u!114 &9219118750910329345
 MonoBehaviour:
   m_ObjectHideFlags: 0
