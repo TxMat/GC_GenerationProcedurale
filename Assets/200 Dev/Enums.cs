@@ -14,6 +14,16 @@ public enum Jobs
     SOLDIER = 8,
     ARTISAN = 9,
     VETERAN = 10,
+    TEACHER = 11,
+    BASKETBALL_PLAYER = 14,
+    FOOTBALL_PLAYER = 15,
+    PLUMBER = 16,
+    CHEMIST = 17,
+    MAGE = 18,
+    COMPUTER_SCIENTIST = 19,
+    LIBRARIAN = 20,
+    ARCHITECT = 21,
+    UNEMPLOYED = 22,
 }
 
 public enum Personalities
@@ -29,6 +39,19 @@ public enum Personalities
     CALM = 9,
     REALIST = 10,
     DREAMER = 11,
+    LAZY = 14,
+    HARD_WORKER = 15,
+    HUMBLE = 17,
+    INTELLIGENT = 18,
+    STUPID = 19,
+    COWARD = 20,
+    BRAVE = 21,
+    SENSITIVE = 22,
+    INSENSITIVE = 23,
+    SADISTIC = 26,
+    HONEST = 28,
+    LIAR = 29,
+    NAIVE = 33,
 }
 
 public enum Status
@@ -36,11 +59,16 @@ public enum Status
     ORPHAN = 0,
     EDUCATED = 1,
     ANALPHABET = 2,
+    INJURED = 10,
+    DISABLED = 11,
+}
+
+public enum RomanticStatus
+{
     SINGLE = 3,
     MARRIED = 4,
     DIVORCED = 5,
     WIDOW = 6,
-
 }
 
 public enum LifeStyle
@@ -48,8 +76,22 @@ public enum LifeStyle
     VOYAGER = 0,
     CITY_HABITANT = 1,
     COUNTRY_HABITANT = 2,
-    DISABLED = 5,
     EXCENTRIC = 6,
+    DRUG_ADDICT = 11,
+    GAMBLER = 12,
+    SMOKER = 13,
+    GAMER = 15,
+    MUSIC_LOVER = 16,
+    ART_LOVER = 17,
+    NATURE_LOVER = 18,
+    ANIMAL_LOVER = 19,
+    VEGETARIAN = 20,
+    VEGAN = 21,
+    RELIGIOUS = 22,
+    ATHEIST = 23,
+    POLITICIAN = 24,
+    ACTIVIST = 25,
+    CRIMINAL = 26,
 }
 
 public enum Category
