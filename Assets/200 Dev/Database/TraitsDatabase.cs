@@ -14,6 +14,8 @@ public class TraitsDatabase : ScriptableObject
 
     public List<PersonnalityTraits> personnalityTraits = new();
 
+    public List<LifestyleTraits> lifestyleTraits = new();
+
 
     #region Utility
 
@@ -27,6 +29,8 @@ public class TraitsDatabase : ScriptableObject
                 return statusTraits.Cast<T>().ToList();
             case Category.PERSONNALITY:
                 return personnalityTraits.Cast<T>().ToList();
+            case Category.LIFESTYLE:
+                return lifestyleTraits.Cast<T>().ToList();
         }
         return null;
     }

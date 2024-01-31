@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JobTraits : Traits
 {
+    [Header("Job")]
     public Jobs job;
 
     public override void Init(int _id)

@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
-  m_Name: JT_MED
+  m_Name: JT_MEDIC
   m_EditorClassIdentifier: 
   id: 2
+  tags: 0
+  excludeTags: 0
   job: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -44,3 +46,6 @@ MonoBehaviour:
   m_Name: ST_46
   m_EditorClassIdentifier: 
   id: 46
+  tags: 0
+  excludeTags: 0
+  status: 0

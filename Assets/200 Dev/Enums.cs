@@ -57,6 +57,7 @@ public enum Category
     JOB = 0,
     STATUS = 1,
     PERSONNALITY = 2,
+    LIFESTYLE = 3,
 }
 
 [Flags]

@@ -14,15 +14,16 @@ public class TraitsDatabaseEditor : Editor
     protected ReorderableList jobList;
     protected ReorderableList statusList;
     protected ReorderableList personnalityList;
+    protected ReorderableList lifestyleList;
 
     private void OnEnable()
     {
         database = (TraitsDatabase)target;
 
-        CreateJobList();
-        //jobList = CreateList<JobTraits>(Category.JOB, "jobTraits", "Job Traits");
+        jobList = CreateList<JobTraits>(Category.JOB, "jobTraits", "Job Traits");
         statusList = CreateList<StatusTraits>(Category.STATUS, "statusTraits", "Status Traits");
         personnalityList = CreateList<PersonnalityTraits>(Category.PERSONNALITY, "personnalityTraits", "Personnality Traits");
+        lifestyleList = CreateList<LifestyleTraits>(Category.LIFESTYLE, "lifestyleTraits", "Lifestyle Traits");
     }
 
     public override void OnInspectorGUI()
@@ -40,42 +41,11 @@ public class TraitsDatabaseEditor : Editor
         EditorGUILayout.Space(5f);
 
         personnalityList.DoLayoutList();
+        EditorGUILayout.Space(5f);
+
+        lifestyleList.DoLayoutList();
 
         serializedObject.ApplyModifiedProperties();
-    }
-
-    private void CreateJobList()
-    {
-        serializedObject.Update();
-        SerializedProperty list = serializedObject.FindProperty("jobTraits");
-
-        jobList = new ReorderableList(serializedObject, list, true, true, true, true)
-        {
-            drawHeaderCallback = (rect) =>
-            {
-                DrawListHeader(rect, "Job Traits");
-            },
-
-            drawElementCallback = (rect, index, active, focused) =>
-            {
-                DrawListElement<JobTraits>(Category.JOB, list, rect, index, active, focused);
-            },
-
-            onAddCallback = (list) =>
-            {
-                AddListElement<JobTraits>(Category.JOB, list);
-            },
-
-            onRemoveCallback = (list) =>
-            {
-                RemoveListElement<JobTraits>(Category.JOB, list);
-            },
-
-            elementHeightCallback = (index) =>
-            {
-                return GetListElementHeight(list, index);
-            }
-        };
     }
 
     

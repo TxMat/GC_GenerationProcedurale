@@ -2,20 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PersonnalityTraits : Traits
+public class LifestyleTraits : Traits
 {
-    [Header("Personnality")]
-    [SerializeField] private Personalities personalities;
+    [Header("Lifestyle")]
+    [SerializeField] private LifeStyle lifestyle;
+
 
     public override void Init(int _id)
     {
         base.Init(_id);
 
-        name = "PT_" + personalities;
+        name = "LT_" + lifestyle;
     }
 
     private void OnValidate()
     {
-        name = "PT_" + personalities;
+        name = "LT_" + lifestyle;
     }
 }
