@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   job: 0
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
 --- !u!114 &-926267054482273517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +34,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 88
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   lifestyle: 0
 --- !u!114 &11400000
@@ -66,6 +72,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 46
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   status: 0
 --- !u!114 &5830705972277537473
@@ -82,6 +90,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   lifestyle: 0
 --- !u!114 &6041332954731383381
@@ -98,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 22
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   lifestyle: 0
 --- !u!114 &6521516897947669359
@@ -114,6 +126,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 69
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   personalities: 0
 --- !u!114 &9219118750910329345
@@ -130,5 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 97
   tags: 0
+  manText: 
+  womanText: 
   excludeTags: 0
   lifestyle: 0

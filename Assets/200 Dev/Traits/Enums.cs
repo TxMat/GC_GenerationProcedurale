@@ -66,3 +66,15 @@ public enum TraitTags
     RICH = 1 << 0,
     POOR = 1 << 1,
 }
+
+public static class EnumExtensions
+{
+    public static string Name(this Jobs job)
+    {
+        switch (job)
+        {
+            case Jobs.MEDIC: return "Medic";
+        }
+        return null;
+    }
+}
