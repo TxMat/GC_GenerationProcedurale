@@ -5,7 +5,12 @@ using UnityEngine;
 public class JobTraits : Traits
 {
     [Header("Job")]
-    public Jobs job;
+    [SerializeField] private Jobs job;
+
+    [Space(10f)]
+
+    [SerializeField] private Sprite manClothesSprite;
+    [SerializeField] private Sprite womanClothesSprite;
 
     public override void Init(int _id)
     {
