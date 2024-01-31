@@ -16,6 +16,22 @@ MonoBehaviour:
   tags: 0
   excludeTags: 0
   job: 0
+--- !u!114 &-926267054482273517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_VOYAGER
+  m_EditorClassIdentifier: 
+  id: 88
+  tags: 0
+  excludeTags: 0
+  lifestyle: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32,7 +48,9 @@ MonoBehaviour:
   - {fileID: -1478077717711290384}
   statusTraits:
   - {fileID: 2965607462187204871}
-  personnalityTraits: []
+  personnalityTraits:
+  - {fileID: 6521516897947669359}
+  lifestyleTraits: []
 --- !u!114 &2965607462187204871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,9 +61,57 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
-  m_Name: ST_46
+  m_Name: ST_ORPHAN
   m_EditorClassIdentifier: 
   id: 46
   tags: 0
   excludeTags: 0
   status: 0
+--- !u!114 &6041332954731383381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_VOYAGER
+  m_EditorClassIdentifier: 
+  id: 22
+  tags: 0
+  excludeTags: 0
+  lifestyle: 0
+--- !u!114 &6521516897947669359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_ADVENTUROUS
+  m_EditorClassIdentifier: 
+  id: 69
+  tags: 0
+  excludeTags: 0
+  personalities: 0
+--- !u!114 &9219118750910329345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_VOYAGER
+  m_EditorClassIdentifier: 
+  id: 97
+  tags: 0
+  excludeTags: 0
+  lifestyle: 0

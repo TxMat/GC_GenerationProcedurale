@@ -42,6 +42,7 @@ public class TraitsDatabase : ScriptableObject
             case Category.JOB: jobTraits.Add(newElement as JobTraits); break;
             case Category.STATUS: statusTraits.Add(newElement as StatusTraits); break;
             case Category.PERSONNALITY: personnalityTraits.Add(newElement as PersonnalityTraits); break;
+            case Category.LIFESTYLE: lifestyleTraits.Add(newElement as LifestyleTraits); break;
         }
     }
 
