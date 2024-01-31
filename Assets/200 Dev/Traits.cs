@@ -3,11 +3,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Traits
+public abstract class Traits : ScriptableObject
 {
-    
+    [SerializeField] private int id;
+    public int ID => id;
 }
 
+public class JobTraits : Traits
+{
+
+}
+public class StatusTraits : Traits
+{
+
+}
+public class PersonnalityTraits : Traits
+{
+
+}
+
+public enum Category
+{
+    JOB = 0,
+    STATUS = 1,
+    PERSONNALITY = 2,
+}
 
 public enum Jobs
 {
