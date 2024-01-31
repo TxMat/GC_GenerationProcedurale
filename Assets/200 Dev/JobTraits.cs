@@ -11,7 +11,7 @@ public class JobTraits : Traits
         base.Init(_id);
 
         name = "JT_" + job;
-    }
+    } 
 
     private void OnValidate()
     {
