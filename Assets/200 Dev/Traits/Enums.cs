@@ -198,7 +198,7 @@ public static class EnumExtensions
         {
             Status.ORPHAN => "Orphan",
             Status.EDUCATED => "Educated",
-            Status.ANALPHABET => "Analphabet",
+            Status.ANALPHABET => "An-alphabet",
             Status.INJURED => "Injured",
             Status.DISABLED => "Disabled",
             _ => "Unknown"
@@ -222,9 +222,9 @@ public static class EnumExtensions
         return lifeStyle switch
         {
             LifeStyle.VOYAGER => "Voyager",
-            LifeStyle.CITY_HABITANT => "City habitant",
-            LifeStyle.COUNTRY_HABITANT => "Country habitant",
-            LifeStyle.EXCENTRIC => "Excentric",
+            LifeStyle.CITY_HABITANT => "City inhabitant",
+            LifeStyle.COUNTRY_HABITANT => "Country inhabitant",
+            LifeStyle.EXCENTRIC => "Eccentric",
             LifeStyle.GAMER => "Gamer",
             LifeStyle.ART_LOVER => "Art lover",
             LifeStyle.CRIMINAL => "Criminal",

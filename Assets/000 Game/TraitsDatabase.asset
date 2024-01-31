@@ -1,6 +1,46 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2677131574473808099
+--- !u!114 &-7225931072142858395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_COUNTRY_HABITANT
+  m_EditorClassIdentifier: 
+  id: 78
+  tags: 0
+  descriptionTexts:
+  - 
+  - 
+  - 
+  excludeTags: 0
+  lifestyle: 2
+--- !u!114 &-5518133776002578567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_GAMER
+  m_EditorClassIdentifier: 
+  id: 58
+  tags: 0
+  descriptionTexts:
+  - 
+  - 
+  - 
+  excludeTags: 0
+  lifestyle: 4
+--- !u!114 &-3523336521177406492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,47 +52,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
   m_Name: LT_ART_LOVER
   m_EditorClassIdentifier: 
-  id: 38
+  id: 7
   tags: 0
-  descriptionTexts: []
+  descriptionTexts:
+  - 
+  - 
+  - 
   excludeTags: 0
   lifestyle: 5
---- !u!114 &-1478077717711290384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
-  m_Name: JT_MEDIC
-  m_EditorClassIdentifier: 
-  id: 2
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  job: 0
-  manClothesSprite: {fileID: 0}
-  womanClothesSprite: {fileID: 0}
---- !u!114 &-926267054482273517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_VOYAGER
-  m_EditorClassIdentifier: 
-  id: 88
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  lifestyle: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,54 +72,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b03c338979335944a61315ce3c9f021, type: 3}
   m_Name: TraitsDatabase
   m_EditorClassIdentifier: 
-  jobTraits:
-  - {fileID: -1478077717711290384}
-  statusTraits:
-  - {fileID: 2965607462187204871}
-  personnalityTraits:
-  - {fileID: 6521516897947669359}
+  jobTraits: []
+  statusTraits: []
+  personnalityTraits: []
   lifestyleTraits:
-  - {fileID: 5830705972277537473}
-  - {fileID: 3473621902788029893}
-  - {fileID: 3110596896978676903}
-  - {fileID: 1892825103296637576}
-  - {fileID: 7085148638194195450}
-  - {fileID: -2677131574473808099}
---- !u!114 &1892825103296637576
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_EXCENTRIC
-  m_EditorClassIdentifier: 
-  id: 99
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  lifestyle: 3
---- !u!114 &2965607462187204871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
-  m_Name: ST_ORPHAN
-  m_EditorClassIdentifier: 
-  id: 46
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  status: 0
---- !u!114 &3110596896978676903
+  - {fileID: 307169184931437083}
+  - {fileID: 9146672079719905310}
+  - {fileID: -7225931072142858395}
+  - {fileID: 643402777003797922}
+  - {fileID: -5518133776002578567}
+  - {fileID: -3523336521177406492}
+  - {fileID: 4944298224677246074}
+--- !u!114 &307169184931437083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,12 +95,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
   m_Name: LT_COUNTRY_HABITANT
   m_EditorClassIdentifier: 
-  id: 66
+  id: 25
   tags: 0
-  descriptionTexts: []
+  descriptionTexts:
+  - 
+  - 
+  - 
   excludeTags: 0
   lifestyle: 2
---- !u!114 &3473621902788029893
+--- !u!114 &643402777003797922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_EXCENTRIC
+  m_EditorClassIdentifier: 
+  id: 33
+  tags: 0
+  descriptionTexts:
+  - 
+  - 
+  - 
+  excludeTags: 0
+  lifestyle: 3
+--- !u!114 &4944298224677246074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_CRIMINAL
+  m_EditorClassIdentifier: 
+  id: 54
+  tags: 0
+  descriptionTexts:
+  - 
+  - 
+  - 
+  excludeTags: 0
+  lifestyle: 6
+--- !u!114 &9146672079719905310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,93 +155,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
   m_Name: LT_CITY_HABITANT
   m_EditorClassIdentifier: 
-  id: 93
+  id: 73
   tags: 0
-  descriptionTexts: []
+  descriptionTexts:
+  - 
+  - 
+  - 
   excludeTags: 0
   lifestyle: 1
---- !u!114 &5830705972277537473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_VOYAGER
-  m_EditorClassIdentifier: 
-  id: 36
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  lifestyle: 0
---- !u!114 &6041332954731383381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_VOYAGER
-  m_EditorClassIdentifier: 
-  id: 22
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  lifestyle: 0
---- !u!114 &6521516897947669359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
-  m_Name: PT_ADVENTUROUS
-  m_EditorClassIdentifier: 
-  id: 69
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  personalities: 0
---- !u!114 &7085148638194195450
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_GAMER
-  m_EditorClassIdentifier: 
-  id: 82
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  lifestyle: 4
---- !u!114 &9219118750910329345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_VOYAGER
-  m_EditorClassIdentifier: 
-  id: 97
-  tags: 0
-  descriptionTexts: []
-  excludeTags: 0
-  lifestyle: 0
