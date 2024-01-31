@@ -24,11 +24,7 @@ namespace _200_Dev
         
         private static String[] PersonalityPresentationTemplaete = new string[]
         {
-            "{M_Pronoun} is {1}.",
-            "{M_Pronoun} is {1} by nature.",
-            "{M_Pronoun} is {1} by temperament.",
-            "{M_Pronoun} is {1} by character.",
-            "{M_Pronoun} is {1} by personality.",
+            "{1} by nature, tkt",
         };
 
         public static string GenerateText(TraitsMix traits, bool isMale)
