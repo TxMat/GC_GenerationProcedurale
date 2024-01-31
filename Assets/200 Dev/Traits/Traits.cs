@@ -12,8 +12,7 @@ public abstract class Traits : ScriptableObject
 
     [Space(10f)]
 
-    [SerializeField][TextArea] protected string manText;
-    [SerializeField][TextArea] protected string womanText;
+    [SerializeField][TextArea] protected List<string> descriptionTexts;
 
     [Header("Exclude")]
     [SerializeField] private TraitTags excludeTags;
