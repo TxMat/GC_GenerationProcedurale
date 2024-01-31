@@ -7,7 +7,9 @@ public class LifestyleTraits : Traits
     [Header("Lifestyle")]
     [SerializeField] private LifeStyle lifestyle;
 
+    public LifeStyle Lifestyle => lifestyle;
 
+    #region Editor
     public override void Init(int _id)
     {
         base.Init(_id);
@@ -19,4 +21,5 @@ public class LifestyleTraits : Traits
     {
         name = "LT_" + lifestyle;
     }
+    #endregion
 }

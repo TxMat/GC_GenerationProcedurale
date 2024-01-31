@@ -12,6 +12,8 @@ public class JobTraits : Traits
     [SerializeField] private Sprite manClothesSprite;
     [SerializeField] private Sprite womanClothesSprite;
 
+    public Jobs Job => job;
+
     public Sprite GetClothesSprite(bool man)
     {
         return man ? manClothesSprite : womanClothesSprite;

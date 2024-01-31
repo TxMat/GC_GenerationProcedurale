@@ -45,6 +45,16 @@ public class TraitsDatabase : ScriptableObject
             case Category.LIFESTYLE: lifestyleTraits.Add(newElement as LifestyleTraits); break;
         }
     }
+    private void RemoveByCategory(Category category, int index)
+    {
+        switch (category)
+        {
+            case Category.JOB: jobTraits.RemoveAt(index); break;
+            case Category.STATUS: statusTraits.RemoveAt(index); break;
+            case Category.PERSONNALITY: personnalityTraits.RemoveAt(index); break;
+            case Category.LIFESTYLE: lifestyleTraits.RemoveAt(index); break;
+        }
+    }
 
     #endregion
 
@@ -93,7 +103,7 @@ public class TraitsDatabase : ScriptableObject
         if (index >= 0 && index < datas.Count)
         {
             T data = datas[index];
-            datas.Remove(data);
+            RemoveByCategory(category, index);
             AssetDatabase.RemoveObjectFromAsset(data);
         }
     }
