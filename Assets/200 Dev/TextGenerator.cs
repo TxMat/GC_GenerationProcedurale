@@ -4,8 +4,7 @@ namespace _200_Dev
 {
     public static class TextGenerator
     {
-        private static String[] JobsPresentationTemplaete = new string[]
-        {
+        private static String[] JobsPresentationTemplaete = {
             "{M_Pronoun} is a {1}.",
             "{M_Pronoun} is a {1} by profession.",
             "{M_Pronoun} always wanted to be a {1} since {m_Pronoun} was a child.",
@@ -13,8 +12,7 @@ namespace _200_Dev
             "{M_Pronoun} is a {1} by vocation.",
         };
         
-        private static String[] StatusPresentationTemplaete = new string[]
-        {
+        private static String[] StatusPresentationTemplaete = {
             "{M_Pronoun} is {1}.",
             "{M_Pronoun} is {1} by nature.",
             "{M_Pronoun} is {1} by temperament.",
@@ -22,8 +20,7 @@ namespace _200_Dev
             "{M_Pronoun} is {1} by personality.",
         };
         
-        private static String[] PersonalityPresentationTemplaete = new string[]
-        {
+        private static String[] PersonalityPresentationTemplaete = {
             "{1} by nature, tkt",
         };
 

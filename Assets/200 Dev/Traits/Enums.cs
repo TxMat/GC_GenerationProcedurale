@@ -109,6 +109,12 @@ public enum TraitTags
 {
     RICH = 1 << 0,
     POOR = 1 << 1,
+    EDUCATED = 1 << 2,
+    DISABLED = 1 << 3,
+    DANGEROUS = 1 << 4,
+    ARTISTIC = 1 << 5,
+    STRANGE = 1 << 6,
+    DUMB = 1 << 7,
 }
 
 public static class EnumExtensions
@@ -135,6 +141,47 @@ public static class EnumExtensions
             Jobs.LIBRARIAN => "Librarian",
             Jobs.ARCHITECT => "Architect",
             Jobs.UNEMPLOYED => "Unemployed",
+            _ => "Unknown"
+        };
+    }
+    
+    public static TraitTags[] Tags(this Jobs job)
+    {
+        return job switch
+        {
+            Jobs.MEDIC => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.PAINTER => new TraitTags[] { TraitTags.ARTISTIC, TraitTags.POOR },
+            Jobs.ENGINEER => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.STUDENT => new TraitTags[] { TraitTags.EDUCATED },
+            Jobs.FARMER => new TraitTags[] { TraitTags.POOR },
+            Jobs.LAWYER => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.MUSICIAN => new TraitTags[] { TraitTags.ARTISTIC, TraitTags.POOR },
+            Jobs.SCIENTIST => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.SOLDIER => new TraitTags[] { TraitTags.DANGEROUS },
+            Jobs.ARTISAN => new TraitTags[] { TraitTags.ARTISTIC, TraitTags.POOR },
+            Jobs.VETERAN => new TraitTags[] { TraitTags.DANGEROUS },
+            Jobs.TEACHER => new TraitTags[] { TraitTags.EDUCATED },
+            Jobs.PLUMBER => new TraitTags[] { TraitTags.POOR },
+            Jobs.CHEMIST => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.COMPUTER_SCIENTIST => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.LIBRARIAN => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.ARCHITECT => new TraitTags[] { TraitTags.EDUCATED, TraitTags.RICH },
+            Jobs.UNEMPLOYED => new TraitTags[] { TraitTags.POOR },
+            _ => new TraitTags[] { }
+        };
+    }
+
+    public static string aaa(this LifeStyle lifeStyle)
+    {
+        return lifeStyle switch
+        {
+            LifeStyle.VOYAGER => "Voyager",
+            LifeStyle.CITY_HABITANT => "City inhabitant",
+            LifeStyle.COUNTRY_HABITANT => "Country inhabitant",
+            LifeStyle.EXCENTRIC => "Eccentric",
+            LifeStyle.GAMER => "Gamer",
+            LifeStyle.ART_LOVER => "Art lover",
+            LifeStyle.CRIMINAL => "Criminal",
             _ => "Unknown"
         };
     }
