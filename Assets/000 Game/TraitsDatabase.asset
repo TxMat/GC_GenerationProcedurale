@@ -693,8 +693,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 130
   job: 0
-  manClothesSprite: {fileID: 21300000, guid: 39ca060a13c4019489c6b7040ba53e9f, type: 3}
-  womanClothesSprite: {fileID: 21300000, guid: 39ca060a13c4019489c6b7040ba53e9f, type: 3}
+  manClothesSprite: {fileID: 21300000, guid: 0e6089c6bceaedd4696e4bc55dbd26d4, type: 3}
+  womanClothesSprite: {fileID: 21300000, guid: 0e6089c6bceaedd4696e4bc55dbd26d4, type: 3}
 --- !u!114 &3644585594296322448
 MonoBehaviour:
   m_ObjectHideFlags: 0

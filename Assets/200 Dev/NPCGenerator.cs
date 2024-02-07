@@ -162,28 +162,33 @@ public class NPCGenerator : MonoBehaviour
         TraitTags tags = job.Tags;
         TraitTags excludedTags = job.ExcludeTags;
 
+        bool statusCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.status);
+        if (statusCompatible) { tags |= status.Tags; excludedTags |= status.ExcludeTags; }
+
+        bool personnalityCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.personnality);
+        if (personnalityCompatible) { tags |= personnality.Tags; excludedTags |= personnality.ExcludeTags; }
+
+        bool lifestyleCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle);
+        if (lifestyleCompatible) { tags |= lifestyle.Tags; excludedTags |= lifestyle.ExcludeTags; }
+
         // Status Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.status))
+        if (!statusCompatible)
         {
-            status = GetCoherentTraits<StatusTraits>(Category.STATUS, 
-                tags | personnality.Tags | lifestyle.Tags, 
-                excludedTags | personnality.ExcludeTags | lifestyle.ExcludeTags);
+            status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
         
         // Personnality Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.personnality))
+        if (!personnalityCompatible)
         {
-            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY,
-                tags | lifestyle.Tags,
-                excludedTags | lifestyle.ExcludeTags);
+            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
 
         // Lifestyle Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle))
+        if (!lifestyleCompatible)
         {
             lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
         }
@@ -215,28 +220,33 @@ public class NPCGenerator : MonoBehaviour
         TraitTags tags = status.Tags;
         TraitTags excludedTags = status.ExcludeTags;
 
+        bool jobCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.job);
+        if (jobCompatible) { tags |= job.Tags; excludedTags |= job.ExcludeTags; }
+
+        bool personnalityCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.personnality);
+        if (personnalityCompatible) { tags |= personnality.Tags; excludedTags |= personnality.ExcludeTags; }
+
+        bool lifestyleCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle);
+        if (lifestyleCompatible) { tags |= lifestyle.Tags; excludedTags |= lifestyle.ExcludeTags; }
+
         // Job Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.job))
+        if (!jobCompatible)
         {
-            job = GetCoherentTraits<JobTraits>(Category.JOB,
-                tags | personnality.Tags | lifestyle.Tags,
-                excludedTags | personnality.ExcludeTags | lifestyle.ExcludeTags);
+            job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
 
         // Personnality Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.personnality))
+        if (!personnalityCompatible)
         {
-            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY,
-                tags | lifestyle.Tags,
-                excludedTags | lifestyle.ExcludeTags);
+            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
 
         // Lifestyle Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle))
+        if (!lifestyleCompatible)
         {
             lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
         }
@@ -268,28 +278,33 @@ public class NPCGenerator : MonoBehaviour
         TraitTags tags = personnality.Tags;
         TraitTags excludedTags = personnality.ExcludeTags;
 
+        bool jobCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.job);
+        if (jobCompatible) { tags |= job.Tags; excludedTags |= job.ExcludeTags; }
+
+        bool statusCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.status);
+        if (statusCompatible) { tags |= status.Tags; excludedTags |= status.ExcludeTags; }
+
+        bool lifestyleCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle);
+        if (lifestyleCompatible) { tags |= lifestyle.Tags; excludedTags |= lifestyle.ExcludeTags; }
+
         // Job Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.job))
+        if (!jobCompatible)
         {
-            job = GetCoherentTraits<JobTraits>(Category.JOB,
-                tags | status.Tags | lifestyle.Tags,
-                excludedTags | status.ExcludeTags | lifestyle.ExcludeTags);
+            job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
 
         // Status Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.status))
+        if (!statusCompatible)
         {
-            status = GetCoherentTraits<StatusTraits>(Category.STATUS,
-                tags | lifestyle.Tags,
-                excludedTags | lifestyle.ExcludeTags);
+            status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
 
         // Lifestyle Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle))
+        if (!lifestyleCompatible)
         {
             lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
         }
@@ -321,28 +336,33 @@ public class NPCGenerator : MonoBehaviour
         TraitTags tags = lifestyle.Tags;
         TraitTags excludedTags = lifestyle.ExcludeTags;
 
+        bool jobCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.job);
+        if (jobCompatible) { tags |= job.Tags; excludedTags |= job.ExcludeTags; }
+
+        bool statusCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.status);
+        if (statusCompatible) { tags |= status.Tags; excludedTags |= status.ExcludeTags; }
+
+        bool personnalityCompatible = AreCompatible(tags, excludedTags, npc.TraitsMix.personnality);
+        if (personnalityCompatible) { tags |= personnality.Tags; excludedTags |= personnality.ExcludeTags; }
+
         // Job Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.job))
+        if (!jobCompatible)
         {
-            job = GetCoherentTraits<JobTraits>(Category.JOB,
-                tags | status.Tags | personnality.Tags,
-                excludedTags | status.ExcludeTags | personnality.ExcludeTags);
+            job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
 
         // Status Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.status))
+        if (!statusCompatible)
         {
-            status = GetCoherentTraits<StatusTraits>(Category.STATUS,
-                tags | lifestyle.Tags,
-                excludedTags | lifestyle.ExcludeTags);
+            status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
 
         // Personnality Compatibility
-        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.personnality))
+        if (!personnalityCompatible)
         {
             personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
         }
