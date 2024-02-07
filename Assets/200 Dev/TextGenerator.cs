@@ -78,7 +78,7 @@ namespace _200_Dev
             { (int) StatusTags.EDUCATION, new ()
                 {
                     { (int) GoodnessTags.GOOD, new List<string> {
-                        "Education has always been a priority for {m_Pronoun}, and {hs_Pronoun} hard work has paid off.",
+                        "Education has always been a priority for {hm_Pronoun}, and {hs_Pronoun} hard work has paid off.",
                         "{m_Pronoun} values education as a cornerstone of personal and professional growth.",
                         "{m_Pronoun} is proud of {hs_Pronoun} achievements in education, which have opened many doors."
                     }},
