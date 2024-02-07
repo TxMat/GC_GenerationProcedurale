@@ -54,6 +54,23 @@ MonoBehaviour:
   - 
   excludeTags: 0
   lifestyle: 2
+--- !u!114 &-6910188713931993252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_DIVORCED
+  m_EditorClassIdentifier: 
+  id: 36
+  tags: 2075
+  descriptionTexts: []
+  excludeTags: 0
+  status: 7
 --- !u!114 &-6107457204954828267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +317,7 @@ MonoBehaviour:
   m_Name: ST_ORPHAN
   m_EditorClassIdentifier: 
   id: 12
-  tags: 0
+  tags: 1234
   descriptionTexts: []
   excludeTags: 0
   status: 0
@@ -323,6 +340,23 @@ MonoBehaviour:
   job: 3
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
+--- !u!114 &-1219430125636528767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_MARRIED
+  m_EditorClassIdentifier: 
+  id: 35
+  tags: 1039
+  descriptionTexts: []
+  excludeTags: 2048
+  status: 6
 --- !u!114 &-1058167733655760874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +393,23 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 12
+--- !u!114 &-781763645087807056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_SINGLE
+  m_EditorClassIdentifier: 
+  id: 95
+  tags: 3145
+  descriptionTexts: []
+  excludeTags: 0
+  status: 5
 --- !u!114 &-701971289091025105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,10 +499,17 @@ MonoBehaviour:
   - {fileID: 5322455486896126184}
   - {fileID: 4258288603175830966}
   - {fileID: 8537722532867734977}
+<<<<<<< Updated upstream
   - {fileID: 6257462847648810226}
   - {fileID: 1754639534946721387}
   - {fileID: -4163782983110621746}
   - {fileID: 3170876998521849776}
+=======
+  - {fileID: -781763645087807056}
+  - {fileID: -1219430125636528767}
+  - {fileID: -6910188713931993252}
+  - {fileID: 4319025471633823091}
+>>>>>>> Stashed changes
   personnalityTraits:
   - {fileID: -6107457204954828267}
   - {fileID: 7238862993694647193}
@@ -693,9 +751,9 @@ MonoBehaviour:
   m_Name: ST_INJURED
   m_EditorClassIdentifier: 
   id: 2
-  tags: 0
+  tags: 1088
   descriptionTexts: []
-  excludeTags: 0
+  excludeTags: 2056
   status: 3
 --- !u!114 &4292828203365800809
 MonoBehaviour:
@@ -714,6 +772,23 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   personalities: 10
+--- !u!114 &4319025471633823091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_WIDOW
+  m_EditorClassIdentifier: 
+  id: 8
+  tags: 3073
+  descriptionTexts: []
+  excludeTags: 10
+  status: 8
 --- !u!114 &4944298224677246074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -747,9 +822,9 @@ MonoBehaviour:
   m_Name: ST_ANALPHABET
   m_EditorClassIdentifier: 
   id: 32
-  tags: 0
+  tags: 1266
   descriptionTexts: []
-  excludeTags: 0
+  excludeTags: 2052
   status: 2
 --- !u!114 &5380235005445582785
 MonoBehaviour:
@@ -764,9 +839,9 @@ MonoBehaviour:
   m_Name: ST_EDUCATED
   m_EditorClassIdentifier: 
   id: 92
-  tags: 0
+  tags: 2365
   descriptionTexts: []
-  excludeTags: 0
+  excludeTags: 128
   status: 1
 --- !u!114 &6257462847648810226
 MonoBehaviour:
@@ -849,9 +924,9 @@ MonoBehaviour:
   m_Name: ST_DISABLED
   m_EditorClassIdentifier: 
   id: 75
-  tags: 0
+  tags: 1094
   descriptionTexts: []
-  excludeTags: 0
+  excludeTags: 2048
   status: 4
 --- !u!114 &9146672079719905310
 MonoBehaviour:
