@@ -5,16 +5,16 @@ namespace _200_Dev
 {
     public static class TextGenerator   
     {
-        private static string[] JobsPresentationTemplaete = {
+        private static string[] JobsPresentationTemplate = {
             "{M_Pronoun} works happily as {job_Pronoun} {1}.",
             "{M_Pronoun} always wanted to be {job_Pronoun} {1} since {m_Pronoun} was a child.",
         };
         
-        private static string[] StatusPresentationTemplaete = {
+        private static string[] StatusPresentationTemplate = {
             "{M_Pronoun} is {1}.",
         };
         
-        private static string[] PersonalityPresentationTemplaete = {
+        private static string[] PersonalityPresentationTemplate = {
             "{M_Pronoun} can be described as {1} person. Some say that this is {m_Pronoun} best quality.",
             "{M_Pronoun} is a {1} person. This is what makes {m_Pronoun} unique.",
         };
@@ -23,13 +23,13 @@ namespace _200_Dev
         {
             var text = "";
 
-            text += GenerateTemplatedText(traits.job.name, isMale, JobsPresentationTemplaete);
+            text += GenerateTemplatedText(traits.job.name, isMale, JobsPresentationTemplate);
             
             
-            text += GenerateTemplatedText(traits.status.name, isMale, StatusPresentationTemplaete);
+            text += GenerateTemplatedText(traits.status.name, isMale, StatusPresentationTemplate);
             
             
-            text += GenerateTemplatedText(traits.personnality.name, isMale, PersonalityPresentationTemplaete);
+            text += GenerateTemplatedText(traits.personnality.name, isMale, PersonalityPresentationTemplate);
 
 
             text += GeneratePredefinedText(traits.lifestyle, isMale);
