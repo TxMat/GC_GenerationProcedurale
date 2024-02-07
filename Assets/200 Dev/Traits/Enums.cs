@@ -271,6 +271,19 @@ public static class EnumExtensions
         };
     }
     
+    public static TraitTags Tags(this Status status)
+    {
+        return status switch
+        {
+            Status.ORPHAN => TraitTags.POOR,
+            Status.EDUCATED => TraitTags.SMART,
+            Status.ANALPHABET => TraitTags.UNEDUCATED,
+            Status.INJURED => TraitTags.DISABLED,
+            Status.DISABLED => TraitTags.DISABLED,
+            _ => TraitTags.RICH
+        };
+    }
+    
     public static string Name(this RomanticStatus romanticStatus)
     {
         return romanticStatus switch
