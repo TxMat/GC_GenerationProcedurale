@@ -46,7 +46,7 @@ namespace _200_Dev
                 "This is what makes {m_Pronoun} unique."
             }},
             { (int) PersonalityTags.BAD, new List<string> {
-                "It already happened that {m_Pronoun} attitude caused some problems.",
+                "It already happened that {m_Pronoun}'s attitude caused some problems.",
                 "It's not always easy to deal with {m_Pronoun}.",
                 "Sometimes, {m_Pronoun} can be a bit too much to handle.",
             }},

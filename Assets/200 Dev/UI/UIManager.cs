@@ -72,6 +72,8 @@ public class UIManager : MonoBehaviour
         {
             npcButtons[i].Assign(list[i], OnSelectNPC);
         }
+
+        OnSelectNPC(list[0]);
     }
 
     #endregion
