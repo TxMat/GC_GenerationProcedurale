@@ -7,8 +7,13 @@ public class StatusTraits : Traits
     [Header("Status")]
     [SerializeField] private Status status;
 
-
     public Status Status => status;
+
+    public override void SetTraitsValue(int index)
+    {
+        status = (Status)index;
+        OnValidate();
+    }
 
     #region Editor
     public override void Init(int _id)

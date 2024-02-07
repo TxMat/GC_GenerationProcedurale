@@ -9,6 +9,12 @@ public class PersonnalityTraits : Traits
 
     public Personalities Personality => personalities;
 
+    public override void SetTraitsValue(int index)
+    {
+        personalities = (Personalities)index;
+        OnValidate();
+    }
+
     #region Editor
     public override void Init(int _id)
     {

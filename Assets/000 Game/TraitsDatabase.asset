@@ -1,5 +1,113 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8921938364439785576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_CALM
+  m_EditorClassIdentifier: 
+  id: 42
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 8
+--- !u!114 &-8674382464303848733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_INSENSITIVE
+  m_EditorClassIdentifier: 
+  id: 40
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 19
+--- !u!114 &-8614191003061433571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_LAZY
+  m_EditorClassIdentifier: 
+  id: 81
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 11
+--- !u!114 &-7800865511338380769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_UNEMPLOYED
+  m_EditorClassIdentifier: 
+  id: 54
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 17
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-7794781996265982442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_COMPUTER_SCIENTIST
+  m_EditorClassIdentifier: 
+  id: 56
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 14
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-7275706345038004488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_LIBRARIAN
+  m_EditorClassIdentifier: 
+  id: 68
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 15
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
 --- !u!114 &-7225931072142858395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20,6 +128,76 @@ MonoBehaviour:
   - 
   excludeTags: 0
   lifestyle: 2
+--- !u!114 &-7033356086613914906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_CHEMIST
+  m_EditorClassIdentifier: 
+  id: 89
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 13
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-6839926332816667258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_SENSITIVE
+  m_EditorClassIdentifier: 
+  id: 3
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 18
+--- !u!114 &-6107457204954828267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_ADVENTUROUS
+  m_EditorClassIdentifier: 
+  id: 39
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 0
+--- !u!114 &-5585429663927827124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_CHARISMATIC
+  m_EditorClassIdentifier: 
+  id: 73
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 2
 --- !u!114 &-5518133776002578567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +218,95 @@ MonoBehaviour:
   - 
   excludeTags: 0
   lifestyle: 4
+--- !u!114 &-4986039409512149065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_PLUMBER
+  m_EditorClassIdentifier: 
+  id: 84
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 12
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-4635342485247602578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_NAIVE
+  m_EditorClassIdentifier: 
+  id: 70
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 23
+--- !u!114 &-3986002696836049833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_LAWYER
+  m_EditorClassIdentifier: 
+  id: 27
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 5
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-3821465397417963059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_EGOTIST
+  m_EditorClassIdentifier: 
+  id: 91
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 6
+--- !u!114 &-3645840716970355038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_HUMBLE
+  m_EditorClassIdentifier: 
+  id: 65
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 13
 --- !u!114 &-3523336521177406492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +327,256 @@ MonoBehaviour:
   - 
   excludeTags: 0
   lifestyle: 5
+--- !u!114 &-3301561777137781445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_REALIST
+  m_EditorClassIdentifier: 
+  id: 19
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 9
+--- !u!114 &-2706310955633784282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_INTELLIGENT
+  m_EditorClassIdentifier: 
+  id: 18
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 14
+--- !u!114 &-2082578869473132344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_ANGRY
+  m_EditorClassIdentifier: 
+  id: 16
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 7
+--- !u!114 &-2049410317431051751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_ENGINEER
+  m_EditorClassIdentifier: 
+  id: 36
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 2
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-2004217721907138611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_SADISTIC
+  m_EditorClassIdentifier: 
+  id: 5
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 20
+--- !u!114 &-1373478449691988515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_ORPHAN
+  m_EditorClassIdentifier: 
+  id: 12
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 0
+--- !u!114 &-1313311879207558631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_STUDENT
+  m_EditorClassIdentifier: 
+  id: 99
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 3
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-1058167733655760874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_VETERAN
+  m_EditorClassIdentifier: 
+  id: 22
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 10
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-1057668791384341189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_HARD_WORKER
+  m_EditorClassIdentifier: 
+  id: 83
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 12
+--- !u!114 &-701971289091025105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_FARMER
+  m_EditorClassIdentifier: 
+  id: 13
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 4
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-591735277676768986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_MUSICIAN
+  m_EditorClassIdentifier: 
+  id: 24
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 6
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-420311949113815452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_SOLDIER
+  m_EditorClassIdentifier: 
+  id: 79
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 8
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &-400474090202412438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_LIAR
+  m_EditorClassIdentifier: 
+  id: 27
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 22
+--- !u!114 &-81622404779610302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_BRAVE
+  m_EditorClassIdentifier: 
+  id: 51
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 17
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,9 +589,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b03c338979335944a61315ce3c9f021, type: 3}
   m_Name: TraitsDatabase
   m_EditorClassIdentifier: 
-  jobTraits: []
-  statusTraits: []
-  personnalityTraits: []
+  jobTraits:
+  - {fileID: 3576874981103260837}
+  - {fileID: 620386756995987938}
+  - {fileID: -2049410317431051751}
+  - {fileID: -1313311879207558631}
+  - {fileID: -701971289091025105}
+  - {fileID: -3986002696836049833}
+  - {fileID: -591735277676768986}
+  - {fileID: 777294109805759254}
+  - {fileID: -420311949113815452}
+  - {fileID: 3644585594296322448}
+  - {fileID: -1058167733655760874}
+  - {fileID: 299725027495695316}
+  - {fileID: -4986039409512149065}
+  - {fileID: -7033356086613914906}
+  - {fileID: -7794781996265982442}
+  - {fileID: -7275706345038004488}
+  - {fileID: 9041289083916422067}
+  - {fileID: -7800865511338380769}
+  statusTraits:
+  - {fileID: -1373478449691988515}
+  - {fileID: 5380235005445582785}
+  - {fileID: 5322455486896126184}
+  - {fileID: 4258288603175830966}
+  - {fileID: 8537722532867734977}
+  personnalityTraits:
+  - {fileID: -6107457204954828267}
+  - {fileID: 7238862993694647193}
+  - {fileID: -5585429663927827124}
+  - {fileID: 3942450949448364395}
+  - {fileID: 7809199315074435519}
+  - {fileID: 6893486084799539887}
+  - {fileID: -3821465397417963059}
+  - {fileID: -2082578869473132344}
+  - {fileID: -8921938364439785576}
+  - {fileID: -3301561777137781445}
+  - {fileID: 4292828203365800809}
+  - {fileID: -8614191003061433571}
+  - {fileID: -1057668791384341189}
+  - {fileID: -3645840716970355038}
+  - {fileID: -2706310955633784282}
+  - {fileID: 28870474637458245}
+  - {fileID: 8411492437157630926}
+  - {fileID: -81622404779610302}
+  - {fileID: -6839926332816667258}
+  - {fileID: -8674382464303848733}
+  - {fileID: -2004217721907138611}
+  - {fileID: 2655150444695396629}
+  - {fileID: -400474090202412438}
+  - {fileID: -4635342485247602578}
   lifestyleTraits:
   - {fileID: 307169184931437083}
   - {fileID: 9146672079719905310}
@@ -83,6 +647,42 @@ MonoBehaviour:
   - {fileID: -5518133776002578567}
   - {fileID: -3523336521177406492}
   - {fileID: 4944298224677246074}
+--- !u!114 &28870474637458245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_STUPID
+  m_EditorClassIdentifier: 
+  id: 7
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 15
+--- !u!114 &299725027495695316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_TEACHER
+  m_EditorClassIdentifier: 
+  id: 83
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 11
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
 --- !u!114 &307169184931437083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +693,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_COUNTRY_HABITANT
+  m_Name: LT_VOYAGER
   m_EditorClassIdentifier: 
   id: 25
   tags: 0
@@ -102,7 +702,26 @@ MonoBehaviour:
   - 
   - 
   excludeTags: 0
-  lifestyle: 2
+  lifestyle: 0
+--- !u!114 &620386756995987938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_PAINTER
+  m_EditorClassIdentifier: 
+  id: 42
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 1
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
 --- !u!114 &643402777003797922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +742,131 @@ MonoBehaviour:
   - 
   excludeTags: 0
   lifestyle: 3
+--- !u!114 &777294109805759254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_SCIENTIST
+  m_EditorClassIdentifier: 
+  id: 28
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 7
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &2655150444695396629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_HONEST
+  m_EditorClassIdentifier: 
+  id: 4
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 21
+--- !u!114 &3576874981103260837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_MEDIC
+  m_EditorClassIdentifier: 
+  id: 72
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 0
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &3644585594296322448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_ARTISAN
+  m_EditorClassIdentifier: 
+  id: 43
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 9
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
+--- !u!114 &3942450949448364395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_OPTIMISTIC
+  m_EditorClassIdentifier: 
+  id: 97
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 3
+--- !u!114 &4258288603175830966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_INJURED
+  m_EditorClassIdentifier: 
+  id: 2
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 3
+--- !u!114 &4292828203365800809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_DREAMER
+  m_EditorClassIdentifier: 
+  id: 87
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 10
 --- !u!114 &4944298224677246074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,6 +887,144 @@ MonoBehaviour:
   - 
   excludeTags: 0
   lifestyle: 6
+--- !u!114 &5322455486896126184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_ANALPHABET
+  m_EditorClassIdentifier: 
+  id: 32
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 2
+--- !u!114 &5380235005445582785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_EDUCATED
+  m_EditorClassIdentifier: 
+  id: 92
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 1
+--- !u!114 &6893486084799539887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_ALTRUISTIC
+  m_EditorClassIdentifier: 
+  id: 38
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 5
+--- !u!114 &7238862993694647193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_SHY
+  m_EditorClassIdentifier: 
+  id: 23
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 1
+--- !u!114 &7809199315074435519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_PESSIMISTIC
+  m_EditorClassIdentifier: 
+  id: 77
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 4
+--- !u!114 &8411492437157630926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0787bfa509eb624ab7fef999e93a43f, type: 3}
+  m_Name: PT_COWARD
+  m_EditorClassIdentifier: 
+  id: 37
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  personalities: 16
+--- !u!114 &8537722532867734977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_DISABLED
+  m_EditorClassIdentifier: 
+  id: 75
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 4
+--- !u!114 &9041289083916422067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbcadbf2c96d9fa43b8e89dfae2d937d, type: 3}
+  m_Name: JT_ARCHITECT
+  m_EditorClassIdentifier: 
+  id: 47
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  job: 16
+  manClothesSprite: {fileID: 0}
+  womanClothesSprite: {fileID: 0}
 --- !u!114 &9146672079719905310
 MonoBehaviour:
   m_ObjectHideFlags: 0

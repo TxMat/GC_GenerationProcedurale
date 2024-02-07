@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -16,6 +17,57 @@ public class TraitsDatabase : ScriptableObject
 
     public List<LifestyleTraits> lifestyleTraits = new();
 
+    #region Accessors
+
+    public List<JobTraits> GetJobExcluding(TraitTags tags, TraitTags includedTags)
+    {
+        List<JobTraits> jobs = new();
+
+        foreach (var job in jobTraits)
+        {
+            if (!job.Tags.Any(tags) && !includedTags.Any(job.ExcludeTags)) jobs.Add(job);
+        }
+
+        return jobs;
+    }
+
+    public List<StatusTraits> GetStatusExcluding(TraitTags tags, TraitTags includedTags)
+    {
+        List<StatusTraits> status = new();
+
+        foreach (var s in statusTraits)
+        {
+            if (!s.Tags.Any(tags) && !includedTags.Any(s.ExcludeTags)) status.Add(s);
+        }
+
+        return status;
+    }
+
+    public List<PersonnalityTraits> GetPersonnalityExcluding(TraitTags tags, TraitTags includedTags)
+    {
+        List<PersonnalityTraits> personnalities = new();
+
+        foreach (var p in personnalityTraits)
+        {
+            if (!p.Tags.Any(tags) && !includedTags.Any(p.ExcludeTags)) personnalities.Add(p);
+        }
+
+        return personnalities;
+    }
+
+    public List<LifestyleTraits> GetLifestyleExcluding(TraitTags tags, TraitTags includedTags)
+    {
+        List<LifestyleTraits> lifestyles = new();
+
+        foreach (var l in lifestyleTraits)
+        {
+            if (!l.Tags.Any(tags) && !includedTags.Any(l.ExcludeTags)) lifestyles.Add(l);
+        }
+
+        return lifestyles;
+    }
+
+    #endregion
 
     #region Utility
 
@@ -73,7 +125,46 @@ public class TraitsDatabase : ScriptableObject
         return null;
     }
 
-    public void CreateNewData<T>(Category category) where T : Traits
+    public void FillDatabase<T>(Category category) where T : Traits
+    {
+        List<T> datas = GetByCategory<T>(category);
+        string[] names = GetEnumNamesByCategory(category);
+
+        int dataCount = datas.Count;
+        T data;
+
+        for (int i = 0; i < names.Length; i++)
+        {
+            if (dataCount > i) datas[i].SetTraitsValue(i);
+            else
+            {
+                data = CreateNewData<T>(category);
+                data.SetTraitsValue(i);
+            }
+        }
+
+        if (dataCount > names.Length)
+        {
+            for (int i = names.Length; i < datas.Count; i++)
+            {
+                DeleteDataAtIndex<T>(category, i);
+            }
+        }
+    }
+
+    private string[] GetEnumNamesByCategory(Category category)
+    {
+        switch (category)
+        {
+            case Category.JOB: return Enum.GetNames(typeof(Jobs));
+            case Category.STATUS: return Enum.GetNames(typeof(Status));
+            case Category.PERSONNALITY: return Enum.GetNames(typeof(Personalities));
+            case Category.LIFESTYLE: return Enum.GetNames(typeof(LifeStyle));
+        }
+        return null;
+    }
+
+    private T CreateNewData<T>(Category category) where T : Traits
     {
         string path = AssetDatabase.GetAssetPath(this);
 
@@ -95,6 +186,8 @@ public class TraitsDatabase : ScriptableObject
         AssetDatabase.SaveAssets();
 
         Undo.CollapseUndoOperations(undoGroup);
+
+        return data;
     }
     public virtual void DeleteDataAtIndex<T>(Category category, int index) where T : Traits
     {
@@ -157,7 +250,7 @@ public class TraitsDatabase : ScriptableObject
         int newID;
         do
         {
-            newID = Random.Range(1, 100);
+            newID = UnityEngine.Random.Range(1, 100);
         } while (ids.Contains(newID));
 
         return newID;
@@ -170,6 +263,14 @@ public class TraitsDatabase : ScriptableObject
 
 public struct TraitsMix
 {
+    public TraitsMix(JobTraits _job, StatusTraits _status, PersonnalityTraits _perso, LifestyleTraits _lifestyle)
+    {
+        job = _job;
+        status = _status;
+        personnality = _perso;
+        lifestyle = _lifestyle;
+    }
+
     public JobTraits job;
     public StatusTraits status;
     public PersonnalityTraits personnality;

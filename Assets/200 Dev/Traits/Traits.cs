@@ -9,6 +9,7 @@ public abstract class Traits : ScriptableObject
     public int ID => id;
 
     [SerializeField] protected TraitTags tags;
+    public TraitTags Tags => tags;
 
     [Space(10f)]
 
@@ -17,10 +18,13 @@ public abstract class Traits : ScriptableObject
     public List<string> DescriptionTexts => descriptionTexts;
 
     [Header("Exclude")]
-    [SerializeField] private TraitTags excludeTags;
+    [SerializeField] protected TraitTags excludeTags;
+    public TraitTags ExcludeTags => tags;
 
     public virtual void Init(int _id)
     {
         id = _id;
     }
+
+    public abstract void SetTraitsValue(int index);
 }

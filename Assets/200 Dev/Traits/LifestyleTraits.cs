@@ -9,6 +9,12 @@ public class LifestyleTraits : Traits
 
     public LifeStyle Lifestyle => lifestyle;
 
+    public override void SetTraitsValue(int index)
+    {
+        lifestyle = (LifeStyle)index;
+        OnValidate();
+    }
+
     #region Editor
     public override void Init(int _id)
     {

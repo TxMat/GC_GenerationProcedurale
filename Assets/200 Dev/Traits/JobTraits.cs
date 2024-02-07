@@ -14,6 +14,12 @@ public class JobTraits : Traits
 
     public Jobs Job => job;
 
+    public override void SetTraitsValue(int index)
+    {
+        job = (Jobs)index;
+        OnValidate();
+    }
+
     public Sprite GetClothesSprite(bool man)
     {
         return man ? manClothesSprite : womanClothesSprite;

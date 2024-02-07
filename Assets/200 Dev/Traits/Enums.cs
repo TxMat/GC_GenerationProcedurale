@@ -1,4 +1,5 @@
 ﻿using System;
+using static UnityEngine.Rendering.DebugUI;
 
 
 public enum Jobs
@@ -107,6 +108,7 @@ public enum Category
 [Flags]
 public enum TraitTags
 {
+    NONE = 0,
     RICH = 1 << 0,
     POOR = 1 << 1,
     SMART = 1 << 2,
@@ -309,5 +311,24 @@ public static class EnumExtensions
             LifeStyle.CRIMINAL => "Criminal",
             _ => "Unknown"
         };
+    }
+
+
+    public static bool Any(this TraitTags thisTags, TraitTags tags)
+    {
+        return (thisTags & tags) != 0;
+    }
+
+    public static int HammingWeight(this TraitTags tags)
+    {
+        int n = (int)tags;
+        int count = 0;
+        while (n > 0)
+        {           
+            if ((n & 1) == 1)
+                count++;
+            n >>= 1;
+        }
+        return count;
     }
 }

@@ -54,7 +54,7 @@ public class TraitsDatabaseEditor : Editor
         serializedObject.Update();
         SerializedProperty list = serializedObject.FindProperty(propertyName);
 
-        return new ReorderableList(serializedObject, list, true, true, true, true)
+        return new ReorderableList(serializedObject, list, false, true, true, false)
         {
             drawHeaderCallback = (rect) =>
             {
@@ -71,10 +71,10 @@ public class TraitsDatabaseEditor : Editor
                 AddListElement<T>(category, list);
             },
 
-            onRemoveCallback = (list) =>
-            {
-                RemoveListElement<T>(category, list);
-            },
+            //onRemoveCallback = (list) =>
+            //{
+            //    RemoveListElement<T>(category, list);
+            //},
 
             elementHeightCallback = (index) =>
             {
@@ -115,7 +115,8 @@ public class TraitsDatabaseEditor : Editor
 
     protected virtual void AddListElement<T>(Category category, ReorderableList list) where T : Traits
     {
-        database.CreateNewData<T>(category);
+        //database.CreateNewData<T>(category);
+        database.FillDatabase<T>(category);
     }
     protected virtual void RemoveListElement<T>(Category category, ReorderableList list) where T : Traits
     {
