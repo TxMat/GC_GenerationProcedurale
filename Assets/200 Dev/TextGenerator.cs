@@ -6,8 +6,8 @@ namespace _200_Dev
     public static class TextGenerator   
     {
         private static string[] JobsPresentationTemplaete = {
-            "{M_Pronoun} works happily as {job_Pronoun} {1}.",
-            "{M_Pronoun} always wanted to be {job_Pronoun} {1} since {m_Pronoun} was a child.",
+            "{M_Pronoun} works happily as {traits_Pronoun} {1}.",
+            "{M_Pronoun} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
         };
         
         private static string[] StatusPresentationTemplaete = {
@@ -15,7 +15,7 @@ namespace _200_Dev
         };
         
         private static string[] PersonalityPresentationTemplaete = {
-            "{M_Pronoun} can be described as {1} person. Some say that this is {m_Pronoun} best quality.",
+            "{M_Pronoun} can be described as {traits_Pronoun} {1} person. Some say that this is {m_Pronoun} best quality.",
             "{M_Pronoun} is a {1} person. This is what makes {m_Pronoun} unique.",
         };
 
@@ -48,15 +48,15 @@ namespace _200_Dev
             return text;
         }
 
-        private static string GenerateTemplatedText(string jobName, bool isMale, IReadOnlyList<string> jobsPresentationTemplate)
+        private static string GenerateTemplatedText(string traitsName, bool isMale, IReadOnlyList<string> jobsPresentationTemplate)
         {
             const string vowels = "aeiou";
             var text = "";
             text += jobsPresentationTemplate[UnityEngine.Random.Range(0, jobsPresentationTemplate.Count)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
-            text = text.Replace("{job_Pronoun}", vowels.Contains(jobName[0].ToString().ToLower()) ? "an" : "a");
-            text = text.Replace("{1}", jobName);
+            text = text.Replace("{traits_Pronoun}", vowels.Contains(traitsName[0].ToString().ToLower()) ? "an" : "a");
+            text = text.Replace("{1}", traitsName);
             return text;
         }
     }
