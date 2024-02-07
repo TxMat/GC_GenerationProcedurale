@@ -126,6 +126,7 @@ public class NPCGenerator : MonoBehaviour
             case Category.PERSONNALITY: traits = database.GetPersonnalityExcluding(excludedTags, tags).Cast<T>().ToList(); break;
             case Category.LIFESTYLE: traits = database.GetLifestyleExcluding(excludedTags, tags).Cast<T>().ToList(); break;
         }
+        if (traits.Count == 0) Debug.LogError("All traits excluded");
 
         List<T> ponderateTraits = new();
 
@@ -139,6 +140,7 @@ public class NPCGenerator : MonoBehaviour
             }
         }
 
+        if (ponderateTraits.Count == 0) Debug.LogError("No traits compatible");
         return ponderateTraits[Random.Range(0, ponderateTraits.Count)];
     }
 
