@@ -19,7 +19,7 @@ public abstract class Traits : ScriptableObject
 
     [Header("Exclude")]
     [SerializeField] protected TraitTags excludeTags;
-    public TraitTags ExcludeTags => tags;
+    public TraitTags ExcludeTags => excludeTags;
 
     public virtual void Init(int _id)
     {
