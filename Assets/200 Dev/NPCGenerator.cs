@@ -11,6 +11,9 @@ public class NPCGenerator : MonoBehaviour
     [Header("Database")]
     [SerializeField] private TraitsDatabase database;
 
+    [Header("References")]
+    [SerializeField] private UIManager uiManager;
+
     #endregion
 
     #region Seeding
@@ -29,6 +32,11 @@ public class NPCGenerator : MonoBehaviour
         }
     }
 
+    public void InitRandom()
+    {
+        Random.InitState(seed);
+    }
+
     #endregion
 
     #region Initialization
@@ -39,16 +47,27 @@ public class NPCGenerator : MonoBehaviour
         InitRandom();
     }
 
-    public void InitRandom()
+    private void Start()
     {
-        Random.InitState(seed);
+        GenerateNPCs();
     }
 
     #endregion
 
     #region Generation
 
-    public NPC GenerateRandom()
+    private void GenerateNPCs()
+    {
+        List<NPC> npcs = new();
+        for (int i = 0; i < 6; i++)
+        {
+            npcs.Add(GenerateRandom());
+        }
+
+        uiManager.SetNPCs(npcs);
+    }
+
+    private NPC GenerateRandom()
     {
         // Init
         TraitTags tags;
