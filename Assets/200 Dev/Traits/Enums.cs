@@ -121,6 +121,21 @@ public enum TraitTags
     BAD = 1 << 9,
 }
 
+public enum PersonalityTags
+{
+    GOOD,
+    BAD,
+    NEUTRAL,
+}
+
+public enum StatusTags
+{
+    ROMANTIC,
+    PHYSICAL,
+    CHILDHOOD,
+    EDUCATION,
+}
+
 public static class EnumExtensions
 {
     public static string Name(this Jobs job)
