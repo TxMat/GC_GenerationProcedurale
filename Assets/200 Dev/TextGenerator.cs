@@ -2,31 +2,25 @@
 
 namespace _200_Dev
 {
-    public static class TextGenerator
+    public static class TextGenerator   
     {
-        private static String[] JobsPresentationTemplaete = {
-            "{M_Pronoun} is a {1}.",
-            "{M_Pronoun} is a {1} by profession.",
-            "{M_Pronoun} always wanted to be a {1} since {m_Pronoun} was a child.",
-            "{M_Pronoun} is a {1} by trade.",
-            "{M_Pronoun} is a {1} by vocation.",
+        private static string[] JobsPresentationTemplaete = {
+            "{M_Pronoun} works happily as {job_Pronoun} {1}.",
+            "{M_Pronoun} always wanted to be {job_Pronoun} {1} since {m_Pronoun} was a child.",
         };
         
-        private static String[] StatusPresentationTemplaete = {
+        private static string[] StatusPresentationTemplaete = {
             "{M_Pronoun} is {1}.",
-            "{M_Pronoun} is {1} by nature.",
-            "{M_Pronoun} is {1} by temperament.",
-            "{M_Pronoun} is {1} by character.",
-            "{M_Pronoun} is {1} by personality.",
         };
         
-        private static String[] PersonalityPresentationTemplaete = {
-            "{1} by nature, tkt",
+        private static string[] PersonalityPresentationTemplaete = {
+            "{M_Pronoun} can be described as {1} person. Some say that this is {m_Pronoun} best quality.",
+            "{M_Pronoun} is a {1} person. This is what makes {m_Pronoun} unique.",
         };
 
         public static string GenerateText(TraitsMix traits, bool isMale)
         {
-            string text = "";
+            var text = "";
 
             text += GenerateTemplatedText(traits.job.name, isMale, JobsPresentationTemplaete);
             
@@ -44,7 +38,7 @@ namespace _200_Dev
 
         private static string GeneratePredifinedText(Traits traits, bool isMale)
         {
-            string text = "";
+            var text = "";
             
             text += traits.DescriptionTexts[UnityEngine.Random.Range(0, traits.DescriptionTexts.Count)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
@@ -55,10 +49,12 @@ namespace _200_Dev
 
         private static string GenerateTemplatedText(string jobName, bool isMale, string[] jobsPresentationTemplaete)
         {
-            string text = "";
+            const string vowels = "aeiou";
+            var text = "";
             text += jobsPresentationTemplaete[UnityEngine.Random.Range(0, jobsPresentationTemplaete.Length)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
+            text = text.Replace("{job_Pronoun}", vowels.Contains(jobName[0].ToString().ToLower()) ? "an" : "a");
             text = text.Replace("{1}", jobName);
             return text;
         }
