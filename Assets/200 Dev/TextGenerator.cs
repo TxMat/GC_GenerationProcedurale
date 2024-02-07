@@ -15,6 +15,23 @@ namespace _200_Dev
             "{m_Pronoun} is {1}.",
         };
         
+        private static readonly Dictionary<int, List<string>> StatusSuffix = new()
+        {
+            { (int) StatusTags.ROMANTIC, new List<string> {
+                "{m_Pronoun} is {1} for more than 5 years now.",
+            }},
+            { (int) StatusTags.PHYSICAL, new List<string> {
+                "Due to {m_Pronoun} physical condition, {m_Pronoun} can't do some activities.",
+            }},
+            { (int) StatusTags.CHILDHOOD, new List<string> {
+                "This is something that {m_Pronoun} has been dealing with since {m_Pronoun} was a child.",
+            }},
+            { (int) StatusTags.EDUCATION, new List<string> {
+                "This is something that {m_Pronoun} has been dealing with since {m_Pronoun} was a child.",
+            }},
+        };
+
+        
         private static string[] PersonalityPresentationTemplate = {
             "{m_Pronoun} can be described as {traits_Pronoun} {1} person.",
             "{m_Pronoun} is {traits_Pronoun} {1} person.",
@@ -44,7 +61,7 @@ namespace _200_Dev
             text += GenerateTemplatedText(traits.job, isMale, JobsPresentationTemplate);
             
             
-            text += GenerateTemplatedText(traits.status, isMale, StatusPresentationTemplate);
+            text += GenerateTemplatedText(traits.status, isMale, StatusPresentationTemplate, StatusSuffix);
             
             
             text += GenerateTemplatedText(traits.personnality, isMale, PersonalityPresentationTemplate, PersonalitySuffix);

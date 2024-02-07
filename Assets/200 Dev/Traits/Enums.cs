@@ -76,16 +76,11 @@ public enum Status
     ANALPHABET,
     INJURED,
     DISABLED,
-}
-
-public enum RomanticStatus
-{
     SINGLE,
     MARRIED,
     DIVORCED,
     WIDOW,
 }
-
 public enum LifeStyle
 {
     VOYAGER,
@@ -225,27 +220,27 @@ public static class EnumExtensions
         };
     }
     
-    public static TraitTags Tags(this Personalities personality)
+    public static PersonalityTags Tags(this Personalities personality)
     {
         return personality switch
         {
-            Personalities.ADVENTUROUS => TraitTags.GOOD,
-            Personalities.SHY => TraitTags.POOR,
-            Personalities.CHARISMATIC => TraitTags.SMART,
-            Personalities.OPTIMISTIC => TraitTags.GOOD,
-            Personalities.PESSIMISTIC => TraitTags.BAD,
-            Personalities.ALTRUISTIC => TraitTags.GOOD,
-            Personalities.EGOTIST => TraitTags.BAD,
-            Personalities.ANGRY => TraitTags.DANGEROUS,
-            Personalities.DREAMER => TraitTags.GOOD,
-            Personalities.LAZY => TraitTags.POOR,
-            Personalities.INTELLIGENT => TraitTags.SMART,
-            Personalities.STUPID => TraitTags.UNEDUCATED,
-            Personalities.COWARD => TraitTags.BAD,
-            Personalities.BRAVE => TraitTags.GOOD,
-            Personalities.SADISTIC => TraitTags.BAD | TraitTags.DANGEROUS,
-            Personalities.LIAR => TraitTags.BAD,
-            _ => TraitTags.GOOD
+            Personalities.ADVENTUROUS => PersonalityTags.GOOD,
+            Personalities.SHY => PersonalityTags.NEUTRAL,
+            Personalities.CHARISMATIC => PersonalityTags.GOOD,
+            Personalities.OPTIMISTIC => PersonalityTags.GOOD,
+            Personalities.PESSIMISTIC => PersonalityTags.BAD,
+            Personalities.ALTRUISTIC => PersonalityTags.GOOD,
+            Personalities.EGOTIST => PersonalityTags.BAD,
+            Personalities.ANGRY => PersonalityTags.BAD,
+            Personalities.DREAMER => PersonalityTags.NEUTRAL,
+            Personalities.LAZY => PersonalityTags.BAD,
+            Personalities.INTELLIGENT => PersonalityTags.GOOD,
+            Personalities.STUPID => PersonalityTags.BAD,
+            Personalities.COWARD => PersonalityTags.BAD,
+            Personalities.BRAVE => PersonalityTags.GOOD,
+            Personalities.SADISTIC => PersonalityTags.BAD,
+            Personalities.LIAR => PersonalityTags.BAD,
+            _ => PersonalityTags.NEUTRAL
         };
     }
 
@@ -258,35 +253,31 @@ public static class EnumExtensions
             Status.ANALPHABET => "An-alphabet",
             Status.INJURED => "Injured",
             Status.DISABLED => "Disabled",
+            Status.SINGLE => "Single",
+            Status.MARRIED => "Married",
+            Status.DIVORCED => "Divorced",
+            Status.WIDOW => "Widow",
             _ => "Unknown"
         };
     }
     
-    public static TraitTags Tags(this Status status)
+    public static StatusTags Tags(this Status status)
     {
         return status switch
         {
-            Status.ORPHAN => TraitTags.POOR,
-            Status.EDUCATED => TraitTags.SMART,
-            Status.ANALPHABET => TraitTags.UNEDUCATED,
-            Status.INJURED => TraitTags.DISABLED,
-            Status.DISABLED => TraitTags.DISABLED,
-            _ => TraitTags.RICH
+            Status.ORPHAN => StatusTags.CHILDHOOD,
+            Status.EDUCATED => StatusTags.EDUCATION,
+            Status.ANALPHABET => StatusTags.EDUCATION,
+            Status.INJURED => StatusTags.PHYSICAL,
+            Status.DISABLED => StatusTags.PHYSICAL,
+            Status.SINGLE => StatusTags.ROMANTIC,
+            Status.MARRIED => StatusTags.ROMANTIC,
+            Status.DIVORCED => StatusTags.ROMANTIC,
+            Status.WIDOW => StatusTags.ROMANTIC,
+            _ => StatusTags.CHILDHOOD
         };
     }
-    
-    public static string Name(this RomanticStatus romanticStatus)
-    {
-        return romanticStatus switch
-        {
-            RomanticStatus.SINGLE => "Single",
-            RomanticStatus.MARRIED => "Married",
-            RomanticStatus.DIVORCED => "Divorced",
-            RomanticStatus.WIDOW => "Widow",
-            _ => "Unknown"
-        };
-    }
-    
+
     public static string Name(this LifeStyle lifeStyle)
     {
         return lifeStyle switch
