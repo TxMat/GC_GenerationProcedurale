@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: LT_COUNTRY_HABITANT
   m_EditorClassIdentifier: 
   id: 78
-  tags: 0
+  tags: 2154
   descriptionTexts:
   - 
   - 
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: LT_GAMER
   m_EditorClassIdentifier: 
   id: 58
-  tags: 0
+  tags: 66
   descriptionTexts:
   - 
   - 
@@ -127,6 +127,23 @@ MonoBehaviour:
   job: 12
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
+--- !u!114 &-4163782983110621746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_DIVORCED
+  m_EditorClassIdentifier: 
+  id: 97
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 7
 --- !u!114 &-3986002696836049833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,7 +210,7 @@ MonoBehaviour:
   m_Name: LT_ART_LOVER
   m_EditorClassIdentifier: 
   id: 7
-  tags: 0
+  tags: 111
   descriptionTexts:
   - 
   - 
@@ -431,6 +448,10 @@ MonoBehaviour:
   - {fileID: 5322455486896126184}
   - {fileID: 4258288603175830966}
   - {fileID: 8537722532867734977}
+  - {fileID: 6257462847648810226}
+  - {fileID: 1754639534946721387}
+  - {fileID: -4163782983110621746}
+  - {fileID: 3170876998521849776}
   personnalityTraits:
   - {fileID: -6107457204954828267}
   - {fileID: 7238862993694647193}
@@ -505,7 +526,7 @@ MonoBehaviour:
   m_Name: LT_VOYAGER
   m_EditorClassIdentifier: 
   id: 25
-  tags: 0
+  tags: 104
   descriptionTexts:
   - 
   - 
@@ -544,7 +565,7 @@ MonoBehaviour:
   m_Name: LT_EXCENTRIC
   m_EditorClassIdentifier: 
   id: 33
-  tags: 0
+  tags: 120
   descriptionTexts:
   - 
   - 
@@ -570,6 +591,40 @@ MonoBehaviour:
   job: 7
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
+--- !u!114 &1754639534946721387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_MARRIED
+  m_EditorClassIdentifier: 
+  id: 11
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 6
+--- !u!114 &3170876998521849776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_WIDOW
+  m_EditorClassIdentifier: 
+  id: 58
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 8
 --- !u!114 &3576874981103260837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -672,7 +727,7 @@ MonoBehaviour:
   m_Name: LT_CRIMINAL
   m_EditorClassIdentifier: 
   id: 54
-  tags: 0
+  tags: 2064
   descriptionTexts:
   - 
   - 
@@ -713,6 +768,23 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 1
+--- !u!114 &6257462847648810226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28c8f35cf9169444daab6c8c7bf1e0c8, type: 3}
+  m_Name: ST_SINGLE
+  m_EditorClassIdentifier: 
+  id: 59
+  tags: 0
+  descriptionTexts: []
+  excludeTags: 0
+  status: 5
 --- !u!114 &6893486084799539887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,7 +866,7 @@ MonoBehaviour:
   m_Name: LT_CITY_HABITANT
   m_EditorClassIdentifier: 
   id: 73
-  tags: 0
+  tags: 1035
   descriptionTexts:
   - 
   - 
