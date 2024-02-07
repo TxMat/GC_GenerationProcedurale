@@ -114,7 +114,7 @@ public enum TraitTags
     DANGEROUS = 1 << 4,
     ARTISTIC = 1 << 5,
     STRANGE = 1 << 6,
-    DUMB = 1 << 7,
+    UNEDUCATED = 1 << 7,
     GOOD = 1 << 8,
     BAD = 1 << 9,
 }
@@ -147,29 +147,29 @@ public static class EnumExtensions
         };
     }
     
-    public static TraitTags[] Tags(this Jobs job)
+    public static TraitTags Tags(this Jobs job)
     {
         return job switch
         {
-            Jobs.MEDIC => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.PAINTER => new TraitTags[] { TraitTags.ARTISTIC, TraitTags.POOR },
-            Jobs.ENGINEER => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.STUDENT => new TraitTags[] { TraitTags.SMART },
-            Jobs.FARMER => new TraitTags[] { TraitTags.POOR },
-            Jobs.LAWYER => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.MUSICIAN => new TraitTags[] { TraitTags.ARTISTIC, TraitTags.POOR },
-            Jobs.SCIENTIST => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.SOLDIER => new TraitTags[] { TraitTags.DANGEROUS },
-            Jobs.ARTISAN => new TraitTags[] { TraitTags.ARTISTIC, TraitTags.POOR },
-            Jobs.VETERAN => new TraitTags[] { TraitTags.DANGEROUS },
-            Jobs.TEACHER => new TraitTags[] { TraitTags.SMART },
-            Jobs.PLUMBER => new TraitTags[] { TraitTags.POOR },
-            Jobs.CHEMIST => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.COMPUTER_SCIENTIST => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.LIBRARIAN => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.ARCHITECT => new TraitTags[] { TraitTags.SMART, TraitTags.RICH },
-            Jobs.UNEMPLOYED => new TraitTags[] { TraitTags.POOR },
-            _ => new TraitTags[] { }
+            Jobs.MEDIC => TraitTags.SMART | TraitTags.RICH,
+            Jobs.PAINTER => TraitTags.ARTISTIC | TraitTags.POOR,
+            Jobs.ENGINEER => TraitTags.SMART | TraitTags.RICH,
+            Jobs.STUDENT => TraitTags.SMART,
+            Jobs.FARMER => TraitTags.POOR | TraitTags.UNEDUCATED,
+            Jobs.LAWYER => TraitTags.SMART | TraitTags.RICH,
+            Jobs.MUSICIAN => TraitTags.ARTISTIC | TraitTags.POOR,
+            Jobs.SCIENTIST => TraitTags.SMART | TraitTags.RICH,
+            Jobs.SOLDIER => TraitTags.DANGEROUS,
+            Jobs.ARTISAN => TraitTags.ARTISTIC | TraitTags.POOR,
+            Jobs.VETERAN => TraitTags.DANGEROUS,
+            Jobs.TEACHER => TraitTags.SMART | TraitTags.RICH,
+            Jobs.PLUMBER => TraitTags.POOR,
+            Jobs.CHEMIST => TraitTags.SMART | TraitTags.RICH,
+            Jobs.COMPUTER_SCIENTIST => TraitTags.SMART | TraitTags.RICH,
+            Jobs.LIBRARIAN => TraitTags.SMART | TraitTags.RICH,
+            Jobs.ARCHITECT => TraitTags.SMART | TraitTags.RICH,
+            Jobs.UNEMPLOYED => TraitTags.POOR,
+            _ => TraitTags.RICH
         };
     }
 
@@ -226,35 +226,35 @@ public static class EnumExtensions
         };
     }
     
-    public static TraitTags[] Tags(this Personalities personality)
+    public static TraitTags Tags(this Personalities personality)
     {
         return personality switch
         {
-            Personalities.ADVENTUROUS => new TraitTags[] { TraitTags.GOOD },
-            Personalities.SHY => new TraitTags[] { TraitTags.GOOD },
-            Personalities.CHARISMATIC => new TraitTags[] { TraitTags.GOOD },
-            Personalities.OPTIMISTIC => new TraitTags[] { TraitTags.GOOD },
-            Personalities.PESSIMISTIC => new TraitTags[] { TraitTags.POOR },
-            Personalities.ALTRUISTIC => new TraitTags[] { TraitTags.GOOD },
-            Personalities.EGOTIST => new TraitTags[] { TraitTags.BAD },
-            Personalities.ANGRY => new TraitTags[] { TraitTags.DANGEROUS },
-            Personalities.CALM => new TraitTags[] { TraitTags.RICH },
-            Personalities.REALIST => new TraitTags[] { TraitTags.RICH },
-            Personalities.DREAMER => new TraitTags[] { TraitTags.POOR },
-            Personalities.LAZY => new TraitTags[] { TraitTags.BAD },
-            Personalities.HARD_WORKER => new TraitTags[] { TraitTags.GOOD },
-            Personalities.HUMBLE => new TraitTags[] { TraitTags.GOOD },
-            Personalities.INTELLIGENT => new TraitTags[] { TraitTags.SMART },
-            Personalities.STUPID => new TraitTags[] { TraitTags.DUMB },
-            Personalities.COWARD => new TraitTags[] { TraitTags.DUMB },
-            Personalities.BRAVE => new TraitTags[] { TraitTags.GOOD },
-            Personalities.SENSITIVE => new TraitTags[] { TraitTags.GOOD },
-            Personalities.INSENSITIVE => new TraitTags[] { TraitTags.DANGEROUS, TraitTags.BAD },
-            Personalities.SADISTIC => new TraitTags[] { TraitTags.DANGEROUS, TraitTags.BAD },
-            Personalities.HONEST => new TraitTags[] { TraitTags.GOOD },
-            Personalities.LIAR => new TraitTags[] { TraitTags.BAD },
-            Personalities.NAIVE => new TraitTags[] { TraitTags.DUMB },
-            _ => new TraitTags[] { }
+            Personalities.ADVENTUROUS => TraitTags.GOOD,
+            Personalities.SHY => TraitTags.POOR,
+            Personalities.CHARISMATIC => TraitTags.SMART,
+            Personalities.OPTIMISTIC => TraitTags.GOOD,
+            Personalities.PESSIMISTIC => TraitTags.BAD,
+            Personalities.ALTRUISTIC => TraitTags.GOOD,
+            Personalities.EGOTIST => TraitTags.BAD,
+            Personalities.ANGRY => TraitTags.DANGEROUS,
+            Personalities.CALM => TraitTags.GOOD,
+            Personalities.REALIST => TraitTags.SMART,
+            Personalities.DREAMER => TraitTags.GOOD,
+            Personalities.LAZY => TraitTags.POOR,
+            Personalities.HARD_WORKER => TraitTags.GOOD,
+            Personalities.HUMBLE => TraitTags.GOOD,
+            Personalities.INTELLIGENT => TraitTags.SMART,
+            Personalities.STUPID => TraitTags.UNEDUCATED,
+            Personalities.COWARD => TraitTags.BAD,
+            Personalities.BRAVE => TraitTags.GOOD,
+            Personalities.SENSITIVE => TraitTags.GOOD,
+            Personalities.INSENSITIVE => TraitTags.BAD | TraitTags.DANGEROUS,
+            Personalities.SADISTIC => TraitTags.BAD | TraitTags.DANGEROUS,
+            Personalities.HONEST => TraitTags.GOOD,
+            Personalities.LIAR => TraitTags.BAD,
+            Personalities.NAIVE => TraitTags.UNEDUCATED,
+            _ => TraitTags.GOOD
         };
     }
 
