@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace _200_Dev
 {
@@ -50,6 +51,10 @@ namespace _200_Dev
 
 
             text += GeneratePredefinedText(traits.lifestyle, isMale);
+            
+            // Correct Capitalization
+            Regex.Replace(text, @"(?<=\. )(.*?)(?=\b)", m => char.ToUpper(m.Value[0]) + m.Value.Substring(1));
+            text = char.ToUpper(text[0]) + text.Substring(1);
 
             return text;
         }
