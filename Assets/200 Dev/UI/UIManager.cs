@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private NPCGenerator npcGenerator;
+
     [Header("UI Manager")]
     [SerializeField] private List<NPCButton> npcButtons;
 
@@ -80,8 +83,12 @@ public class UIManager : MonoBehaviour
 
     #region Selection
 
+    public NPC CurrentNPC { get; private set; }
+
     private void OnSelectNPC(NPC npc)
     {
+        CurrentNPC = npc;
+
         jobDropdown.SetValueWithoutNotify((int)npc.TraitsMix.job.Job);
         statusDropdown.SetValueWithoutNotify((int)npc.TraitsMix.status.Status);
         personnalityDropdown.SetValueWithoutNotify((int)npc.TraitsMix.personnality.Personality);
@@ -90,6 +97,35 @@ public class UIManager : MonoBehaviour
         summaryText.text = npc.Summary;
 
         uiPortrait.Generate(npc.Portrait);
+    }
+
+    #endregion
+
+    #region NPC Modification
+
+    public void OnChangeJob(int newJobIndex)
+    {
+        NPC newNPC = npcGenerator.RegenerateWithNewJob(CurrentNPC, newJobIndex);
+
+        OnSelectNPC(newNPC);
+    }
+    public void OnChangeStatus(int newStatusIndex)
+    {
+        NPC newNPC = npcGenerator.RegenerateWithNewStatus(CurrentNPC, newStatusIndex);
+
+        OnSelectNPC(newNPC);
+    }
+    public void OnChangePersonnality(int newPersoIndex)
+    {
+        NPC newNPC = npcGenerator.RegenerateWithNewPersonnality(CurrentNPC, newPersoIndex);
+
+        OnSelectNPC(newNPC);
+    }
+    public void OnChangeLifestyle(int newLifestyleIndex)
+    {
+        NPC newNPC = npcGenerator.RegenerateWithNewLifestyle(CurrentNPC, newLifestyleIndex);
+
+        OnSelectNPC(newNPC);
     }
 
     #endregion

@@ -70,8 +70,18 @@ public class PortraitGenerator : MonoBehaviour
             Instance.GenerateSkinColor(),
             Instance.GenerateHairSprite(man),
             Instance.GenerateHairColor(),
-            traitsMix.job.GetClothesSprite(man)
-            );
+            traitsMix.job.GetClothesSprite(man));
+    }
+
+    public static Portrait UpdatePortrait(bool man, Portrait basePortrait, TraitsMix traitsMix)
+    {
+        if (Instance == null) return default;
+
+        return new Portrait(
+            basePortrait.skinColor,
+            basePortrait.hairSprite,
+            basePortrait.hairColor,
+            traitsMix.job.GetClothesSprite(man));
     }
 
     private Color GenerateSkinColor()

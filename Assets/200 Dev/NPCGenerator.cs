@@ -143,4 +143,225 @@ public class NPCGenerator : MonoBehaviour
     }
 
     #endregion
+
+    #region Regeneration
+
+    public NPC RegenerateWithNewJob(NPC npc, int newJobIndex)
+    {
+        JobTraits job = database.GetTraitByIndex<JobTraits>(Category.JOB, newJobIndex);
+        StatusTraits status = npc.TraitsMix.status;
+        PersonnalityTraits personnality = npc.TraitsMix.personnality;
+        LifestyleTraits lifestyle = npc.TraitsMix.lifestyle;
+
+        TraitsMix traitsMix;
+        Portrait portrait;
+        string summary;
+
+        TraitTags tags = job.Tags;
+        TraitTags excludedTags = job.ExcludeTags;
+
+        // Status Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.status))
+        {
+            status = GetCoherentTraits<StatusTraits>(Category.STATUS, 
+                tags | personnality.Tags | lifestyle.Tags, 
+                excludedTags | personnality.ExcludeTags | lifestyle.ExcludeTags);
+        }
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+        
+        // Personnality Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.personnality))
+        {
+            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY,
+                tags | lifestyle.Tags,
+                excludedTags | lifestyle.ExcludeTags);
+        }
+        tags |= personnality.Tags;
+        excludedTags |= personnality.ExcludeTags;
+
+        // Lifestyle Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle))
+        {
+            lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+        }
+
+        // Create Traits Mix
+        traitsMix = new(job, status, personnality, lifestyle);
+
+        // Create Portrait
+        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
+
+        // Create Summary
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+
+        // Return NPC
+        return new NPC(npc.Man, traitsMix, portrait, summary);
+    }
+
+    public NPC RegenerateWithNewStatus(NPC npc, int newStatusIndex)
+    {
+        JobTraits job = npc.TraitsMix.job;
+        StatusTraits status = database.GetTraitByIndex<StatusTraits>(Category.STATUS, newStatusIndex);
+        PersonnalityTraits personnality = npc.TraitsMix.personnality;
+        LifestyleTraits lifestyle = npc.TraitsMix.lifestyle;
+
+        TraitsMix traitsMix;
+        Portrait portrait;
+        string summary;
+
+        TraitTags tags = status.Tags;
+        TraitTags excludedTags = status.ExcludeTags;
+
+        // Job Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.job))
+        {
+            job = GetCoherentTraits<JobTraits>(Category.JOB,
+                tags | personnality.Tags | lifestyle.Tags,
+                excludedTags | personnality.ExcludeTags | lifestyle.ExcludeTags);
+        }
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+
+        // Personnality Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.personnality))
+        {
+            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY,
+                tags | lifestyle.Tags,
+                excludedTags | lifestyle.ExcludeTags);
+        }
+        tags |= personnality.Tags;
+        excludedTags |= personnality.ExcludeTags;
+
+        // Lifestyle Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle))
+        {
+            lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+        }
+
+        // Create Traits Mix
+        traitsMix = new(job, status, personnality, lifestyle);
+
+        // Create Portrait
+        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
+
+        // Create Summary
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+
+        // Return NPC
+        return new NPC(npc.Man, traitsMix, portrait, summary);
+    }
+
+    public NPC RegenerateWithNewPersonnality(NPC npc, int newPersoIndex)
+    {
+        JobTraits job = npc.TraitsMix.job;
+        StatusTraits status = npc.TraitsMix.status;
+        PersonnalityTraits personnality = database.GetTraitByIndex<PersonnalityTraits>(Category.PERSONNALITY, newPersoIndex);
+        LifestyleTraits lifestyle = npc.TraitsMix.lifestyle;
+
+        TraitsMix traitsMix;
+        Portrait portrait;
+        string summary;
+
+        TraitTags tags = personnality.Tags;
+        TraitTags excludedTags = personnality.ExcludeTags;
+
+        // Job Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.job))
+        {
+            job = GetCoherentTraits<JobTraits>(Category.JOB,
+                tags | status.Tags | lifestyle.Tags,
+                excludedTags | status.ExcludeTags | lifestyle.ExcludeTags);
+        }
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+
+        // Status Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.status))
+        {
+            status = GetCoherentTraits<StatusTraits>(Category.STATUS,
+                tags | lifestyle.Tags,
+                excludedTags | lifestyle.ExcludeTags);
+        }
+        tags |= personnality.Tags;
+        excludedTags |= personnality.ExcludeTags;
+
+        // Lifestyle Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.lifestyle))
+        {
+            lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+        }
+
+        // Create Traits Mix
+        traitsMix = new(job, status, personnality, lifestyle);
+
+        // Create Portrait
+        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
+
+        // Create Summary
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+
+        // Return NPC
+        return new NPC(npc.Man, traitsMix, portrait, summary);
+    }
+
+    public NPC RegenerateWithNewLifestyle(NPC npc, int newLifestyleIndex)
+    {
+        JobTraits job = npc.TraitsMix.job;
+        StatusTraits status = npc.TraitsMix.status;
+        PersonnalityTraits personnality = npc.TraitsMix.personnality;
+        LifestyleTraits lifestyle = database.GetTraitByIndex<LifestyleTraits>(Category.LIFESTYLE, newLifestyleIndex);
+
+        TraitsMix traitsMix;
+        Portrait portrait;
+        string summary;
+
+        TraitTags tags = lifestyle.Tags;
+        TraitTags excludedTags = lifestyle.ExcludeTags;
+
+        // Job Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.job))
+        {
+            job = GetCoherentTraits<JobTraits>(Category.JOB,
+                tags | status.Tags | personnality.Tags,
+                excludedTags | status.ExcludeTags | personnality.ExcludeTags);
+        }
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+
+        // Status Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.status))
+        {
+            status = GetCoherentTraits<StatusTraits>(Category.STATUS,
+                tags | lifestyle.Tags,
+                excludedTags | lifestyle.ExcludeTags);
+        }
+        tags |= personnality.Tags;
+        excludedTags |= personnality.ExcludeTags;
+
+        // Personnality Compatibility
+        if (!AreCompatible(tags, excludedTags, npc.TraitsMix.personnality))
+        {
+            personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+        }
+
+        // Create Traits Mix
+        traitsMix = new(job, status, personnality, lifestyle);
+
+        // Create Portrait
+        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
+
+        // Create Summary
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+
+        // Return NPC
+        return new NPC(npc.Man, traitsMix, portrait, summary);
+    }
+
+    private bool AreCompatible(TraitTags tags, TraitTags excludedTags, Traits trait2)
+    {
+        return !excludedTags.Any(trait2.Tags) && !trait2.ExcludeTags.Any(tags);
+    }
+
+    #endregion
 }

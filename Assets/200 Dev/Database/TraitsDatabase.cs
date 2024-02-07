@@ -9,15 +9,28 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "TraitsDatabase", menuName = "Traits Database")]
 public class TraitsDatabase : ScriptableObject
 {
-    public List<JobTraits> jobTraits;
+    [SerializeField] private List<JobTraits> jobTraits = new();
 
-    public List<StatusTraits> statusTraits = new();
+    [SerializeField] private List<StatusTraits> statusTraits = new();
 
-    public List<PersonnalityTraits> personnalityTraits = new();
+    [SerializeField] private List<PersonnalityTraits> personnalityTraits = new();
 
-    public List<LifestyleTraits> lifestyleTraits = new();
+    [SerializeField] private List<LifestyleTraits> lifestyleTraits = new();
 
     #region Accessors
+
+    public T GetTraitByIndex<T>(Category category, int index) where T : Traits
+    {
+        switch (category)
+        {
+            case Category.JOB: return jobTraits[index] as T; 
+            case Category.STATUS: return statusTraits[index] as T;
+            case Category.PERSONNALITY: return personnalityTraits[index] as T;
+            case Category.LIFESTYLE: return lifestyleTraits[index] as T;
+        }
+        return null;
+    }
+
 
     public List<JobTraits> GetJobExcluding(TraitTags tags, TraitTags includedTags)
     {
