@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace _200_Dev
 {
@@ -31,12 +32,12 @@ namespace _200_Dev
             text += GenerateTemplatedText(traits.personnality.name, isMale, PersonalityPresentationTemplaete);
 
 
-            text += GeneratePredifinedText(traits.lifestyle, isMale);
+            text += GeneratePredefinedText(traits.lifestyle, isMale);
 
             return text;
         }
 
-        private static string GeneratePredifinedText(Traits traits, bool isMale)
+        private static string GeneratePredefinedText(Traits traits, bool isMale)
         {
             var text = "";
             
@@ -47,11 +48,11 @@ namespace _200_Dev
             return text;
         }
 
-        private static string GenerateTemplatedText(string jobName, bool isMale, string[] jobsPresentationTemplaete)
+        private static string GenerateTemplatedText(string jobName, bool isMale, IReadOnlyList<string> jobsPresentationTemplate)
         {
             const string vowels = "aeiou";
             var text = "";
-            text += jobsPresentationTemplaete[UnityEngine.Random.Range(0, jobsPresentationTemplaete.Length)];
+            text += jobsPresentationTemplate[UnityEngine.Random.Range(0, jobsPresentationTemplate.Count)];
             text = text.Replace("{M_Pronoun}", isMale ? "He" : "She");
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
             text = text.Replace("{job_Pronoun}", vowels.Contains(jobName[0].ToString().ToLower()) ? "an" : "a");
