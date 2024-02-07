@@ -27,4 +27,7 @@ public abstract class Traits : ScriptableObject
     }
 
     public abstract void SetTraitsValue(int index);
+
+    public abstract string Name { get; }
+    public abstract int TextTags { get; }
 }

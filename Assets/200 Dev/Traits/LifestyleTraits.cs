@@ -15,6 +15,9 @@ public class LifestyleTraits : Traits
         OnValidate();
     }
 
+    public override string Name => lifestyle.Name();
+    public override int TextTags => 0;
+
     #region Editor
     public override void Init(int _id)
     {

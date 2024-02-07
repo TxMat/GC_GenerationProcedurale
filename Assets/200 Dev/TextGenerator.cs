@@ -94,7 +94,7 @@ namespace _200_Dev
             text += primaryPresentationTemplate[UnityEngine.Random.Range(0, primaryPresentationTemplate.Count)];
             if (suffixes != null)
             {
-                text += suffixes[(int) traits.Tags][UnityEngine.Random.Range(0, suffixes[(int) traits.Tags].Count)];
+                text += suffixes[traits.TextTags][UnityEngine.Random.Range(0, suffixes[traits.TextTags].Count)];
             }
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
             text = text.Replace("{traits_Pronoun}", vowels.Contains(traits.name[0].ToString().ToLower()) ? "an" : "a");

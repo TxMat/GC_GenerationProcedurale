@@ -15,6 +15,9 @@ public class PersonnalityTraits : Traits
         OnValidate();
     }
 
+    public override string Name => personalities.Name();
+    public override int TextTags => (int)personalities.TextTags();
+
     #region Editor
     public override void Init(int _id)
     {

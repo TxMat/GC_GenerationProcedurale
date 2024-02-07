@@ -223,7 +223,7 @@ public static class EnumExtensions
         };
     }
     
-    public static PersonalityTags Tags(this Personalities personality)
+    public static PersonalityTags TextTags(this Personalities personality)
     {
         return personality switch
         {
@@ -264,7 +264,7 @@ public static class EnumExtensions
         };
     }
     
-    public static StatusTags Tags(this Status status)
+    public static StatusTags TextTags(this Status status)
     {
         return status switch
         {

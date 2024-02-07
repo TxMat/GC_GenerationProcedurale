@@ -15,6 +15,9 @@ public class StatusTraits : Traits
         OnValidate();
     }
 
+    public override string Name => status.Name();
+    public override int TextTags => (int)status.TextTags();
+
     #region Editor
     public override void Init(int _id)
     {
