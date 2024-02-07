@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using static UnityEngine.Rendering.DebugUI;
 
 
@@ -106,14 +107,16 @@ public enum TraitTags
     NONE = 0,
     RICH = 1 << 0,
     POOR = 1 << 1,
-    SMART = 1 << 2,
-    DISABLED = 1 << 3,
+    EDUCATED = 1 << 2,
+    HAPPY = 1 << 3,
     DANGEROUS = 1 << 4,
     ARTISTIC = 1 << 5,
     STRANGE = 1 << 6,
     UNEDUCATED = 1 << 7,
     GOOD = 1 << 8,
     BAD = 1 << 9,
+    UNHAPPY = 1 << 10,
+    FREE = 1 << 11,
 }
 
 public enum PersonalityTags
@@ -158,19 +161,19 @@ public static class EnumExtensions
     {
         return job switch
         {
-            Jobs.MEDIC => TraitTags.SMART | TraitTags.RICH,
+            //Jobs.MEDIC => TraitTags.SMART | TraitTags.RICH,
             Jobs.PAINTER => TraitTags.ARTISTIC | TraitTags.POOR,
-            Jobs.ENGINEER => TraitTags.SMART | TraitTags.RICH,
-            Jobs.STUDENT => TraitTags.SMART,
+            //Jobs.ENGINEER => TraitTags.SMART | TraitTags.RICH,
+            //Jobs.STUDENT => TraitTags.SMART,
             Jobs.FARMER => TraitTags.POOR | TraitTags.UNEDUCATED,
-            Jobs.LAWYER => TraitTags.SMART | TraitTags.RICH,
+            //Jobs.LAWYER => TraitTags.SMART | TraitTags.RICH,
             Jobs.MUSICIAN => TraitTags.ARTISTIC | TraitTags.POOR,
             Jobs.SOLDIER => TraitTags.DANGEROUS,
             Jobs.ARTISAN => TraitTags.ARTISTIC | TraitTags.POOR,
             Jobs.PLUMBER => TraitTags.POOR,
-            Jobs.CHEMIST => TraitTags.SMART | TraitTags.RICH,
-            Jobs.LIBRARIAN => TraitTags.SMART | TraitTags.RICH,
-            Jobs.ARCHITECT => TraitTags.SMART | TraitTags.RICH,
+            //Jobs.CHEMIST => TraitTags.SMART | TraitTags.RICH,
+            //Jobs.LIBRARIAN => TraitTags.SMART | TraitTags.RICH,
+            //Jobs.ARCHITECT => TraitTags.SMART | TraitTags.RICH,
             _ => TraitTags.RICH
         };
     }
