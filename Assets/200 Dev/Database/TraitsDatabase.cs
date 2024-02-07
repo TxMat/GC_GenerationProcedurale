@@ -145,7 +145,7 @@ public class TraitsDatabase : ScriptableObject
 
         if (dataCount > names.Length)
         {
-            for (int i = names.Length; i < datas.Count; i++)
+            for (int i = dataCount - 1; i >= names.Length; i--)
             {
                 DeleteDataAtIndex<T>(category, i);
             }
