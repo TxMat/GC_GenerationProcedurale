@@ -17,6 +17,8 @@ public class StatusTraits : Traits
 
     public override string Name => status.Name();
     public override int TextTags => (int)status.TextTags();
+    
+    public override int TextGoodnessTags => (int)status.GoodnessTag();
 
     #region Editor
     public override void Init(int _id)

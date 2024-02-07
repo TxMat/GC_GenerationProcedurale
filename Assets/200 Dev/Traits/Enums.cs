@@ -119,7 +119,8 @@ public enum TraitTags
     FREE = 1 << 11,
 }
 
-public enum PersonalityTags
+
+public enum GoodnessTags
 {
     GOOD,
     BAD,
@@ -223,27 +224,27 @@ public static class EnumExtensions
         };
     }
     
-    public static PersonalityTags TextTags(this Personalities personality)
+    public static GoodnessTags GoodnessTag(this Personalities personality)
     {
         return personality switch
         {
-            Personalities.ADVENTUROUS => PersonalityTags.GOOD,
-            Personalities.SHY => PersonalityTags.NEUTRAL,
-            Personalities.CHARISMATIC => PersonalityTags.GOOD,
-            Personalities.OPTIMISTIC => PersonalityTags.GOOD,
-            Personalities.PESSIMISTIC => PersonalityTags.BAD,
-            Personalities.ALTRUISTIC => PersonalityTags.GOOD,
-            Personalities.EGOTIST => PersonalityTags.BAD,
-            Personalities.ANGRY => PersonalityTags.BAD,
-            Personalities.DREAMER => PersonalityTags.NEUTRAL,
-            Personalities.LAZY => PersonalityTags.BAD,
-            Personalities.INTELLIGENT => PersonalityTags.GOOD,
-            Personalities.STUPID => PersonalityTags.BAD,
-            Personalities.COWARD => PersonalityTags.BAD,
-            Personalities.BRAVE => PersonalityTags.GOOD,
-            Personalities.SADISTIC => PersonalityTags.BAD,
-            Personalities.LIAR => PersonalityTags.BAD,
-            _ => PersonalityTags.NEUTRAL
+            Personalities.ADVENTUROUS => GoodnessTags.GOOD,
+            Personalities.SHY => GoodnessTags.NEUTRAL,
+            Personalities.CHARISMATIC => GoodnessTags.GOOD,
+            Personalities.OPTIMISTIC => GoodnessTags.GOOD,
+            Personalities.PESSIMISTIC => GoodnessTags.BAD,
+            Personalities.ALTRUISTIC => GoodnessTags.GOOD,
+            Personalities.EGOTIST => GoodnessTags.BAD,
+            Personalities.ANGRY => GoodnessTags.BAD,
+            Personalities.DREAMER => GoodnessTags.NEUTRAL,
+            Personalities.LAZY => GoodnessTags.BAD,
+            Personalities.INTELLIGENT => GoodnessTags.GOOD,
+            Personalities.STUPID => GoodnessTags.BAD,
+            Personalities.COWARD => GoodnessTags.BAD,
+            Personalities.BRAVE => GoodnessTags.GOOD,
+            Personalities.SADISTIC => GoodnessTags.BAD,
+            Personalities.LIAR => GoodnessTags.BAD,
+            _ => GoodnessTags.NEUTRAL
         };
     }
 
@@ -281,6 +282,23 @@ public static class EnumExtensions
         };
     }
 
+    public static GoodnessTags GoodnessTag(this Status status)
+    {
+        return status switch
+        {
+            Status.ORPHAN => GoodnessTags.BAD,
+            Status.EDUCATED => GoodnessTags.GOOD,
+            Status.ANALPHABET => GoodnessTags.BAD,
+            Status.INJURED => GoodnessTags.BAD,
+            Status.DISABLED => GoodnessTags.BAD,
+            Status.SINGLE => GoodnessTags.GOOD,
+            Status.MARRIED => GoodnessTags.GOOD,
+            Status.DIVORCED => GoodnessTags.BAD,
+            Status.WIDOW => GoodnessTags.BAD,
+            _ => GoodnessTags.NEUTRAL
+        };
+    }
+    
     public static string Name(this LifeStyle lifeStyle)
     {
         return lifeStyle switch

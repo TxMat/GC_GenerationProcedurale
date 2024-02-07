@@ -16,7 +16,7 @@ public class PersonnalityTraits : Traits
     }
 
     public override string Name => personalities.Name();
-    public override int TextTags => (int)personalities.TextTags();
+    public override int TextGoodnessTags => (int)personalities.GoodnessTag();
 
     #region Editor
     public override void Init(int _id)

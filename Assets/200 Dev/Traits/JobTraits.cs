@@ -21,7 +21,6 @@ public class JobTraits : Traits
     }
 
     public override string Name => job.Name();
-    public override int TextTags => 0;
 
     public Sprite GetClothesSprite(bool man)
     {
