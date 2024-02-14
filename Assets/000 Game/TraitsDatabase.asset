@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 2287
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 8
@@ -31,8 +32,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 81
   tags: 2203
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 1028
+  excludeTags: 4
   personalities: 11
 --- !u!114 &-7225931072142858395
 MonoBehaviour:
@@ -48,6 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 78
   tags: 2154
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
@@ -68,6 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 2075
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 7
@@ -85,8 +89,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 39
   tags: 2313
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 1024
+  excludeTags: 0
   personalities: 0
 --- !u!114 &-5585429663927827124
 MonoBehaviour:
@@ -102,8 +107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 73
   tags: 2317
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 1216
+  excludeTags: 64
   personalities: 2
 --- !u!114 &-5518133776002578567
 MonoBehaviour:
@@ -119,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 58
   tags: 66
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
@@ -139,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 84
   tags: 2109
+  goodnessScore: 1
   descriptionTexts: []
   excludeTags: 130
   job: 12
@@ -158,6 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 97
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 7
@@ -175,6 +184,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 27
   tags: 1045
+  goodnessScore: -1
   descriptionTexts: []
   excludeTags: 130
   job: 5
@@ -194,8 +204,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 91
   tags: 1681
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 262
+  excludeTags: 256
   personalities: 6
 --- !u!114 &-3645840716970355038
 MonoBehaviour:
@@ -211,6 +222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 65
   tags: 280
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 512
   personalities: 13
@@ -228,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   tags: 111
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
@@ -248,8 +261,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 19
   tags: 1251
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 4
+  excludeTags: 0
   personalities: 9
 --- !u!114 &-2706310955633784282
 MonoBehaviour:
@@ -265,8 +279,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 18
   tags: 1619
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 264
+  excludeTags: 256
   personalities: 14
 --- !u!114 &-2082578869473132344
 MonoBehaviour:
@@ -282,8 +297,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 16
   tags: 1683
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 264
+  excludeTags: 256
   personalities: 7
 --- !u!114 &-2049410317431051751
 MonoBehaviour:
@@ -299,6 +315,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 1053
+  goodnessScore: 1
   descriptionTexts: []
   excludeTags: 130
   job: 2
@@ -318,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   tags: 1234
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 0
@@ -335,6 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 99
   tags: 1070
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   job: 3
@@ -354,6 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 35
   tags: 1039
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   status: 6
@@ -371,6 +391,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 22
   tags: 1109
+  goodnessScore: 1
   descriptionTexts: []
   excludeTags: 32
   job: 10
@@ -390,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 83
   tags: 1680
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 12
@@ -407,6 +429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 95
   tags: 3145
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 5
@@ -424,6 +447,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 13
   tags: 1242
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   job: 4
@@ -443,6 +467,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   tags: 3310
+  goodnessScore: 1
   descriptionTexts: []
   excludeTags: 0
   job: 6
@@ -462,6 +487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 79
   tags: 1258
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1
   job: 8
@@ -542,8 +568,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   tags: 1744
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 260
+  excludeTags: 256
   personalities: 15
 --- !u!114 &299725027495695316
 MonoBehaviour:
@@ -559,6 +586,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 83
   tags: 366
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   job: 11
@@ -578,6 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 25
   tags: 104
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
@@ -598,6 +627,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 3311
+  goodnessScore: 1
   descriptionTexts: []
   excludeTags: 0
   job: 1
@@ -617,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 33
   tags: 120
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
@@ -637,6 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 28
   tags: 1174
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   job: 7
@@ -656,6 +688,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 11
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 6
@@ -673,6 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 58
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 8
@@ -690,6 +724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 72
   tags: 1293
+  goodnessScore: 2
   descriptionTexts: []
   excludeTags: 130
   job: 0
@@ -709,6 +744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 43
   tags: 1234
+  goodnessScore: -1
   descriptionTexts: []
   excludeTags: 1
   job: 9
@@ -727,9 +763,10 @@ MonoBehaviour:
   m_Name: PT_OPTIMISTIC
   m_EditorClassIdentifier: 
   id: 97
-  tags: 2095
+  tags: 2092
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 1040
+  excludeTags: 1024
   personalities: 3
 --- !u!114 &4258288603175830966
 MonoBehaviour:
@@ -745,8 +782,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tags: 1088
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 2056
+  excludeTags: 2048
   status: 3
 --- !u!114 &4292828203365800809
 MonoBehaviour:
@@ -762,6 +800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 87
   tags: 365
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   personalities: 10
@@ -779,8 +818,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   tags: 3073
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 10
+  excludeTags: 0
   status: 8
 --- !u!114 &4944298224677246074
 MonoBehaviour:
@@ -796,6 +836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 54
   tags: 2064
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
@@ -816,8 +857,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 32
   tags: 1266
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 2052
+  excludeTags: 4
   status: 2
 --- !u!114 &5380235005445582785
 MonoBehaviour:
@@ -833,6 +875,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 92
   tags: 2365
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   status: 1
@@ -850,6 +893,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 59
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 5
@@ -867,6 +911,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 38
   tags: 269
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 528
   personalities: 5
@@ -884,6 +929,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 23
   tags: 1120
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 1
@@ -900,9 +946,10 @@ MonoBehaviour:
   m_Name: PT_PESSIMISTIC
   m_EditorClassIdentifier: 
   id: 77
-  tags: 1047
+  tags: 1044
+  goodnessScore: 0
   descriptionTexts: []
-  excludeTags: 2056
+  excludeTags: 8
   personalities: 4
 --- !u!114 &8537722532867734977
 MonoBehaviour:
@@ -918,6 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 75
   tags: 1094
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   status: 4
@@ -935,6 +983,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 73
   tags: 1035
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 

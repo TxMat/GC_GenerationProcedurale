@@ -11,7 +11,7 @@ public abstract class Traits : ScriptableObject
     [SerializeField] protected TraitTags tags;
     public TraitTags Tags => tags;
 
-    [Range(-2, 2)] protected int goodnessScore;
+    [Range(-2, 2)][SerializeField] protected int goodnessScore;
     public int GoodnessScore => goodnessScore;
 
     [Space(10f)]
