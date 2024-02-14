@@ -32,4 +32,5 @@ public abstract class Traits : ScriptableObject
     public abstract string Name { get; }
     public virtual int TextTags => -1;
     public virtual int TextGoodnessTags => -1;
+    public virtual bool NeedsSuffix => false;
 }

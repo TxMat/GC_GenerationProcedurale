@@ -218,7 +218,7 @@ public static class EnumExtensions
             Personalities.STUPID => "Stupid",
             Personalities.COWARD => "Coward",
             Personalities.BRAVE => "Brave",
-            Personalities.SADISTIC => "Sadistic",
+            Personalities.SADISTIC => "Sadist",
             Personalities.LIAR => "Liar",
             _ => "Unknown"
         };
@@ -245,6 +245,30 @@ public static class EnumExtensions
             Personalities.SADISTIC => GoodnessTags.BAD,
             Personalities.LIAR => GoodnessTags.BAD,
             _ => GoodnessTags.NEUTRAL
+        };
+    }
+
+    public static bool NeedsSuffix(this Personalities personality)
+    {
+        return personality switch
+        {
+            Personalities.ADVENTUROUS => true,
+            Personalities.SHY => true,
+            Personalities.CHARISMATIC => true,
+            Personalities.OPTIMISTIC => true,
+            Personalities.PESSIMISTIC => true,
+            Personalities.ALTRUISTIC => true,
+            Personalities.EGOTIST => true,
+            Personalities.ANGRY => true,
+            Personalities.DREAMER => false,
+            Personalities.LAZY => true,
+            Personalities.INTELLIGENT => true,
+            Personalities.STUPID => true,
+            Personalities.COWARD => false,
+            Personalities.BRAVE => true,
+            Personalities.SADISTIC => false,
+            Personalities.LIAR => false,
+            _ => true
         };
     }
 

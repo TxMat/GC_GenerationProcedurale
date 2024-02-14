@@ -18,6 +18,8 @@ public class PersonnalityTraits : Traits
     public override string Name => personalities.Name();
     public override int TextGoodnessTags => (int)personalities.GoodnessTag();
 
+    public override bool NeedsSuffix => personalities.NeedsSuffix();
+
     #region Editor
     public override void Init(int _id)
     {
