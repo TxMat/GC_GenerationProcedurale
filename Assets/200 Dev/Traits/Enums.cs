@@ -77,6 +77,7 @@ public enum LifeStyle
     GAMER,
     ART_LOVER,
     CRIMINAL,
+    ATHLETIC,
 }
 
 public enum Category
