@@ -120,6 +120,8 @@ namespace _200_Dev
             }},
             { (int) GoodnessTags.NEUTRAL, new List<string> {
                 "{m_Pronoun} has a balanced personality.",
+                "It's hard to say if {m_Pronoun} is a good or a bad person.",
+                "When it comes to {hs_Pronoun} personality, {m_Pronoun} is a bit of a mystery."
             }}
         };
         
