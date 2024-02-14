@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 2287
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 8
@@ -31,6 +32,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 81
   tags: 2203
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1028
   personalities: 11
@@ -48,12 +50,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 78
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 2
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-6107457204954828267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 39
   tags: 2313
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1024
   personalities: 0
@@ -85,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 73
   tags: 2317
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1216
   personalities: 2
@@ -102,12 +109,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 58
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 4
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-4986039409512149065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,9 +132,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 84
   tags: 2109
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 12
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-3986002696836049833
@@ -141,9 +153,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 27
   tags: 1045
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 162
   job: 5
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-3821465397417963059
@@ -160,6 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 91
   tags: 1681
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 262
   personalities: 6
@@ -177,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 65
   tags: 280
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 512
   personalities: 13
@@ -194,12 +210,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 5
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-3301561777137781445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +233,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 19
   tags: 1251
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 4
   personalities: 9
@@ -231,6 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 18
   tags: 1619
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 264
   personalities: 14
@@ -248,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 16
   tags: 1683
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 264
   personalities: 7
@@ -265,9 +287,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 1053
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 2
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-1373478449691988515
@@ -284,9 +308,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 0
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-1313311879207558631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,9 +328,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 99
   tags: 1070
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2177
   job: 3
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-1058167733655760874
@@ -320,9 +349,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 22
   tags: 1109
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2080
   job: 10
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-1057668791384341189
@@ -339,6 +370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 83
   tags: 1680
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 12
@@ -356,9 +388,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 13
   tags: 1242
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2052
   job: 4
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-591735277676768986
@@ -375,9 +409,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   tags: 3310
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 528
   job: 6
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &-420311949113815452
@@ -394,9 +430,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 79
   tags: 1258
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 17
   job: 8
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &11400000
@@ -470,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   tags: 1744
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 260
   personalities: 15
@@ -487,9 +526,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 83
   tags: 366
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 129
   job: 11
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &307169184931437083
@@ -506,12 +547,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 25
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 0
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &620386756995987938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,9 +570,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 3311
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 16
   job: 1
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &643402777003797922
@@ -545,12 +591,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 33
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 3
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &777294109805759254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,9 +614,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 28
   tags: 1174
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2081
   job: 7
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &3576874981103260837
@@ -584,9 +635,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 72
   tags: 1293
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2178
   job: 0
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &3644585594296322448
@@ -603,9 +656,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 43
   tags: 1234
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2049
   job: 9
+  wearsHelmet: 0
   manClothesSprite: {fileID: 0}
   womanClothesSprite: {fileID: 0}
 --- !u!114 &3942450949448364395
@@ -622,6 +677,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 97
   tags: 2095
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1040
   personalities: 3
@@ -639,9 +695,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 3
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &4292828203365800809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +715,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 87
   tags: 365
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   personalities: 10
@@ -673,12 +733,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 54
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 6
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &5322455486896126184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -693,9 +756,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 32
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 2
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &5380235005445582785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -710,9 +776,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 92
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 1
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &6893486084799539887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,6 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 38
   tags: 269
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 528
   personalities: 5
@@ -744,6 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 23
   tags: 1120
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 1
@@ -761,6 +832,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 77
   tags: 1047
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2056
   personalities: 4
@@ -778,9 +850,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 75
   tags: 0
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 4
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &9146672079719905310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -795,9 +870,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 73
   tags: 0
+  goodnessScore: 0
   descriptionTexts:
   - 
   - 
   - 
   excludeTags: 0
   lifestyle: 1
+  hasAccessory: 0
+  accessories: []

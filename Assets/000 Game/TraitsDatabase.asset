@@ -59,6 +59,8 @@ MonoBehaviour:
     a more relaxed lifestyle.
   excludeTags: 0
   lifestyle: 2
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-6910188713931993252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +79,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 7
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-6107457204954828267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +141,9 @@ MonoBehaviour:
     put to the test.
   excludeTags: 0
   lifestyle: 4
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: 6a04d0f049c7b8a4fb3aa6b8adcf0ae5, type: 3}
 --- !u!114 &-4986039409512149065
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +183,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 7
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-3986002696836049833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +266,8 @@ MonoBehaviour:
     identity.
   excludeTags: 0
   lifestyle: 5
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-3301561777137781445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,6 +361,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 0
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-1313311879207558631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +402,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2048
   status: 6
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-1058167733655760874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,6 +461,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 5
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &-701971289091025105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,6 +648,8 @@ MonoBehaviour:
   - Traveling is not just a hobby for {m_Pronoun}, it's a way of life.
   excludeTags: 0
   lifestyle: 0
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &620386756995987938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,6 +695,8 @@ MonoBehaviour:
     {hm_Pronoun} apart from the crowd.
   excludeTags: 0
   lifestyle: 3
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &777294109805759254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -694,7 +715,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2048
   job: 7
-  wearsHelmet: 0
+  wearsHelmet: 1
   manClothesSprite: {fileID: 21300000, guid: 8cfe3e3a941b32f4a991721a31223fae, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 45bff4f88c996e948b903a5f71192573, type: 3}
 --- !u!114 &1754639534946721387
@@ -715,6 +736,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 6
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &3170876998521849776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,6 +756,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 8
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &3576874981103260837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -811,6 +836,10 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2048
   status: 3
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: 3bf5ab924448fbc4f9f65c043b9121c1, type: 3}
+  - {fileID: 21300000, guid: 0e0e539c1f6cc654796b28dc6fd4ee60, type: 3}
 --- !u!114 &4292828203365800809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,6 +876,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 8
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &4944298224677246074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,6 +902,9 @@ MonoBehaviour:
     are put to the test.
   excludeTags: 0
   lifestyle: 6
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: a0a1f7fba3169ab499e66b1321451ccd, type: 3}
 --- !u!114 &5322455486896126184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -889,6 +923,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 4
   status: 2
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &5380235005445582785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -907,6 +943,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   status: 1
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &6084804318797105304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +958,7 @@ MonoBehaviour:
   m_Name: LT_ATHLETIC
   m_EditorClassIdentifier: 
   id: 2
-  tags: 392
+  tags: 2332
   goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} is a fitness enthusiast, dedicating {hs_Pronoun}self to maintaining
@@ -931,6 +969,10 @@ MonoBehaviour:
     joy and fulfillment.
   excludeTags: 0
   lifestyle: 7
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: b74e1093620052340b466294643960e4, type: 3}
+  - {fileID: 21300000, guid: 19997388fe61ccb458b00723af8c6fce, type: 3}
 --- !u!114 &6257462847648810226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -949,6 +991,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   status: 5
+  hasAccessory: 0
+  accessories: []
 --- !u!114 &6893486084799539887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1021,6 +1065,9 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2048
   status: 4
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: 4f3b5a7d88ace274784a7b43c2fee743, type: 3}
 --- !u!114 &9146672079719905310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1044,3 +1091,5 @@ MonoBehaviour:
     offerings.
   excludeTags: 0
   lifestyle: 1
+  hasAccessory: 0
+  accessories: []

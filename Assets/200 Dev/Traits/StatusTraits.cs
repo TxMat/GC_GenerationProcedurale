@@ -9,6 +9,16 @@ public class StatusTraits : Traits
 
     public Status Status => status;
 
+    [Header("Eventual Accessories")]
+    [SerializeField] protected bool hasAccessory;
+    [SerializeField] protected List<Sprite> accessories;
+
+    public bool HasAccessory(out Sprite _accessory)
+    {
+        _accessory = hasAccessory ? accessories[Random.Range(0, accessories.Count)] : null;
+        return hasAccessory;
+    }
+
     public override void SetTraitsValue(int index)
     {
         status = (Status)index;

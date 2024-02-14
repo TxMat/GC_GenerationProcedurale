@@ -9,6 +9,7 @@ public class UIPortrait : MonoBehaviour
     [SerializeField] private Image skinImage;
     [SerializeField] private Image hairImage;
     [SerializeField] private Image clothesImage;
+    [SerializeField] private Image clothesAccessoryImage;
     [SerializeField] private Image accessoryImage;
 
     public Portrait Portrait { get; private set; }
@@ -19,6 +20,9 @@ public class UIPortrait : MonoBehaviour
         hairImage.sprite = portrait.hairSprite;
         hairImage.color = portrait.hairColor;
         clothesImage.sprite = portrait.clothesSprite;
+
+        clothesAccessoryImage.enabled = portrait.hasClothesAccessory;
+        clothesAccessoryImage.sprite = portrait.clothesAccessory;
 
         accessoryImage.enabled = portrait.hasAccessory;
         accessoryImage.sprite = portrait.accessory;

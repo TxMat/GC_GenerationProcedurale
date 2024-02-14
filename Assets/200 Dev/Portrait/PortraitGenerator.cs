@@ -6,13 +6,18 @@ using UnityEngine;
 
 public struct Portrait
 {
-    public Portrait(Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, Sprite _clothesSprite, bool _hasAccessory, Sprite _accessory)
+    public Portrait(Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, 
+        Sprite _clothesSprite, 
+        bool _hasClothesAccessory, Sprite _clothesAccessory,
+        bool _hasAccessory, Sprite _accessory)
     {
         skinColor = _skinColor;
         hairSprite = _hairSprite;
         hairSpriteIndex = _hairSpriteIndex;
         hairColor = _hairColor;
         clothesSprite = _clothesSprite;
+        hasClothesAccessory = _hasClothesAccessory;
+        clothesAccessory = _clothesAccessory;
         hasAccessory = _hasAccessory;
         accessory = _accessory;
     }
@@ -25,6 +30,9 @@ public struct Portrait
 
     public Sprite clothesSprite;
 
+    public bool hasClothesAccessory;
+    public Sprite clothesAccessory;
+    
     public bool hasAccessory;
     public Sprite accessory;
 }
@@ -79,6 +87,7 @@ public class PortraitGenerator : MonoBehaviour
         if (Instance == null) return default;
 
         (Sprite hairSprite, int hairSpriteIndex) = Instance.GenerateHairSprite(man, traitsMix.job.WearsHelmet);
+        bool hasClothesAccessory = traitsMix.status.HasAccessory(out Sprite clothesAccessory);
         bool hasAccessory = traitsMix.lifestyle.HasAccessory(out Sprite accessory);
 
         return new Portrait(
@@ -86,6 +95,7 @@ public class PortraitGenerator : MonoBehaviour
             hairSprite, hairSpriteIndex,
             Instance.GenerateHairColor(),
             traitsMix.job.GetClothesSprite(man),
+            hasClothesAccessory, clothesAccessory,
             hasAccessory, accessory);
     }
 
@@ -95,6 +105,7 @@ public class PortraitGenerator : MonoBehaviour
 
         (Sprite hairSprite, int hairSpriteIndex) =
             Instance.GetHairSpriteWithIndex(basePortrait.hairSpriteIndex, man, traitsMix.job.WearsHelmet);
+        bool hasClothesAccessory = traitsMix.status.HasAccessory(out Sprite clothesAccessory);
         bool hasAccessory = traitsMix.lifestyle.HasAccessory(out Sprite accessory);
 
         return new Portrait(
@@ -102,6 +113,7 @@ public class PortraitGenerator : MonoBehaviour
             hairSprite, hairSpriteIndex,
             basePortrait.hairColor,
             traitsMix.job.GetClothesSprite(man),
+            hasClothesAccessory, clothesAccessory,
             hasAccessory, accessory);
     }
 

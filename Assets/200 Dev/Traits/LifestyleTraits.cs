@@ -11,11 +11,11 @@ public class LifestyleTraits : Traits
 
     [Header("Eventual Accessories")]
     [SerializeField] protected bool hasAccessory;
-    [SerializeField] protected Sprite accessory;
+    [SerializeField] protected List<Sprite> accessories;
 
     public bool HasAccessory(out Sprite _accessory)
     {
-        _accessory = accessory;
+        _accessory = hasAccessory ? accessories[Random.Range(0, accessories.Count)] : null;
         return hasAccessory;
     }
 
