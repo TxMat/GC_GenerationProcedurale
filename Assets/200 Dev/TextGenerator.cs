@@ -65,7 +65,7 @@ namespace _200_Dev
                         "{m_Pronoun} has fond memories of {hs_Pronoun} childhood, filled with laughter and joy."
                     }},
                     { (int) GoodnessTags.BAD, new List<string> {
-                        "This is something that {m_Pronoun} has been dealing with since {m_Pronoun} was a child.",
+                        "Being {1} is something that {m_Pronoun} has been dealing with since {m_Pronoun} was a child.",
                         "Childhood trauma has had a lasting impact on {hs_Pronoun} life.",
                         "{m_Pronoun} faced significant challenges during {hs_Pronoun} upbringing."
                     }},
