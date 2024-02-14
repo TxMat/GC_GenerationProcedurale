@@ -148,6 +148,9 @@ namespace _200_Dev
             
             // correct spaces
             text = Regex.Replace(text, @"\s+(?=[.,?!])", "");   
+            
+            // correct multiple spaces
+            text = Regex.Replace(text, @"\s+", " ");
 
             return text;
         }
