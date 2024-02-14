@@ -266,8 +266,9 @@ MonoBehaviour:
     identity.
   excludeTags: 0
   lifestyle: 5
-  hasAccessory: 0
-  accessories: []
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: d065f314951745948a9d4330717109d8, type: 3}
 --- !u!114 &-3301561777137781445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -648,8 +649,9 @@ MonoBehaviour:
   - Traveling is not just a hobby for {m_Pronoun}, it's a way of life.
   excludeTags: 0
   lifestyle: 0
-  hasAccessory: 0
-  accessories: []
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: 206c52225f5faa9459ca9f93005f7d57, type: 3}
 --- !u!114 &620386756995987938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1091,5 +1093,6 @@ MonoBehaviour:
     offerings.
   excludeTags: 0
   lifestyle: 1
-  hasAccessory: 0
-  accessories: []
+  hasAccessory: 1
+  accessories:
+  - {fileID: 21300000, guid: 306e530d27cb9414d8dd8a2842f760c8, type: 3}
