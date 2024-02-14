@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using static UnityEngine.Rendering.DebugUI;
 
 
@@ -12,17 +11,12 @@ public enum Jobs
     FARMER,
     LAWYER,
     MUSICIAN,
-    //SCIENTIST,
     SOLDIER,
     ARTISAN,
-    //VETERAN,
-    //TEACHER,
     PLUMBER,
     CHEMIST,
-    //COMPUTER_SCIENTIST,
     LIBRARIAN,
     ARCHITECT,
-    //UNEMPLOYED,
 }
 
 public enum Hobby
@@ -52,22 +46,14 @@ public enum Personalities
     ALTRUISTIC,
     EGOTIST,
     ANGRY,
-    //CALM,
-    //REALIST,
     DREAMER,
     LAZY,
-    //HARD_WORKER,
-    //HUMBLE,
     INTELLIGENT,
     STUPID,
     COWARD,
     BRAVE,
-    //SENSITIVE,
-    //INSENSITIVE,
     SADISTIC,
-    //HONEST,
     LIAR,
-    //NAIVE,
 }
 
 public enum Status
@@ -162,19 +148,12 @@ public static class EnumExtensions
     {
         return job switch
         {
-            //Jobs.MEDIC => TraitTags.SMART | TraitTags.RICH,
             Jobs.PAINTER => TraitTags.ARTISTIC | TraitTags.POOR,
-            //Jobs.ENGINEER => TraitTags.SMART | TraitTags.RICH,
-            //Jobs.STUDENT => TraitTags.SMART,
             Jobs.FARMER => TraitTags.POOR | TraitTags.UNEDUCATED,
-            //Jobs.LAWYER => TraitTags.SMART | TraitTags.RICH,
             Jobs.MUSICIAN => TraitTags.ARTISTIC | TraitTags.POOR,
             Jobs.SOLDIER => TraitTags.DANGEROUS,
             Jobs.ARTISAN => TraitTags.ARTISTIC | TraitTags.POOR,
             Jobs.PLUMBER => TraitTags.POOR,
-            //Jobs.CHEMIST => TraitTags.SMART | TraitTags.RICH,
-            //Jobs.LIBRARIAN => TraitTags.SMART | TraitTags.RICH,
-            //Jobs.ARCHITECT => TraitTags.SMART | TraitTags.RICH,
             _ => TraitTags.RICH
         };
     }
