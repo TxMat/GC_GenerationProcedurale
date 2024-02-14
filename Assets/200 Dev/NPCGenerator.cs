@@ -56,6 +56,12 @@ public class NPCGenerator : MonoBehaviour
 
     #region Generation
 
+    public void Generate()
+    {
+        InitRandom();
+        GenerateNPCs();
+    }
+
     private void GenerateNPCs()
     {
         List<NPC> npcs = new();
