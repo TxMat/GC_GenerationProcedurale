@@ -19,5 +19,8 @@ public class UIPortrait : MonoBehaviour
         hairImage.sprite = portrait.hairSprite;
         hairImage.color = portrait.hairColor;
         clothesImage.sprite = portrait.clothesSprite;
+
+        accessoryImage.enabled = portrait.hasAccessory;
+        accessoryImage.sprite = portrait.accessory;
     }
 }
