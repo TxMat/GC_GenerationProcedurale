@@ -52,9 +52,11 @@ MonoBehaviour:
   tags: 2154
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - '{m_Pronoun} enjoys the tranquility and simplicity of rural life, away from the
+    chaos of the city.'
+  - Nature is {m_Pronoun}'s sanctuary, finding solace in the peaceful countryside.
+  - Living in the countryside allows {m_Pronoun} to connect with nature and lead
+    a more relaxed lifestyle.
   excludeTags: 0
   lifestyle: 2
 --- !u!114 &-6910188713931993252
@@ -127,9 +129,12 @@ MonoBehaviour:
   tags: 66
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - '{m_Pronoun} is a dedicated gamer, spending countless hours immersed in virtual
+    worlds.'
+  - Gaming isn't just a hobby for {m_Pronoun}, it's a passion that fuels {hs_Pronoun}
+    competitive spirit.
+  - The digital realm is {m_Pronoun}'s playground, where {hs_Pronoun} skills are
+    put to the test.
   excludeTags: 0
   lifestyle: 4
 --- !u!114 &-4986039409512149065
@@ -146,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 84
   tags: 2109
-  goodnessScore: 1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 12
@@ -184,7 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 27
   tags: 1045
-  goodnessScore: -1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 5
@@ -242,9 +247,12 @@ MonoBehaviour:
   tags: 111
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - '{m_Pronoun} has a deep appreciation for art in all its forms, from paintings
+    to sculptures and beyond.'
+  - Creativity flows through {m_Pronoun}'s veins, finding inspiration in the beauty
+    of artistic expression.
+  - Art is not just something {m_Pronoun} enjoys; it's a fundamental part of {hs_Pronoun}
+    identity.
   excludeTags: 0
   lifestyle: 5
 --- !u!114 &-3301561777137781445
@@ -315,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 1053
-  goodnessScore: 1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 2
@@ -391,7 +399,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 22
   tags: 1109
-  goodnessScore: 1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 32
   job: 10
@@ -467,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   tags: 3310
-  goodnessScore: 1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   job: 6
@@ -554,6 +562,7 @@ MonoBehaviour:
   - {fileID: -5518133776002578567}
   - {fileID: -3523336521177406492}
   - {fileID: 4944298224677246074}
+  - {fileID: 6084804318797105304}
 --- !u!114 &28870474637458245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,9 +617,9 @@ MonoBehaviour:
   tags: 104
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - '{m_Pronoun} loves to travel and explore new destinations whenever possible.'
+  - Wanderlust runs deep in {m_Pronoun}'s veins, always seeking new adventures.
+  - Traveling is not just a hobby for {m_Pronoun}, it's a way of life.
   excludeTags: 0
   lifestyle: 0
 --- !u!114 &620386756995987938
@@ -627,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 3311
-  goodnessScore: 1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   job: 1
@@ -649,9 +658,12 @@ MonoBehaviour:
   tags: 120
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - "{m_Pronoun} is known for {hs_Pronoun} unconventional lifestyle and eccentric
+    personality.\t\t"
+  - Unpredictability is {m_Pronoun}'s middle name, always marching to the beat of
+    {hs_Pronoun} own drum.
+  - Conformity is not in {m_Pronoun}'s vocabulary; {hs_Pronoun} excentricity sets
+    {hm_Pronoun} apart from the crowd.
   excludeTags: 0
   lifestyle: 3
 --- !u!114 &777294109805759254
@@ -724,7 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 72
   tags: 1293
-  goodnessScore: 2
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 0
@@ -744,7 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 43
   tags: 1234
-  goodnessScore: -1
+  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1
   job: 9
@@ -838,9 +850,12 @@ MonoBehaviour:
   tags: 2064
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - Despite {hs_Pronoun} troubled past, {m_Pronoun} is working towards a brighter
+    future.
+  - '{m_Pronoun} walks on the edge of the law, navigating a life filled with risks
+    and rewards.'
+  - The criminal underworld is {m_Pronoun}'s domain, where {hs_Pronoun} street smarts
+    are put to the test.
   excludeTags: 0
   lifestyle: 6
 --- !u!114 &5322455486896126184
@@ -879,6 +894,24 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   status: 1
+--- !u!114 &6084804318797105304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
+  m_Name: LT_VOYAGER
+  m_EditorClassIdentifier: 
+  id: 2
+  tags: 0
+  goodnessScore: 0
+  descriptionTexts: []
+  excludeTags: 0
+  lifestyle: 0
 --- !u!114 &6257462847648810226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -985,8 +1018,10 @@ MonoBehaviour:
   tags: 1035
   goodnessScore: 0
   descriptionTexts:
-  - 
-  - 
-  - 
+  - '{m_Pronoun} thrives in the hustle and bustle of city life, where opportunities
+    abound.'
+  - For {m_Pronoun}, the fast-paced energy of urban living is invigorating.
+  - City living suits {m_Pronoun} perfectly, with its endless entertainment and cultural
+    offerings.
   excludeTags: 0
   lifestyle: 1
