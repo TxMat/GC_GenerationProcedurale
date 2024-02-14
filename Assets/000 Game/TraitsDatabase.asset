@@ -155,6 +155,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 130
   job: 12
+  wearsHelmet: 1
   manClothesSprite: {fileID: 21300000, guid: c69f4aa30ff5c064d83583d761fb9eb9, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: cf5e414971541cf4a96cf5e554a0fec3, type: 3}
 --- !u!114 &-4163782983110621746
@@ -193,6 +194,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 130
   job: 5
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 447d04c40da913f4ca8dc3ec06b847f6, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 5d7843d081eab534e8fdbe2016134c10, type: 3}
 --- !u!114 &-3821465397417963059
@@ -327,6 +329,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 130
   job: 2
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: f20a924bc27fb3043a13411e9b853a85, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 19a633c3178110e4d802aa317554e329, type: 3}
 --- !u!114 &-1373478449691988515
@@ -365,6 +368,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   job: 3
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 83cac168cc2cfe044aae6b628df4e7c4, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 76318052dd9296d4b84613fa4d1a7760, type: 3}
 --- !u!114 &-1219430125636528767
@@ -403,6 +407,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 32
   job: 10
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 39ca060a13c4019489c6b7040ba53e9f, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: c90a53583c242ec4d841bcd387b203e2, type: 3}
 --- !u!114 &-1057668791384341189
@@ -459,6 +464,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2048
   job: 4
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: ba7ce546249c05443adafbaeee1e6763, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 1528e290178eb684b93595abad08db99, type: 3}
 --- !u!114 &-591735277676768986
@@ -479,6 +485,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   job: 6
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: c5d154aa38a07914aa3fdbd29b8b63b3, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 74699587abfffaa4a8fbf036dc606536, type: 3}
 --- !u!114 &-420311949113815452
@@ -499,6 +506,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1
   job: 8
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 31556274ca62a45459172e909a813fad, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 8a36711ea0b311349b9a07536ba5d05d, type: 3}
 --- !u!114 &11400000
@@ -599,6 +607,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   job: 11
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 6087ca48c4a911f448505c57750a520a, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 20b9979a5da4a644891a2074b2ecbc2e, type: 3}
 --- !u!114 &307169184931437083
@@ -640,6 +649,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   job: 1
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 12c997bb4480feb44b76c3ef590c1c82, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 1c6032c40965fb944b1f6d6553b0cf16, type: 3}
 --- !u!114 &643402777003797922
@@ -684,6 +694,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2048
   job: 7
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 8cfe3e3a941b32f4a991721a31223fae, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 45bff4f88c996e948b903a5f71192573, type: 3}
 --- !u!114 &1754639534946721387
@@ -740,6 +751,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 130
   job: 0
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 0e6089c6bceaedd4696e4bc55dbd26d4, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 01fda7f5bb4cd7a4691f5d6f2c5a2ba3, type: 3}
 --- !u!114 &3644585594296322448
@@ -760,6 +772,7 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1
   job: 9
+  wearsHelmet: 0
   manClothesSprite: {fileID: 21300000, guid: 412781bf363ba944da50a6fa0da8c6a3, type: 3}
   womanClothesSprite: {fileID: 21300000, guid: 533caecd30b64274a8d84be76a3bf2d8, type: 3}
 --- !u!114 &3942450949448364395

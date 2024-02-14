@@ -6,10 +6,11 @@ using UnityEngine;
 
 public struct Portrait
 {
-    public Portrait(Color _skinColor, Sprite _hairSprite, Color _hairColor, Sprite _clothesSprite)
+    public Portrait(Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, Sprite _clothesSprite)
     {
         skinColor = _skinColor;
         hairSprite = _hairSprite;
+        hairSpriteIndex = _hairSpriteIndex;
         hairColor = _hairColor;
         clothesSprite = _clothesSprite;
     }
@@ -17,6 +18,7 @@ public struct Portrait
     public Color skinColor;
 
     public Sprite hairSprite;
+    public int hairSpriteIndex;
     public Color hairColor;
 
     public Sprite clothesSprite;
@@ -56,6 +58,11 @@ public class PortraitGenerator : MonoBehaviour
 
     [Space(5f)]
 
+    [SerializeField] private List<Sprite> manHairsWithHelmet;
+    [SerializeField] private List<Sprite> womanHairsWithHelmet;
+
+    [Space(5f)]
+
     [SerializeField] private List<Color> hairColors;
 
     #endregion
@@ -66,9 +73,11 @@ public class PortraitGenerator : MonoBehaviour
     {
         if (Instance == null) return default;
 
+        (Sprite hairSprite, int hairSpriteIndex) = Instance.GenerateHairSprite(man, traitsMix.job.WearsHelmet);
+
         return new Portrait(
             Instance.GenerateSkinColor(),
-            Instance.GenerateHairSprite(man),
+            hairSprite, hairSpriteIndex,
             Instance.GenerateHairColor(),
             traitsMix.job.GetClothesSprite(man));
     }
@@ -77,9 +86,12 @@ public class PortraitGenerator : MonoBehaviour
     {
         if (Instance == null) return default;
 
+        (Sprite hairSprite, int hairSpriteIndex) =
+            Instance.GetHairSpriteWithIndex(basePortrait.hairSpriteIndex, man, traitsMix.job.WearsHelmet);
+
         return new Portrait(
             basePortrait.skinColor,
-            basePortrait.hairSprite,
+            hairSprite, hairSpriteIndex,
             basePortrait.hairColor,
             traitsMix.job.GetClothesSprite(man));
     }
@@ -89,10 +101,20 @@ public class PortraitGenerator : MonoBehaviour
         return skinColors[Random.Range(0, skinColors.Count)];
     }
 
-    private Sprite GenerateHairSprite(bool man)
+    private (Sprite, int) GenerateHairSprite(bool man, bool helmet)
     {
-        if (man) return manHairs[Random.Range(0, manHairs.Count)];
-        return womanHairs[Random.Range(0, womanHairs.Count)];
+        int index = Random.Range(0, man ? manHairs.Count : womanHairs.Count);
+        return (man ? 
+            (helmet ? manHairsWithHelmet[index] : manHairs[index]) 
+            : (helmet ? womanHairsWithHelmet[index] : womanHairs[index]) 
+            , index);
+    }
+    private (Sprite, int) GetHairSpriteWithIndex(int index, bool man, bool helmet)
+    {
+        return (man ? 
+            (helmet ? manHairsWithHelmet[index] : manHairs[index]) 
+            : (helmet ? womanHairsWithHelmet[index] : womanHairs[index]) 
+            , index);
     }
 
     private Color GenerateHairColor()

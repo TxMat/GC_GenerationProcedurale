@@ -143,20 +143,6 @@ public static class EnumExtensions
             _ => "Unknown"
         };
     }
-    
-    public static TraitTags Tags(this Jobs job)
-    {
-        return job switch
-        {
-            Jobs.PAINTER => TraitTags.ARTISTIC | TraitTags.POOR,
-            Jobs.FARMER => TraitTags.POOR | TraitTags.UNEDUCATED,
-            Jobs.MUSICIAN => TraitTags.ARTISTIC | TraitTags.POOR,
-            Jobs.SOLDIER => TraitTags.DANGEROUS,
-            Jobs.ARTISAN => TraitTags.ARTISTIC | TraitTags.POOR,
-            Jobs.PLUMBER => TraitTags.POOR,
-            _ => TraitTags.RICH
-        };
-    }
 
     public static string Name(this Hobby hobby)
     {
