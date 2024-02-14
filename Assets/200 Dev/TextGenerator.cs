@@ -9,7 +9,7 @@ namespace _200_Dev
         private static string[] JobsPresentationTemplate = {
             "{m_Name} works happily as {traits_Pronoun} {1}.",
             "{m_Name} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
-            "For {m_Name}, being {traits_Pronoun} {1} is a dream come true.",
+                "For {m_Name}, being {traits_Pronoun} {1} is a dream come true.",
             "{m_Name} holds a steady job as {traits_Pronoun} {1}.",
             "{m_Name} has found stability in {hs_Pronoun} career as {traits_Pronoun} {1}.",
             "{m_Name} reluctantly works as {traits_Pronoun} {1}, struggling to find fulfillment.",
@@ -99,29 +99,29 @@ namespace _200_Dev
 
         
         private static string[] PersonalityPresentationTemplate = {
-            "{m_Pronoun} can be described as {traits_Pronoun} {1} {suffix}.",
-            "{m_Pronoun} is {traits_Pronoun} {1} {suffix}.",
-            "People often describe {hm_Pronoun} as {traits_Pronoun} {1} {suffix}."
+            "{m_Pronoun} can be described as {traits_Pronoun} {1} {suffix}",
+            "{m_Pronoun} is {traits_Pronoun} {1} {suffix}",
+            "People often describe {hm_Pronoun} as {traits_Pronoun} {1} {suffix}"
         };
         
         private static readonly Dictionary<int, List<string>> PersonalitySuffix = new()
         {
             { (int) GoodnessTags.GOOD, new List<string> {
-                "Some say that this is {hs_Pronoun} best quality.",
-                "This is what makes {hm_Pronoun} a great person to be around.",
-                "It's always a pleasure to be with {hm_Pronoun}.",
-                "This is what makes {hm_Pronoun} unique."
+                " and some say that this is {hs_Pronoun} best quality.",
+                ", this is what makes {hm_Pronoun} a great person to be around.",
+                ", it's always a pleasure to be with {hm_Pronoun}.",
+                " and this is what makes {hm_Pronoun} unique."
             }},
             { (int) GoodnessTags.BAD, new List<string> {
-                "It already happened that {hs_Pronoun} attitude caused some problems.",
-                "It's not always easy to deal with {hm_Pronoun}.",
-                "Sometimes, {m_Pronoun} can be a bit too much to handle.",
-                "{m_Pronoun} needs to work on overcoming some negative traits."
+                " and it already happened that {hs_Pronoun} attitude caused some problems.",
+                ", it's not always easy to deal with {hm_Pronoun}.",
+                " and sometimes, {m_Pronoun} can be a bit too much to handle.",
+                ", {m_Pronoun} needs to work on overcoming some negative traits."
             }},
             { (int) GoodnessTags.NEUTRAL, new List<string> {
-                "{m_Pronoun} has a balanced personality.",
-                "It's hard to say if {m_Pronoun} is a good or a bad person.",
-                "When it comes to {hs_Pronoun} personality, {m_Pronoun} is a bit of a mystery."
+                ", {m_Pronoun} has a balanced personality.",
+                ", it's hard to say if {m_Pronoun} is a good or a bad person.",
+                " but when it comes to {hs_Pronoun} personality, {m_Pronoun} is a bit of a mystery."
             }}
         };
         
