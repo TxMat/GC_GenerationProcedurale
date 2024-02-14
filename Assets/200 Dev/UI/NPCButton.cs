@@ -8,13 +8,21 @@ public class NPCButton : MonoBehaviour
     [Header("NPC Button")]
     [SerializeField] private UIPortrait portrait;
 
+    public int NPCIndex { get; private set; }
     public NPC NPC { get; private set; }
-    private Action<NPC> onClick;
+    private Action<int> onClick;
 
-    public void Assign(NPC npc, Action<NPC> _onClick)
+    public void Assign(NPC npc, int index, Action<int> _onClick)
     {
         NPC = npc;
+        NPCIndex = index;
         onClick = _onClick;
+
+        portrait.Generate(npc.Portrait);
+    }
+    public void UpdateNPC(NPC npc)
+    {
+        NPC = npc;
 
         portrait.Generate(npc.Portrait);
     }
@@ -22,6 +30,6 @@ public class NPCButton : MonoBehaviour
 
     public void OnClick()
     {
-        onClick?.Invoke(NPC);
+        onClick?.Invoke(NPCIndex);
     }
 }

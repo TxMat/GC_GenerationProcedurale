@@ -71,32 +71,37 @@ public class UIManager : MonoBehaviour
 
     public void SetNPCs(List<NPC> list)
     {
+        npcList = new(list);
+
         for (int i = 0; i < Mathf.Min(list.Count, npcButtons.Count); i++)
         {
-            npcButtons[i].Assign(list[i], OnSelectNPC);
+            npcButtons[i].Assign(list[i], i, OnSelectNPC);
         }
 
-        OnSelectNPC(list[0]);
+        OnSelectNPC(0);
     }
 
     #endregion
 
     #region Selection
 
-    public NPC CurrentNPC { get; private set; }
+    private List<NPC> npcList = new();
 
-    private void OnSelectNPC(NPC npc)
+    public int CurrentNPCIndex { get; private set; }
+
+    private void OnSelectNPC(int index)
     {
-        CurrentNPC = npc;
+        CurrentNPCIndex = index;
+        NPC currentNPC = npcList[CurrentNPCIndex];
 
-        jobDropdown.SetValueWithoutNotify((int)npc.TraitsMix.job.Job);
-        statusDropdown.SetValueWithoutNotify((int)npc.TraitsMix.status.Status);
-        personnalityDropdown.SetValueWithoutNotify((int)npc.TraitsMix.personnality.Personality);
-        lifestyleDropdown.SetValueWithoutNotify((int)npc.TraitsMix.lifestyle.Lifestyle);
+        jobDropdown.SetValueWithoutNotify((int)currentNPC.TraitsMix.job.Job);
+        statusDropdown.SetValueWithoutNotify((int)currentNPC.TraitsMix.status.Status);
+        personnalityDropdown.SetValueWithoutNotify((int)currentNPC.TraitsMix.personnality.Personality);
+        lifestyleDropdown.SetValueWithoutNotify((int)currentNPC.TraitsMix.lifestyle.Lifestyle);
 
-        summaryText.text = npc.Summary;
+        summaryText.text = currentNPC.Summary;
 
-        uiPortrait.Generate(npc.Portrait);
+        uiPortrait.Generate(currentNPC.Portrait);
     }
 
     #endregion
@@ -105,27 +110,35 @@ public class UIManager : MonoBehaviour
 
     public void OnChangeJob(int newJobIndex)
     {
-        NPC newNPC = npcGenerator.RegenerateWithNewJob(CurrentNPC, newJobIndex);
+        NPC newNPC = npcGenerator.RegenerateWithNewJob(npcList[CurrentNPCIndex], newJobIndex);
+        npcList[CurrentNPCIndex] = newNPC;
+        npcButtons[CurrentNPCIndex].UpdateNPC(newNPC);
 
-        OnSelectNPC(newNPC);
+        OnSelectNPC(CurrentNPCIndex);
     }
     public void OnChangeStatus(int newStatusIndex)
     {
-        NPC newNPC = npcGenerator.RegenerateWithNewStatus(CurrentNPC, newStatusIndex);
+        NPC newNPC = npcGenerator.RegenerateWithNewStatus(npcList[CurrentNPCIndex], newStatusIndex);
+        npcList[CurrentNPCIndex] = newNPC;
+        npcButtons[CurrentNPCIndex].UpdateNPC(newNPC);
 
-        OnSelectNPC(newNPC);
+        OnSelectNPC(CurrentNPCIndex);
     }
     public void OnChangePersonnality(int newPersoIndex)
     {
-        NPC newNPC = npcGenerator.RegenerateWithNewPersonnality(CurrentNPC, newPersoIndex);
+        NPC newNPC = npcGenerator.RegenerateWithNewPersonnality(npcList[CurrentNPCIndex], newPersoIndex);
+        npcList[CurrentNPCIndex] = newNPC;
+        npcButtons[CurrentNPCIndex].UpdateNPC(newNPC);
 
-        OnSelectNPC(newNPC);
+        OnSelectNPC(CurrentNPCIndex);
     }
     public void OnChangeLifestyle(int newLifestyleIndex)
     {
-        NPC newNPC = npcGenerator.RegenerateWithNewLifestyle(CurrentNPC, newLifestyleIndex);
+        NPC newNPC = npcGenerator.RegenerateWithNewLifestyle(npcList[CurrentNPCIndex], newLifestyleIndex);
+        npcList[CurrentNPCIndex] = newNPC;
+        npcButtons[CurrentNPCIndex].UpdateNPC(newNPC);
 
-        OnSelectNPC(newNPC);
+        OnSelectNPC(CurrentNPCIndex);
     }
 
     #endregion
