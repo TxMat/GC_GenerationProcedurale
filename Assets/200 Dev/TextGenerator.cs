@@ -97,9 +97,9 @@ namespace _200_Dev
 
         
         private static string[] PersonalityPresentationTemplate = {
-            "{m_Pronoun} can be described as {traits_Pronoun} {1} person.",
-            "{m_Pronoun} is {traits_Pronoun} {1} person.",
-            "People often describe {hm_Pronoun} as {traits_Pronoun} {1} individual."
+            "{m_Pronoun} can be described as {traits_Pronoun} {1} {suffix}.",
+            "{m_Pronoun} is {traits_Pronoun} {1} {suffix}.",
+            "People often describe {hm_Pronoun} as {traits_Pronoun} {1} {suffix}."
         };
         
         private static readonly Dictionary<int, List<string>> PersonalitySuffix = new()
@@ -141,6 +141,9 @@ namespace _200_Dev
             // Correct Capitalization
             text = Regex.Replace(text, @"([!?.]\s*)([a-zA-Z])", m => m.Groups[1].Value + " " + char.ToUpper(m.Groups[2].Value[0]));
             text = char.ToUpper(text[0]) + text[1..];
+            
+            // correct spaces
+            text = Regex.Replace(text, @"\s+(?=[.,?!])", "");
 
             return text;
         }
@@ -189,6 +192,7 @@ namespace _200_Dev
             text = text.Replace("{hm_Pronoun}", isMale ? "him" : "her");
             text = text.Replace("{traits_Pronoun}", vowels.Contains(traits.Name[0].ToString().ToLower()) ? "an" : "a");
             text = text.Replace("{1}", traits.Name.ToLower());
+            text = text.Replace("{suffix}", traits.NeedsSuffix ? UnityEngine.Random.Range(0, 2) == 0 ? "person" : "individual" : "");
             text = text.Replace("{rd_1}", UnityEngine.Random.Range(1, 20).ToString());
             return text;
         }
