@@ -18,6 +18,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 8
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-8614191003061433571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,11 +33,13 @@ MonoBehaviour:
   m_Name: PT_STUPID
   m_EditorClassIdentifier: 
   id: 81
-  tags: 2203
+  tags: 218
   goodnessScore: 0
   descriptionTexts: []
   excludeTags: 4
   personalities: 11
+  overrideSkin: 1
+  skin: {fileID: 21300000, guid: 43a7f320c44ce6542b3e9f403d7f68c7, type: 3}
 --- !u!114 &-7225931072142858395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +103,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 0
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-5585429663927827124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,6 +123,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 64
   personalities: 2
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-5518133776002578567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +232,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 6
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-3645840716970355038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +252,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 512
   personalities: 13
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-3523336521177406492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +299,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 9
+  overrideSkin: 1
+  skin: {fileID: 21300000, guid: 5364fd083e1f2f548948afe5b869bcbc, type: 3}
 --- !u!114 &-2706310955633784282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,6 +319,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 14
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-2082578869473132344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,6 +339,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 7
+  overrideSkin: 1
+  skin: {fileID: 21300000, guid: a81485a9d723b5e439d2eb3d017e4767, type: 3}
 --- !u!114 &-2049410317431051751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -444,6 +462,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 12
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-781763645087807056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -607,6 +627,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 15
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &299725027495695316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,6 +842,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1024
   personalities: 3
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &4258288603175830966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -860,6 +884,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   personalities: 10
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &4319025471633823091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1012,6 +1038,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 528
   personalities: 5
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &7238862993694647193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1030,6 +1058,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 1
+  overrideSkin: 1
+  skin: {fileID: 21300000, guid: 0a6c4f174b6657640a47066d9bb3893f, type: 3}
 --- !u!114 &7809199315074435519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,6 +1078,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 8
   personalities: 4
+  overrideSkin: 1
+  skin: {fileID: 21300000, guid: 6de8c7d06b41f1041a05e784581dc448, type: 3}
 --- !u!114 &8537722532867734977
 MonoBehaviour:
   m_ObjectHideFlags: 0

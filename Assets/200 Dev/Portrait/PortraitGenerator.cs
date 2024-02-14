@@ -6,11 +6,12 @@ using UnityEngine;
 
 public struct Portrait
 {
-    public Portrait(Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, 
+    public Portrait(Sprite _skinSprite, Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, 
         Sprite _clothesSprite, 
         bool _hasClothesAccessory, Sprite _clothesAccessory,
         bool _hasAccessory, Sprite _accessory)
     {
+        skinSprite = _skinSprite;
         skinColor = _skinColor;
         hairSprite = _hairSprite;
         hairSpriteIndex = _hairSpriteIndex;
@@ -22,6 +23,7 @@ public struct Portrait
         accessory = _accessory;
     }
 
+    public Sprite skinSprite;
     public Color skinColor;
 
     public Sprite hairSprite;
@@ -62,6 +64,7 @@ public class PortraitGenerator : MonoBehaviour
 
     [Header("Portrait Generator")]
 
+    [SerializeField] private Sprite baseSkinSprite;
     [SerializeField] private List<Color> skinColors;
 
     [Space(10f)]
@@ -86,11 +89,13 @@ public class PortraitGenerator : MonoBehaviour
     {
         if (Instance == null) return default;
 
+        bool overrideSkin = traitsMix.personnality.OverrideSkin(out Sprite skinSprite);
         (Sprite hairSprite, int hairSpriteIndex) = Instance.GenerateHairSprite(man, traitsMix.job.WearsHelmet);
         bool hasClothesAccessory = traitsMix.status.HasAccessory(out Sprite clothesAccessory);
         bool hasAccessory = traitsMix.lifestyle.HasAccessory(out Sprite accessory);
 
         return new Portrait(
+            overrideSkin ? skinSprite : Instance.baseSkinSprite,
             Instance.GenerateSkinColor(),
             hairSprite, hairSpriteIndex,
             Instance.GenerateHairColor(),
@@ -103,12 +108,14 @@ public class PortraitGenerator : MonoBehaviour
     {
         if (Instance == null) return default;
 
+        bool overrideSkin = traitsMix.personnality.OverrideSkin(out Sprite skinSprite);
         (Sprite hairSprite, int hairSpriteIndex) =
             Instance.GetHairSpriteWithIndex(basePortrait.hairSpriteIndex, man, traitsMix.job.WearsHelmet);
         bool hasClothesAccessory = traitsMix.status.HasAccessory(out Sprite clothesAccessory);
         bool hasAccessory = traitsMix.lifestyle.HasAccessory(out Sprite accessory);
 
         return new Portrait(
+            overrideSkin ? skinSprite : Instance.baseSkinSprite,
             basePortrait.skinColor,
             hairSprite, hairSpriteIndex,
             basePortrait.hairColor,
