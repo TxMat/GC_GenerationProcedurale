@@ -14,8 +14,6 @@ namespace _200_Dev
         
         private static string[] StatusPresentationTemplate = {
             "{m_Pronoun} is {1}.",
-            "{m_Pronoun} has been {1} for years.",
-            "Being {1} is a defining characteristic of {m_Pronoun}."
         };
         
         private static readonly Dictionary<int, Dictionary<int, List<string>>> StatusMEGATemplate = new()
@@ -172,7 +170,10 @@ namespace _200_Dev
         private static string GenerateMEGATemplatedText(Traits traits, bool isMale, IReadOnlyList<string> primaryPresentationTemplate, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate)
         {
             var text = "";
-            text += primaryPresentationTemplate[UnityEngine.Random.Range(0, primaryPresentationTemplate.Count)];
+            if (UnityEngine.Random.Range(0, 2) == 0)
+            {
+                text += primaryPresentationTemplate[UnityEngine.Random.Range(0, primaryPresentationTemplate.Count)];
+            }
             text += statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags][UnityEngine.Random.Range(0, statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags].Count)];
 
             return SanitizeText(text, isMale, traits);
