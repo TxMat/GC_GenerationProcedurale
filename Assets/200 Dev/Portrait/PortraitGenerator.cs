@@ -6,13 +6,15 @@ using UnityEngine;
 
 public struct Portrait
 {
-    public Portrait(Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, Sprite _clothesSprite)
+    public Portrait(Color _skinColor, Sprite _hairSprite, int _hairSpriteIndex, Color _hairColor, Sprite _clothesSprite, bool _hasAccessory, Sprite _accessory)
     {
         skinColor = _skinColor;
         hairSprite = _hairSprite;
         hairSpriteIndex = _hairSpriteIndex;
         hairColor = _hairColor;
         clothesSprite = _clothesSprite;
+        hasAccessory = _hasAccessory;
+        accessory = _accessory;
     }
 
     public Color skinColor;
@@ -22,6 +24,9 @@ public struct Portrait
     public Color hairColor;
 
     public Sprite clothesSprite;
+
+    public bool hasAccessory;
+    public Sprite accessory;
 }
 
 #endregion
@@ -74,12 +79,14 @@ public class PortraitGenerator : MonoBehaviour
         if (Instance == null) return default;
 
         (Sprite hairSprite, int hairSpriteIndex) = Instance.GenerateHairSprite(man, traitsMix.job.WearsHelmet);
+        bool hasAccessory = traitsMix.lifestyle.HasAccessory(out Sprite accessory);
 
         return new Portrait(
             Instance.GenerateSkinColor(),
             hairSprite, hairSpriteIndex,
             Instance.GenerateHairColor(),
-            traitsMix.job.GetClothesSprite(man));
+            traitsMix.job.GetClothesSprite(man),
+            hasAccessory, accessory);
     }
 
     public static Portrait UpdatePortrait(bool man, Portrait basePortrait, TraitsMix traitsMix)
@@ -88,12 +95,14 @@ public class PortraitGenerator : MonoBehaviour
 
         (Sprite hairSprite, int hairSpriteIndex) =
             Instance.GetHairSpriteWithIndex(basePortrait.hairSpriteIndex, man, traitsMix.job.WearsHelmet);
+        bool hasAccessory = traitsMix.lifestyle.HasAccessory(out Sprite accessory);
 
         return new Portrait(
             basePortrait.skinColor,
             hairSprite, hairSpriteIndex,
             basePortrait.hairColor,
-            traitsMix.job.GetClothesSprite(man));
+            traitsMix.job.GetClothesSprite(man),
+            hasAccessory, accessory);
     }
 
     private Color GenerateSkinColor()

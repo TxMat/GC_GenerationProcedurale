@@ -9,6 +9,16 @@ public class LifestyleTraits : Traits
 
     public LifeStyle Lifestyle => lifestyle;
 
+    [Header("Eventual Accessories")]
+    [SerializeField] protected bool hasAccessory;
+    [SerializeField] protected Sprite accessory;
+
+    public bool HasAccessory(out Sprite _accessory)
+    {
+        _accessory = accessory;
+        return hasAccessory;
+    }
+
     public override void SetTraitsValue(int index)
     {
         lifestyle = (LifeStyle)index;
