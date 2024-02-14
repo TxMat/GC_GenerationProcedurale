@@ -29,7 +29,7 @@ namespace _200_Dev
                     { (int) GoodnessTags.BAD, new List<string> {
                         "{m_Pronoun} sometimes struggles with {hs_Pronoun} romantic feelings.",
                         "{m_Pronoun} has faced challenges due to {hs_Pronoun} romantic tendencies.",
-                        "{m_Pronoun} has been {1} for {rd_1} years now. it hase been pretty tough for {hm_Pronoun}.",
+                        "{m_Pronoun} has been {1} for {rd_1} years now. it has been pretty tough for {hm_Pronoun}.",
                         "{m_Pronoun} has been {1} for {rd_1} years now. but it doesn't seem to bother {hm_Pronoun}."
                     }},
                     { (int) GoodnessTags.NEUTRAL, new List<string> {

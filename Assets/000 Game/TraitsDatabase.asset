@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 2287
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 8
@@ -34,7 +33,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 81
   tags: 218
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 4
   personalities: 11
@@ -54,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 78
   tags: 2154
-  goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} enjoys the tranquility and simplicity of rural life, away from the
     chaos of the city.'
@@ -79,7 +76,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 2075
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 7
@@ -99,7 +95,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 39
   tags: 2313
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 0
@@ -119,7 +114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 73
   tags: 2317
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 64
   personalities: 2
@@ -139,7 +133,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 58
   tags: 66
-  goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} is a dedicated gamer, spending countless hours immersed in virtual
     worlds.'
@@ -166,7 +159,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 84
   tags: 2109
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 12
@@ -187,7 +179,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 97
   tags: 0
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 7
@@ -207,7 +198,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 27
   tags: 1045
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 5
@@ -228,7 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 91
   tags: 1681
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 6
@@ -248,7 +237,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 65
   tags: 280
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 512
   personalities: 13
@@ -268,7 +256,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   tags: 111
-  goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} has a deep appreciation for art in all its forms, from paintings
     to sculptures and beyond.'
@@ -295,7 +282,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 19
   tags: 1251
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 9
@@ -315,7 +301,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 18
   tags: 1619
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 14
@@ -335,7 +320,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 16
   tags: 1683
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 7
@@ -355,7 +339,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 36
   tags: 1053
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 2
@@ -376,7 +359,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 12
   tags: 1234
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 0
@@ -396,7 +378,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 99
   tags: 1070
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   job: 3
@@ -417,7 +398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 35
   tags: 1039
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   status: 6
@@ -437,7 +417,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 22
   tags: 1109
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 32
   job: 10
@@ -458,7 +437,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 83
   tags: 1680
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 12
@@ -478,7 +456,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 95
   tags: 3145
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 5
@@ -498,7 +475,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 13
   tags: 1242
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   job: 4
@@ -519,7 +495,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 24
   tags: 3310
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   job: 6
@@ -540,7 +515,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 79
   tags: 1258
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1
   job: 8
@@ -623,7 +597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 7
   tags: 1744
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 256
   personalities: 15
@@ -643,7 +616,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 83
   tags: 366
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   job: 11
@@ -664,7 +636,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 25
   tags: 104
-  goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} loves to travel and explore new destinations whenever possible.'
   - Wanderlust runs deep in {hs_Pronoun} veins, always seeking new adventures.
@@ -688,7 +659,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 42
   tags: 3311
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   job: 1
@@ -709,7 +679,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 33
   tags: 120
-  goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} is known for {hs_Pronoun} unconventional lifestyle and eccentric
     personality.'
@@ -735,7 +704,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 28
   tags: 1174
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   job: 7
@@ -756,7 +724,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 11
   tags: 0
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 6
@@ -776,7 +743,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 58
   tags: 0
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 8
@@ -796,7 +762,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 72
   tags: 1293
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 130
   job: 0
@@ -817,7 +782,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 43
   tags: 1234
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1
   job: 9
@@ -838,7 +802,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 97
   tags: 2092
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 1024
   personalities: 3
@@ -858,7 +821,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tags: 1088
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   status: 3
@@ -880,7 +842,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 87
   tags: 365
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   personalities: 10
@@ -900,7 +861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   tags: 3073
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 8
@@ -920,7 +880,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 54
   tags: 2064
-  goodnessScore: 0
   descriptionTexts:
   - Despite {hs_Pronoun} troubled past, {m_Pronoun} is working towards a brighter
     future.
@@ -947,7 +906,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 32
   tags: 1266
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 4
   status: 2
@@ -967,7 +925,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 92
   tags: 2365
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 128
   status: 1
@@ -987,9 +944,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   tags: 2332
-  goodnessScore: 0
   descriptionTexts:
-  - '{m_Pronoun} is a fitness enthusiast, dedicating {hs_Pronoun}self to maintaining
+  - '{m_Pronoun} is a fitness enthusiast, dedicating {hm_Pronoun}self to maintaining
     a healthy and active lifestyle.'
   - The thrill of competition drives {hm_Pronoun} to push {hs_Pronoun} physical limits.
   - Exercise isn't just a hobby for {hm_Pronoun}, it's a way of life that brings
@@ -1014,7 +970,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 59
   tags: 0
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   status: 5
@@ -1034,7 +989,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 38
   tags: 269
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 528
   personalities: 5
@@ -1054,7 +1008,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 23
   tags: 1120
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 0
   personalities: 1
@@ -1074,7 +1027,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 77
   tags: 1044
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 8
   personalities: 4
@@ -1094,7 +1046,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 75
   tags: 1094
-  goodnessScore: 0
   descriptionTexts: []
   excludeTags: 2048
   status: 4
@@ -1115,7 +1066,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 73
   tags: 1035
-  goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} thrives in the hustle and bustle of city life, where opportunities
     abound.'
