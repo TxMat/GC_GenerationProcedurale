@@ -9,7 +9,7 @@ namespace _200_Dev
         private static readonly string[] JobsPresentationTemplate = {
             "{m_Name} works happily as {traits_Pronoun} {1}.",
             "{m_Name} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
-                "For {m_Name}, being {traits_Pronoun} {1} is a dream come true.",
+            "For {m_Name}, being {traits_Pronoun} {1} is a dream come true.",
             "{m_Name} holds a steady job as {traits_Pronoun} {1}.",
             "{m_Name} has found stability in {hs_Pronoun} career as {traits_Pronoun} {1}.",
             "{m_Name} reluctantly works as {traits_Pronoun} {1}, struggling to find fulfillment.",
@@ -178,7 +178,7 @@ namespace _200_Dev
             return SanitizeText(text, isMale, traits, name);
         }
         
-        private static string GenerateMegaTemplatedText(Traits traits, bool isMale, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
+        private static string GenerateMegaTemplatedText(Traits traits, bool isMale, IReadOnlyDictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
         {
             var text = "";
             
