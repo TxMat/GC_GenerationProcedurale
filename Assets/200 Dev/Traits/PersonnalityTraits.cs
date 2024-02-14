@@ -9,6 +9,16 @@ public class PersonnalityTraits : Traits
 
     public Personalities Personality => personalities;
 
+    [Header("Face")]
+    [SerializeField] protected bool overrideSkin;
+    [SerializeField] protected Sprite skin;
+
+    public bool OverrideSkin(out Sprite _skin)
+    {
+        _skin = overrideSkin ? skin : null;
+        return overrideSkin;
+    }
+
     public override void SetTraitsValue(int index)
     {
         personalities = (Personalities)index;

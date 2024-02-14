@@ -84,12 +84,9 @@ public class NPCGenerator : MonoBehaviour
         PersonnalityTraits personnality;
         LifestyleTraits lifestyle;
 
-        TraitsMix traitsMix;
-        Portrait portrait;
-        string summary;
-        string name;
-
         bool man = Random.value < 0.5f;
+        // Generate name
+        string npcName = NameGenerator.GenerateName(man);
 
         // --- Get random job ---
         List<JobTraits> jobs = database.GetJobExcluding(TraitTags.NONE, TraitTags.NONE);
@@ -110,15 +107,22 @@ public class NPCGenerator : MonoBehaviour
         // --- Get random coherent lifestyle ---
         lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
 
+        return GenerateNPC(man, job, status, personnality, lifestyle, npcName);
+    }
+    private NPC GenerateNPC(bool man, 
+        JobTraits job, StatusTraits status, PersonnalityTraits personnality, LifestyleTraits lifestyle, 
+        string name)
+    {
+        TraitsMix traitsMix;
+        Portrait portrait;
+        string summary;
+
         // Create Traits Mix
         traitsMix = new(job, status, personnality, lifestyle);
 
         // Create Portrait
         portrait = PortraitGenerator.Generate(man, traitsMix);
 
-        // Generate name
-        name = NameGenerator.GenerateName(man);
-        
         // Create Summary
         summary = _200_Dev.TextGenerator.GenerateText(traitsMix, man, name);
 
@@ -136,7 +140,11 @@ public class NPCGenerator : MonoBehaviour
             case Category.PERSONNALITY: traits = database.GetPersonnalityExcluding(excludedTags, tags).Cast<T>().ToList(); break;
             case Category.LIFESTYLE: traits = database.GetLifestyleExcluding(excludedTags, tags).Cast<T>().ToList(); break;
         }
-        if (traits.Count == 0) Debug.LogError("All traits excluded");
+        if (traits.Count == 0)
+        {
+            Debug.LogError("All traits excluded");
+            return null;
+        }
 
         List<T> ponderateTraits = new();
 
@@ -150,7 +158,11 @@ public class NPCGenerator : MonoBehaviour
             }
         }
 
-        if (ponderateTraits.Count == 0) Debug.LogError("No traits compatible");
+        if (ponderateTraits.Count == 0)
+        {
+            Debug.LogError("No traits compatible");
+            return null;
+        }
         return ponderateTraits[Random.Range(0, ponderateTraits.Count)];
     }
 
@@ -164,10 +176,6 @@ public class NPCGenerator : MonoBehaviour
         StatusTraits status = npc.TraitsMix.status;
         PersonnalityTraits personnality = npc.TraitsMix.personnality;
         LifestyleTraits lifestyle = npc.TraitsMix.lifestyle;
-
-        TraitsMix traitsMix;
-        Portrait portrait;
-        string summary;
 
         TraitTags tags = job.Tags;
         TraitTags excludedTags = job.ExcludeTags;
@@ -185,6 +193,7 @@ public class NPCGenerator : MonoBehaviour
         if (!statusCompatible)
         {
             status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
+            if (status == null) return CleanRegenerateWithJob(npc, job);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
@@ -193,6 +202,7 @@ public class NPCGenerator : MonoBehaviour
         if (!personnalityCompatible)
         {
             personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+            if (personnality == null) return CleanRegenerateWithJob(npc, job);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
@@ -201,19 +211,32 @@ public class NPCGenerator : MonoBehaviour
         if (!lifestyleCompatible)
         {
             lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+            if (lifestyle == null) return CleanRegenerateWithJob(npc, job);
         }
 
-        // Create Traits Mix
-        traitsMix = new(job, status, personnality, lifestyle);
-
-        // Create Portrait
-        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
-
-        // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
-
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
+    }
+    private NPC CleanRegenerateWithJob(NPC npc, JobTraits job)
+    {
+        StatusTraits status;
+        PersonnalityTraits personnality;
+        LifestyleTraits lifestyle;
+
+        TraitTags tags = job.Tags;
+        TraitTags excludedTags = job.ExcludeTags;
+
+        status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+
+        personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+        tags |= personnality.Tags;
+        excludedTags |= personnality.ExcludeTags;
+
+        lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
     }
 
     public NPC RegenerateWithNewStatus(NPC npc, int newStatusIndex)
@@ -222,10 +245,6 @@ public class NPCGenerator : MonoBehaviour
         StatusTraits status = database.GetTraitByIndex<StatusTraits>(Category.STATUS, newStatusIndex);
         PersonnalityTraits personnality = npc.TraitsMix.personnality;
         LifestyleTraits lifestyle = npc.TraitsMix.lifestyle;
-
-        TraitsMix traitsMix;
-        Portrait portrait;
-        string summary;
 
         TraitTags tags = status.Tags;
         TraitTags excludedTags = status.ExcludeTags;
@@ -243,6 +262,7 @@ public class NPCGenerator : MonoBehaviour
         if (!jobCompatible)
         {
             job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
+            if (job == null) return CleanRegenerateWithStatus(npc, status);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
@@ -251,6 +271,7 @@ public class NPCGenerator : MonoBehaviour
         if (!personnalityCompatible)
         {
             personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+            if (personnality == null) return CleanRegenerateWithStatus(npc, status);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
@@ -259,19 +280,32 @@ public class NPCGenerator : MonoBehaviour
         if (!lifestyleCompatible)
         {
             lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+            if (lifestyle == null) return CleanRegenerateWithStatus(npc, status);
         }
 
-        // Create Traits Mix
-        traitsMix = new(job, status, personnality, lifestyle);
-
-        // Create Portrait
-        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
-
-        // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
-
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
+    }
+    private NPC CleanRegenerateWithStatus(NPC npc, StatusTraits status)
+    {
+        JobTraits job;
+        PersonnalityTraits personnality;
+        LifestyleTraits lifestyle;
+
+        TraitTags tags = status.Tags;
+        TraitTags excludedTags = status.ExcludeTags;
+
+        job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
+        tags |= job.Tags;
+        excludedTags |= job.ExcludeTags;
+
+        personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+        tags |= personnality.Tags;
+        excludedTags |= personnality.ExcludeTags;
+
+        lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
     }
 
     public NPC RegenerateWithNewPersonnality(NPC npc, int newPersoIndex)
@@ -280,10 +314,6 @@ public class NPCGenerator : MonoBehaviour
         StatusTraits status = npc.TraitsMix.status;
         PersonnalityTraits personnality = database.GetTraitByIndex<PersonnalityTraits>(Category.PERSONNALITY, newPersoIndex);
         LifestyleTraits lifestyle = npc.TraitsMix.lifestyle;
-
-        TraitsMix traitsMix;
-        Portrait portrait;
-        string summary;
 
         TraitTags tags = personnality.Tags;
         TraitTags excludedTags = personnality.ExcludeTags;
@@ -301,6 +331,7 @@ public class NPCGenerator : MonoBehaviour
         if (!jobCompatible)
         {
             job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
+            if (job == null) return CleanRegenerateWithPersonnality(npc, personnality);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
@@ -309,6 +340,7 @@ public class NPCGenerator : MonoBehaviour
         if (!statusCompatible)
         {
             status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
+            if (status == null) return CleanRegenerateWithPersonnality(npc, personnality);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
@@ -317,19 +349,32 @@ public class NPCGenerator : MonoBehaviour
         if (!lifestyleCompatible)
         {
             lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+            if (lifestyle == null) return CleanRegenerateWithPersonnality(npc, personnality);
         }
 
-        // Create Traits Mix
-        traitsMix = new(job, status, personnality, lifestyle);
-
-        // Create Portrait
-        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
-
-        // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
-
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
+    }
+    private NPC CleanRegenerateWithPersonnality(NPC npc, PersonnalityTraits personnality)
+    {
+        JobTraits job;
+        StatusTraits status;
+        LifestyleTraits lifestyle;
+
+        TraitTags tags = personnality.Tags;
+        TraitTags excludedTags = personnality.ExcludeTags;
+
+        job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
+        tags |= job.Tags;
+        excludedTags |= job.ExcludeTags;
+
+        status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+
+        lifestyle = GetCoherentTraits<LifestyleTraits>(Category.LIFESTYLE, tags, excludedTags);
+
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
     }
 
     public NPC RegenerateWithNewLifestyle(NPC npc, int newLifestyleIndex)
@@ -338,10 +383,6 @@ public class NPCGenerator : MonoBehaviour
         StatusTraits status = npc.TraitsMix.status;
         PersonnalityTraits personnality = npc.TraitsMix.personnality;
         LifestyleTraits lifestyle = database.GetTraitByIndex<LifestyleTraits>(Category.LIFESTYLE, newLifestyleIndex);
-
-        TraitsMix traitsMix;
-        Portrait portrait;
-        string summary;
 
         TraitTags tags = lifestyle.Tags;
         TraitTags excludedTags = lifestyle.ExcludeTags;
@@ -359,6 +400,7 @@ public class NPCGenerator : MonoBehaviour
         if (!jobCompatible)
         {
             job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
+            if (job == null) return CleanRegenerateWithLifestyle(npc, lifestyle);
         }
         tags |= status.Tags;
         excludedTags |= status.ExcludeTags;
@@ -367,6 +409,7 @@ public class NPCGenerator : MonoBehaviour
         if (!statusCompatible)
         {
             status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
+            if (status == null) return CleanRegenerateWithLifestyle(npc, lifestyle);
         }
         tags |= personnality.Tags;
         excludedTags |= personnality.ExcludeTags;
@@ -375,19 +418,32 @@ public class NPCGenerator : MonoBehaviour
         if (!personnalityCompatible)
         {
             personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+            if (personnality == null) return CleanRegenerateWithLifestyle(npc, lifestyle);
         }
 
-        // Create Traits Mix
-        traitsMix = new(job, status, personnality, lifestyle);
-
-        // Create Portrait
-        portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
-
-        // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
-
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
+    }
+    private NPC CleanRegenerateWithLifestyle(NPC npc, LifestyleTraits lifestyle)
+    {
+        JobTraits job;
+        StatusTraits status;
+        PersonnalityTraits personnality;
+
+        TraitTags tags = lifestyle.Tags;
+        TraitTags excludedTags = lifestyle.ExcludeTags;
+
+        job = GetCoherentTraits<JobTraits>(Category.JOB, tags, excludedTags);
+        tags |= job.Tags;
+        excludedTags |= job.ExcludeTags;
+
+        status = GetCoherentTraits<StatusTraits>(Category.STATUS, tags, excludedTags);
+        tags |= status.Tags;
+        excludedTags |= status.ExcludeTags;
+
+        personnality = GetCoherentTraits<PersonnalityTraits>(Category.PERSONNALITY, tags, excludedTags);
+
+        return GenerateNPC(npc.Man, job, status, personnality, lifestyle, npc.Name);
     }
 
     private bool AreCompatible(TraitTags tags, TraitTags excludedTags, Traits trait2)

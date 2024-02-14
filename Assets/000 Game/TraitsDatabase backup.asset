@@ -18,6 +18,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 8
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-8614191003061433571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,6 +38,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1028
   personalities: 11
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-7225931072142858395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,6 +81,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1024
   personalities: 0
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-5585429663927827124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +101,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1216
   personalities: 2
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-5518133776002578567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +186,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 262
   personalities: 6
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-3645840716970355038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,6 +206,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 512
   personalities: 13
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-3523336521177406492
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +249,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 4
   personalities: 9
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-2706310955633784282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +269,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 264
   personalities: 14
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-2082578869473132344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +289,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 264
   personalities: 7
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-2049410317431051751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +392,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 256
   personalities: 12
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &-701971289091025105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +532,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 260
   personalities: 15
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &299725027495695316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +703,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 1040
   personalities: 3
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &4258288603175830966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +743,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 128
   personalities: 10
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &4944298224677246074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,6 +826,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 528
   personalities: 5
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &7238862993694647193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -818,6 +846,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 0
   personalities: 1
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &7809199315074435519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -836,6 +866,8 @@ MonoBehaviour:
   descriptionTexts: []
   excludeTags: 2056
   personalities: 4
+  overrideSkin: 0
+  skin: {fileID: 0}
 --- !u!114 &8537722532867734977
 MonoBehaviour:
   m_ObjectHideFlags: 0

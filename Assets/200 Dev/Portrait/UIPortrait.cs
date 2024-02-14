@@ -16,6 +16,7 @@ public class UIPortrait : MonoBehaviour
 
     public void Generate(Portrait portrait)
     {
+        skinImage.sprite = portrait.skinSprite;
         skinImage.color = portrait.skinColor;
         hairImage.sprite = portrait.hairSprite;
         hairImage.color = portrait.hairColor;

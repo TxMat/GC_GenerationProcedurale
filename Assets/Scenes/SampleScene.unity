@@ -1098,6 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f41448de24656c941b36d065ff98d28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseSkinSprite: {fileID: 21300000, guid: 85f6a43a39a429a4d8152cf629f60c20, type: 3}
   skinColors:
   - {r: 0.8962264, g: 0.69609374, b: 0.6468049, a: 1}
   - {r: 0.8113208, g: 0.53054893, b: 0.4477572, a: 1}
