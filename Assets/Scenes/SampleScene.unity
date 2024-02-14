@@ -1114,6 +1114,14 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 746515ede29f7094b8d08d736bf19472, type: 3}
   - {fileID: 21300000, guid: c7f51a2a8afaafb42b226507a1355dc0, type: 3}
   - {fileID: 21300000, guid: 870edc4b73e0da349b111a29a52a03a9, type: 3}
+  manHairsWithHelmet:
+  - {fileID: 21300000, guid: 4d612f7533c3d0b45853a3e8f9f02109, type: 3}
+  - {fileID: 21300000, guid: 5f6ae8762192c9f4d9eea330986cae4e, type: 3}
+  - {fileID: 21300000, guid: ccd2303beadd4134d806b7e75fb129d6, type: 3}
+  womanHairsWithHelmet:
+  - {fileID: 21300000, guid: 0232ea0ea1bbe104e8522908cd8cd316, type: 3}
+  - {fileID: 21300000, guid: b9b4b7fff151e77418978fd39802652b, type: 3}
+  - {fileID: 21300000, guid: db1b24ce3df73314d853f1d76c83ccd1, type: 3}
   hairColors:
   - {r: 1, g: 0.21226418, b: 0.2785881, a: 1}
   - {r: 0.8490566, g: 0.2495943, b: 0, a: 1}

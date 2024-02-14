@@ -9,10 +9,12 @@ public class JobTraits : Traits
 
     [Space(10f)]
 
+    [SerializeField] private bool wearsHelmet;
     [SerializeField] private Sprite manClothesSprite;
     [SerializeField] private Sprite womanClothesSprite;
 
     public Jobs Job => job;
+    public bool WearsHelmet => wearsHelmet;
 
     public override void SetTraitsValue(int index)
     {
