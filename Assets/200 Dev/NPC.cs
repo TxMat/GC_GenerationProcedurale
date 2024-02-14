@@ -5,14 +5,6 @@ using UnityEngine;
 public class NPC
 {
     
-    public NPC(bool man, TraitsMix traits, Portrait portrait, string summary)
-    {
-        Man = man;
-        TraitsMix = traits;
-        Portrait = portrait;
-        Summary = summary;
-    }
-    
     public NPC(bool man, TraitsMix traits, Portrait portrait, string summary, string name)
     {
         Man = man;
