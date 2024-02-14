@@ -693,7 +693,7 @@ MonoBehaviour:
     personality.'
   - Unpredictability is {m_Pronoun}'s middle name, always marching to the beat of
     {hs_Pronoun} own drum.
-  - Conformity is not in {m_Pronoun}'s vocabulary; {hs_Pronoun} excentricity sets
+  - Conformity is not in {hs_Pronoun}'s vocabulary; {hs_Pronoun} excentricity sets
     {hm_Pronoun} apart from the crowd.
   excludeTags: 0
   lifestyle: 3
