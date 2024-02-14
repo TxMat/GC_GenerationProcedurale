@@ -98,7 +98,7 @@ namespace _200_Dev
         private static string[] PersonalityPresentationTemplate = {
             "{m_Pronoun} can be described as {traits_Pronoun} {1} person.",
             "{m_Pronoun} is {traits_Pronoun} {1} person.",
-            "People often describe {m_Pronoun} as {traits_Pronoun} {1} individual."
+            "People often describe {hm_Pronoun} as {traits_Pronoun} {1} individual."
         };
         
         private static readonly Dictionary<int, List<string>> PersonalitySuffix = new()
@@ -173,7 +173,7 @@ namespace _200_Dev
             if (UnityEngine.Random.Range(0, 2) == 0)
             {
                 text += primaryPresentationTemplate[UnityEngine.Random.Range(0, primaryPresentationTemplate.Count)];
-            }
+            }   
             text += statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags][UnityEngine.Random.Range(0, statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags].Count)];
 
             return SanitizeText(text, isMale, traits);
