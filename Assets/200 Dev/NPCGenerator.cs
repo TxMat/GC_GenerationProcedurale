@@ -213,7 +213,7 @@ public class NPCGenerator : MonoBehaviour
         summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary);
+        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
     }
 
     public NPC RegenerateWithNewStatus(NPC npc, int newStatusIndex)
@@ -271,7 +271,7 @@ public class NPCGenerator : MonoBehaviour
         summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary);
+        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
     }
 
     public NPC RegenerateWithNewPersonnality(NPC npc, int newPersoIndex)
@@ -329,7 +329,7 @@ public class NPCGenerator : MonoBehaviour
         summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary);
+        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
     }
 
     public NPC RegenerateWithNewLifestyle(NPC npc, int newLifestyleIndex)
@@ -387,7 +387,7 @@ public class NPCGenerator : MonoBehaviour
         summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
-        return new NPC(npc.Man, traitsMix, portrait, summary);
+        return new NPC(npc.Man, traitsMix, portrait, summary, npc.Name);
     }
 
     private bool AreCompatible(TraitTags tags, TraitTags excludedTags, Traits trait2)
