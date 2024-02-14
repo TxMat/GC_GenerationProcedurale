@@ -54,8 +54,8 @@ MonoBehaviour:
   descriptionTexts:
   - '{m_Pronoun} enjoys the tranquility and simplicity of rural life, away from the
     chaos of the city.'
-  - Nature is {m_Pronoun}'s sanctuary, finding solace in the peaceful countryside.
-  - Living in the countryside allows {m_Pronoun} to connect with nature and lead
+  - Nature is {hs_Pronoun} sanctuary, finding solace in the peaceful countryside.
+  - Living in the countryside allows {hm_Pronoun} to connect with nature and lead
     a more relaxed lifestyle.
   excludeTags: 0
   lifestyle: 2
@@ -135,10 +135,10 @@ MonoBehaviour:
   descriptionTexts:
   - '{m_Pronoun} is a dedicated gamer, spending countless hours immersed in virtual
     worlds.'
-  - Gaming isn't just a hobby for {m_Pronoun}, it's a passion that fuels {hs_Pronoun}
+  - Gaming isn't just a hobby for {hm_Pronoun}, it's a passion that fuels {hs_Pronoun}
     competitive spirit.
-  - The digital realm is {m_Pronoun}'s playground, where {hs_Pronoun} skills are
-    put to the test.
+  - The digital realm is {hs_Pronoun} playground, where {hs_Pronoun} skills are put
+    to the test.
   excludeTags: 0
   lifestyle: 4
   hasAccessory: 1
@@ -260,7 +260,7 @@ MonoBehaviour:
   descriptionTexts:
   - '{m_Pronoun} has a deep appreciation for art in all its forms, from paintings
     to sculptures and beyond.'
-  - Creativity flows through {m_Pronoun}'s veins, finding inspiration in the beauty
+  - Creativity flows through {hs_Pronoun} veins, finding inspiration in the beauty
     of artistic expression.
   - Art is not just something {m_Pronoun} enjoys; it's a fundamental part of {hs_Pronoun}
     identity.
@@ -645,8 +645,8 @@ MonoBehaviour:
   goodnessScore: 0
   descriptionTexts:
   - '{m_Pronoun} loves to travel and explore new destinations whenever possible.'
-  - Wanderlust runs deep in {m_Pronoun}'s veins, always seeking new adventures.
-  - Traveling is not just a hobby for {m_Pronoun}, it's a way of life.
+  - Wanderlust runs deep in {hs_Pronoun} veins, always seeking new adventures.
+  - Traveling is not just a hobby for {hm_Pronoun}, it's a way of life.
   excludeTags: 0
   lifestyle: 0
   hasAccessory: 1
@@ -691,7 +691,7 @@ MonoBehaviour:
   descriptionTexts:
   - '{m_Pronoun} is known for {hs_Pronoun} unconventional lifestyle and eccentric
     personality.'
-  - Unpredictability is {m_Pronoun}'s middle name, always marching to the beat of
+  - Unpredictability is {hs_Pronoun} middle name, always marching to the beat of
     {hs_Pronoun} own drum.
   - Conformity is not in {hs_Pronoun} vocabulary; {hs_Pronoun} excentricity sets
     {hm_Pronoun} apart from the crowd.
@@ -900,7 +900,7 @@ MonoBehaviour:
     future.
   - '{m_Pronoun} walks on the edge of the law, navigating a life filled with risks
     and rewards.'
-  - The criminal underworld is {m_Pronoun}'s domain, where {hs_Pronoun} street smarts
+  - The criminal underworld is {hs_Pronoun} domain, where {hs_Pronoun} street smarts
     are put to the test.
   excludeTags: 0
   lifestyle: 6
@@ -965,10 +965,9 @@ MonoBehaviour:
   descriptionTexts:
   - '{m_Pronoun} is a fitness enthusiast, dedicating {hs_Pronoun}self to maintaining
     a healthy and active lifestyle.'
-  - For {m_Pronoun}, the thrill of competition drives {hm_Pronoun} to push {hs_Pronoun}
-    physical limits.
-  - Exercise isn't just a hobby for {m_Pronoun}, it's a way of life that brings {hm_Pronoun}
-    joy and fulfillment.
+  - The thrill of competition drives {hm_Pronoun} to push {hs_Pronoun} physical limits.
+  - Exercise isn't just a hobby for {hm_Pronoun}, it's a way of life that brings
+    {hm_Pronoun} joy and fulfillment.
   excludeTags: 0
   lifestyle: 7
   hasAccessory: 1
@@ -1088,9 +1087,9 @@ MonoBehaviour:
   descriptionTexts:
   - '{m_Pronoun} thrives in the hustle and bustle of city life, where opportunities
     abound.'
-  - For {m_Pronoun}, the fast-paced energy of urban living is invigorating.
-  - City living suits {m_Pronoun} perfectly, with its endless entertainment and cultural
-    offerings.
+  - For {hm_Pronoun}, the fast-paced energy of urban living is invigorating.
+  - City living suits {hm_Pronoun} perfectly, with its endless entertainment and
+    cultural offerings.
   excludeTags: 0
   lifestyle: 1
   hasAccessory: 1

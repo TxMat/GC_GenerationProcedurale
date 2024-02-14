@@ -116,7 +116,7 @@ namespace _200_Dev
                 " and it already happened that {hs_Pronoun} attitude caused some problems.",
                 ", it's not always easy to deal with {hm_Pronoun}.",
                 " and sometimes, {m_Pronoun} can be a bit too much to handle.",
-                ", {m_Pronoun} needs to work on overcoming some negative traits."
+                " and needs to work on overcoming some negative traits."
             }},
             { (int) GoodnessTags.NEUTRAL, new List<string> {
                 ", {m_Pronoun} has a balanced personality.",
