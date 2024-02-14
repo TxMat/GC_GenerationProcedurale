@@ -32,6 +32,7 @@ namespace _200_Dev
                     }},
                     { (int) GoodnessTags.NEUTRAL, new List<string> {
                         "{m_Pronoun} doesn't think much about romance.",
+                        "Romance is not something important for {hm_Pronoun} currently."
                     }}
                 }
             },
