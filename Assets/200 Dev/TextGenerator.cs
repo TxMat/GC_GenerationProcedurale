@@ -16,24 +16,21 @@ namespace _200_Dev
             "{m_Name} feels trapped in {hs_Pronoun} job as {traits_Pronoun} {1}, longing for something more.",
             "{m_Name} endures {hs_Pronoun} role as {traits_Pronoun} {1} with a sense of resignation and dissatisfaction."
         };
-        
-        private static string[] StatusPresentationTemplate = {
-            "{m_Pronoun} is {1}.",
-        };
-        
+
         private static readonly Dictionary<int, Dictionary<int, List<string>>> StatusMEGATemplate = new()
         {
             { (int) StatusTags.ROMANTIC, new()
                 {
                     { (int) GoodnessTags.GOOD, new List<string> {
-                        "this is something that {m_Pronoun} is proud of.",
+                        "{m_Pronoun} has been happily {1} for {rd_1} years and it's something that {m_Pronoun} is proud of.",
                         "{hs_Pronoun} romantic nature brings joy to {hs_Pronoun} life.",
                         "{m_Pronoun} cherishes {!hs_Pronoun} romantic side.",
                     }},
                     { (int) GoodnessTags.BAD, new List<string> {
                         "{m_Pronoun} sometimes struggles with {hs_Pronoun} romantic feelings.",
                         "{m_Pronoun} has faced challenges due to {hs_Pronoun} romantic tendencies.",
-                        "It's been like this for {rd_1} years now.",
+                        "{m_Pronoun} has been {1} for {rd_1} years now. it hase been pretty tough for {hm_Pronoun}.",
+                        "{m_Pronoun} has been {1} for {rd_1} years now. but it doesn't seem to bother {hm_Pronoun}."
                     }},
                     { (int) GoodnessTags.NEUTRAL, new List<string> {
                         "{m_Pronoun} doesn't think much about romance.",
@@ -135,7 +132,7 @@ namespace _200_Dev
             text += GenerateTemplatedText(traits.job, isMale, JobsPresentationTemplate, name);
             
             
-            text += GenerateMEGATemplatedText(traits.status, isMale, StatusPresentationTemplate, StatusMEGATemplate , name);
+            text += GenerateMEGATemplatedText(traits.status, isMale, StatusMEGATemplate , name);
             
             
             text += GenerateTemplatedText(traits.personnality, isMale, PersonalityPresentationTemplate, name, PersonalitySuffix);
@@ -148,7 +145,7 @@ namespace _200_Dev
             text = char.ToUpper(text[0]) + text[1..];
             
             // correct spaces
-            text = Regex.Replace(text, @"\s+(?=[.,?!])", "");
+            text = Regex.Replace(text, @"\s+(?=[.,?!])", "");   
 
             return text;
         }
@@ -176,13 +173,10 @@ namespace _200_Dev
             return SanitizeText(text, isMale, traits, name);
         }
         
-        private static string GenerateMEGATemplatedText(Traits traits, bool isMale, IReadOnlyList<string> primaryPresentationTemplate, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
+        private static string GenerateMEGATemplatedText(Traits traits, bool isMale, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
         {
             var text = "";
-            if (UnityEngine.Random.Range(0, 2) == 0)
-            {
-                text += primaryPresentationTemplate[UnityEngine.Random.Range(0, primaryPresentationTemplate.Count)];
-            }   
+            
             text += statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags][UnityEngine.Random.Range(0, statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags].Count)];
 
             return SanitizeText(text, isMale, traits, name);
