@@ -6,7 +6,7 @@ namespace _200_Dev
 {
     public static class TextGenerator   
     {
-        private static string[] JobsPresentationTemplate = {
+        private static readonly string[] JobsPresentationTemplate = {
             "{m_Name} works happily as {traits_Pronoun} {1}.",
             "{m_Name} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
                 "For {m_Name}, being {traits_Pronoun} {1} is a dream come true.",
@@ -17,9 +17,9 @@ namespace _200_Dev
             "{m_Name} endures {hs_Pronoun} role as {traits_Pronoun} {1} with a sense of resignation and dissatisfaction."
         };
 
-        private static readonly Dictionary<int, Dictionary<int, List<string>>> StatusMEGATemplate = new()
+        private static readonly Dictionary<int, Dictionary<int, List<string>>> StatusMegaTemplate = new()
         {
-            { (int) StatusTags.ROMANTIC, new()
+            { (int) StatusTags.ROMANTIC, new Dictionary<int, List<string>>
                 {
                     { (int) GoodnessTags.GOOD, new List<string> {
                         "{m_Pronoun} has been happily {1} for {rd_1} years and it's something that {m_Pronoun} is proud of.",
@@ -38,7 +38,7 @@ namespace _200_Dev
                     }}
                 }
             },
-            { (int) StatusTags.PHYSICAL, new ()
+            { (int) StatusTags.PHYSICAL, new Dictionary<int, List<string>>
                 {
                     { (int) GoodnessTags.GOOD, new List<string> {
                         "Despite some physical challenges, {m_Pronoun} excels in many activities.",
@@ -57,7 +57,7 @@ namespace _200_Dev
                     }}
                 }
             },
-            { (int) StatusTags.CHILDHOOD, new ()
+            { (int) StatusTags.CHILDHOOD, new Dictionary<int, List<string>>
                 {
                     { (int) GoodnessTags.GOOD, new List<string> {
                         "{m_Pronoun}'s childhood was filled with happy memories and positive experiences.",
@@ -76,7 +76,7 @@ namespace _200_Dev
                     }}
                 }
             },
-            { (int) StatusTags.EDUCATION, new ()
+            { (int) StatusTags.EDUCATION, new Dictionary<int, List<string>>
                 {
                     { (int) GoodnessTags.GOOD, new List<string> {
                         "Education has always been a priority for {hm_Pronoun}, and {hs_Pronoun} hard work has paid off.",
@@ -98,7 +98,7 @@ namespace _200_Dev
         };
 
         
-        private static string[] PersonalityPresentationTemplate = {
+        private static readonly string[] PersonalityPresentationTemplate = {
             "{m_Pronoun} can be described as {traits_Pronoun} {1} {suffix}",
             "{m_Pronoun} is {traits_Pronoun} {1} {suffix}",
             "People often describe {hm_Pronoun} as {traits_Pronoun} {1} {suffix}"
@@ -116,7 +116,7 @@ namespace _200_Dev
                 " and it already happened that {hs_Pronoun} attitude caused some problems.",
                 ", it's not always easy to deal with {hm_Pronoun}.",
                 " and sometimes, {m_Pronoun} can be a bit too much to handle.",
-                ", {m_Pronoun} needs to work on overcoming some negative traits."
+                " and needs to work on overcoming some negative traits."
             }},
             { (int) GoodnessTags.NEUTRAL, new List<string> {
                 ", {m_Pronoun} has a balanced personality.",
@@ -134,7 +134,7 @@ namespace _200_Dev
             text += GenerateTemplatedText(traits.job, isMale, JobsPresentationTemplate, name);
             
             
-            text += GenerateMEGATemplatedText(traits.status, isMale, StatusMEGATemplate , name);
+            text += GenerateMegaTemplatedText(traits.status, isMale, StatusMegaTemplate , name);
             
             
             text += GenerateTemplatedText(traits.personnality, isMale, PersonalityPresentationTemplate, name, PersonalitySuffix);
@@ -178,7 +178,7 @@ namespace _200_Dev
             return SanitizeText(text, isMale, traits, name);
         }
         
-        private static string GenerateMEGATemplatedText(Traits traits, bool isMale, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
+        private static string GenerateMegaTemplatedText(Traits traits, bool isMale, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
         {
             var text = "";
             
