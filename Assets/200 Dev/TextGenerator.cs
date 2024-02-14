@@ -7,14 +7,14 @@ namespace _200_Dev
     public static class TextGenerator   
     {
         private static string[] JobsPresentationTemplate = {
-            "{m_Pronoun} works happily as {traits_Pronoun} {1}.",
-            "{m_Pronoun} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
-            "For {hm_Pronoun}, being {traits_Pronoun} {1} is a dream come true.",
-            "{m_Pronoun} holds a steady job as {traits_Pronoun} {1}.",
-            "{m_Pronoun} has found stability in {hs_Pronoun} career as {traits_Pronoun} {1}.",
-            "{m_Pronoun} reluctantly works as {traits_Pronoun} {1}, struggling to find fulfillment.",
-            "{m_Pronoun} feels trapped in {hs_Pronoun} job as {traits_Pronoun} {1}, longing for something more.",
-            "{m_Pronoun} endures {hs_Pronoun} role as {traits_Pronoun} {1} with a sense of resignation and dissatisfaction."
+            "{m_Name} works happily as {traits_Pronoun} {1}.",
+            "{m_Name} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
+            "For {m_Name}, being {traits_Pronoun} {1} is a dream come true.",
+            "{m_Name} holds a steady job as {traits_Pronoun} {1}.",
+            "{m_Name} has found stability in {hs_Pronoun} career as {traits_Pronoun} {1}.",
+            "{m_Name} reluctantly works as {traits_Pronoun} {1}, struggling to find fulfillment.",
+            "{m_Name} feels trapped in {hs_Pronoun} job as {traits_Pronoun} {1}, longing for something more.",
+            "{m_Name} endures {hs_Pronoun} role as {traits_Pronoun} {1} with a sense of resignation and dissatisfaction."
         };
         
         private static string[] StatusPresentationTemplate = {
@@ -128,20 +128,20 @@ namespace _200_Dev
         
         
 
-        public static string GenerateText(TraitsMix traits, bool isMale)
+        public static string GenerateText(TraitsMix traits, bool isMale, string name)
         {
             var text = "";
 
-            text += GenerateTemplatedText(traits.job, isMale, JobsPresentationTemplate);
+            text += GenerateTemplatedText(traits.job, isMale, JobsPresentationTemplate, name);
             
             
-            text += GenerateMEGATemplatedText(traits.status, isMale, StatusPresentationTemplate, StatusMEGATemplate);
+            text += GenerateMEGATemplatedText(traits.status, isMale, StatusPresentationTemplate, StatusMEGATemplate , name);
             
             
-            text += GenerateTemplatedText(traits.personnality, isMale, PersonalityPresentationTemplate, PersonalitySuffix);
+            text += GenerateTemplatedText(traits.personnality, isMale, PersonalityPresentationTemplate, name, PersonalitySuffix);
 
 
-            text += GeneratePredefinedText(traits.lifestyle, isMale);
+            text += GeneratePredefinedText(traits.lifestyle, isMale, name);
             
             // Correct Capitalization
             text = Regex.Replace(text, @"([!?.]\s*)([a-zA-Z])", m => m.Groups[1].Value + " " + char.ToUpper(m.Groups[2].Value[0]));
@@ -154,16 +154,16 @@ namespace _200_Dev
         }
 
 
-        private static string GeneratePredefinedText(Traits traits, bool isMale)
+        private static string GeneratePredefinedText(Traits traits, bool isMale, string name)
         {
             var text = "";
             
             text += traits.DescriptionTexts[UnityEngine.Random.Range(0, traits.DescriptionTexts.Count)];
 
-            return SanitizeText(text, isMale, traits);
+            return SanitizeText(text, isMale, traits, name);
         }
 
-        private static string GenerateTemplatedText(Traits traits, bool isMale, IReadOnlyList<string> primaryPresentationTemplate, Dictionary<int, List<string>> suffixes = null)
+        private static string GenerateTemplatedText(Traits traits, bool isMale, IReadOnlyList<string> primaryPresentationTemplate, string name, Dictionary<int, List<string>> suffixes = null)
         {
             var text = "";
             text += primaryPresentationTemplate[UnityEngine.Random.Range(0, primaryPresentationTemplate.Count)];
@@ -173,10 +173,10 @@ namespace _200_Dev
                 text += suffixes[tags][UnityEngine.Random.Range(0, suffixes[tags].Count)];
             }
 
-            return SanitizeText(text, isMale, traits);
+            return SanitizeText(text, isMale, traits, name);
         }
         
-        private static string GenerateMEGATemplatedText(Traits traits, bool isMale, IReadOnlyList<string> primaryPresentationTemplate, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate)
+        private static string GenerateMEGATemplatedText(Traits traits, bool isMale, IReadOnlyList<string> primaryPresentationTemplate, Dictionary<int, Dictionary<int, List<string>>> statusMegaTemplate, string name)
         {
             var text = "";
             if (UnityEngine.Random.Range(0, 2) == 0)
@@ -185,16 +185,17 @@ namespace _200_Dev
             }   
             text += statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags][UnityEngine.Random.Range(0, statusMegaTemplate[traits.TextTags][traits.TextGoodnessTags].Count)];
 
-            return SanitizeText(text, isMale, traits);
+            return SanitizeText(text, isMale, traits, name);
         }
         
-        private static string SanitizeText(string text, bool isMale, Traits traits)
+        private static string SanitizeText(string text, bool isMale, Traits traits, string name)
         {
             const string vowels = "aeiou";
             text = text.Replace("{m_Pronoun}", isMale ? "he" : "she");
             text = text.Replace("{hs_Pronoun}", isMale ? "his" : "her");
             text = text.Replace("{!hs_Pronoun}", isMale ? "her" : "his");
             text = text.Replace("{hm_Pronoun}", isMale ? "him" : "her");
+            text = text.Replace("{m_Name}", name);
             text = text.Replace("{traits_Pronoun}", vowels.Contains(traits.Name[0].ToString().ToLower()) ? "an" : "a");
             text = text.Replace("{1}", traits.Name.ToLower());
             text = text.Replace("{suffix}", traits.NeedsSuffix ? UnityEngine.Random.Range(0, 2) == 0 ? "person" : "individual" : "");

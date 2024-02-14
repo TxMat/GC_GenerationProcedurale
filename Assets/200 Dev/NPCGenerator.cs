@@ -87,6 +87,7 @@ public class NPCGenerator : MonoBehaviour
         TraitsMix traitsMix;
         Portrait portrait;
         string summary;
+        string name;
 
         bool man = Random.value < 0.5f;
 
@@ -115,11 +116,14 @@ public class NPCGenerator : MonoBehaviour
         // Create Portrait
         portrait = PortraitGenerator.Generate(man, traitsMix);
 
+        // Generate name
+        name = NameGenerator.GenerateName(man);
+        
         // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, man);
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, man, name);
 
         // Return NPC
-        return new NPC(man, traitsMix, portrait, summary);
+        return new NPC(man, traitsMix, portrait, summary, name);
     }
 
     private T GetCoherentTraits<T>(Category category, TraitTags tags, TraitTags excludedTags) where T : Traits
@@ -206,7 +210,7 @@ public class NPCGenerator : MonoBehaviour
         portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
 
         // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
         return new NPC(npc.Man, traitsMix, portrait, summary);
@@ -264,7 +268,7 @@ public class NPCGenerator : MonoBehaviour
         portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
 
         // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
         return new NPC(npc.Man, traitsMix, portrait, summary);
@@ -322,7 +326,7 @@ public class NPCGenerator : MonoBehaviour
         portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
 
         // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
         return new NPC(npc.Man, traitsMix, portrait, summary);
@@ -380,7 +384,7 @@ public class NPCGenerator : MonoBehaviour
         portrait = PortraitGenerator.UpdatePortrait(npc.Man, npc.Portrait, traitsMix);
 
         // Create Summary
-        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man);
+        summary = _200_Dev.TextGenerator.GenerateText(traitsMix, npc.Man, npc.Name);
 
         // Return NPC
         return new NPC(npc.Man, traitsMix, portrait, summary);
