@@ -1,5 +1,4 @@
 ﻿using System;
-using static UnityEngine.Rendering.DebugUI;
 
 
 public enum Jobs
@@ -314,6 +313,7 @@ public static class EnumExtensions
             LifeStyle.GAMER => "Gamer",
             LifeStyle.ART_LOVER => "Art lover",
             LifeStyle.CRIMINAL => "Criminal",
+            LifeStyle.ATHLETIC => "Athletic",
             _ => "Unknown"
         };
     }

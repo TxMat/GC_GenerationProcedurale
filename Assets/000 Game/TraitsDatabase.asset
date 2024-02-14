@@ -658,8 +658,8 @@ MonoBehaviour:
   tags: 120
   goodnessScore: 0
   descriptionTexts:
-  - "{m_Pronoun} is known for {hs_Pronoun} unconventional lifestyle and eccentric
-    personality.\t\t"
+  - '{m_Pronoun} is known for {hs_Pronoun} unconventional lifestyle and eccentric
+    personality.'
   - Unpredictability is {m_Pronoun}'s middle name, always marching to the beat of
     {hs_Pronoun} own drum.
   - Conformity is not in {m_Pronoun}'s vocabulary; {hs_Pronoun} excentricity sets
@@ -904,14 +904,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 16f9ac0c65585424c82a5b63e536e2ae, type: 3}
-  m_Name: LT_VOYAGER
+  m_Name: LT_ATHLETIC
   m_EditorClassIdentifier: 
   id: 2
-  tags: 0
+  tags: 392
   goodnessScore: 0
-  descriptionTexts: []
+  descriptionTexts:
+  - '{m_Pronoun} is a fitness enthusiast, dedicating {hs_Pronoun}self to maintaining
+    a healthy and active lifestyle.'
+  - For {m_Pronoun}, the thrill of competition drives {hm_Pronoun} to push {hs_Pronoun}
+    physical limits.
+  - Exercise isn't just a hobby for {m_Pronoun}, it's a way of life that brings {hm_Pronoun}
+    joy and fulfillment.
   excludeTags: 0
-  lifestyle: 0
+  lifestyle: 7
 --- !u!114 &6257462847648810226
 MonoBehaviour:
   m_ObjectHideFlags: 0

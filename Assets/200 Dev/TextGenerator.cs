@@ -9,7 +9,12 @@ namespace _200_Dev
         private static string[] JobsPresentationTemplate = {
             "{m_Pronoun} works happily as {traits_Pronoun} {1}.",
             "{m_Pronoun} always wanted to be {traits_Pronoun} {1} since {m_Pronoun} was a child.",
-            "For {hm_Pronoun}, being {traits_Pronoun} {1} is a dream come true."
+            "For {hm_Pronoun}, being {traits_Pronoun} {1} is a dream come true.",
+            "{m_Pronoun} holds a steady job as {traits_Pronoun} {1}.",
+            "{m_Pronoun} has found stability in {hs_Pronoun} career as {traits_Pronoun} {1}.",
+            "{m_Pronoun} reluctantly works as {traits_Pronoun} {1}, struggling to find fulfillment.",
+            "{m_Pronoun} feels trapped in {hs_Pronoun} job as {traits_Pronoun} {1}, longing for something more.",
+            "{m_Pronoun} endures {hs_Pronoun} role as {traits_Pronoun} {1} with a sense of resignation and dissatisfaction."
         };
         
         private static string[] StatusPresentationTemplate = {
